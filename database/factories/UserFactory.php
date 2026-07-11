@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Institution;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
@@ -28,8 +29,15 @@ class UserFactory extends Factory
             'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
+            'phone' => fake()->unique()->numerify('080########'),
             'password' => static::$password ??= Hash::make('password'),
             'remember_token' => Str::random(10),
+            'institution_id' => Institution::factory(),
+            'call_up_number' => fake()->unique()->bothify('NYSC/??/2026/#####'),
+            'state_code' => fake()->optional()->bothify('??/26?/####'),
+            'batch' => fake()->randomElement(['A', 'B', 'C']),
+            'stream' => fake()->randomElement(['1', '2']),
+            'notification_preferences' => User::DEFAULT_NOTIFICATION_PREFERENCES,
         ];
     }
 

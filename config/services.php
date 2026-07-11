@@ -35,4 +35,40 @@ return [
         ],
     ],
 
+    'zeptomail' => [
+        'url' => env('ZEPTOMAIL_URL', 'https://api.zeptomail.com/v1.1/email'),
+        'token' => env('ZEPTOMAIL_TOKEN'),
+    ],
+
+    'termii' => [
+        'url' => env('TERMII_URL', 'https://v3.api.termii.com'),
+        'api_key' => env('TERMII_API_KEY'),
+        'sender_id' => env('TERMII_SENDER_ID', 'CorpsLink'),
+    ],
+
+    'paystack' => [
+        'url' => env('PAYSTACK_URL', 'https://api.paystack.co'),
+        'secret_key' => env('PAYSTACK_SECRET_KEY'),
+        'public_key' => env('PAYSTACK_PUBLIC_KEY'),
+    ],
+
+    'flutterwave' => [
+        'url' => env('FLUTTERWAVE_URL', 'https://api.flutterwave.com/v3'),
+        'secret_key' => env('FLUTTERWAVE_SECRET_KEY'),
+        'public_key' => env('FLUTTERWAVE_PUBLIC_KEY'),
+        'webhook_hash' => env('FLUTTERWAVE_WEBHOOK_HASH'),
+        // Flutterwave requires this — where it redirects the browser after
+        // the hosted checkout page completes. The client app handles the
+        // landing (deep link or lightweight page); actual payment
+        // confirmation still goes through POST /payments/{reference}/verify
+        // or the webhook, not this redirect.
+        'redirect_url' => env('FLUTTERWAVE_REDIRECT_URL', env('APP_URL', 'http://localhost').'/payments/callback'),
+    ],
+
+    'cloudinary' => [
+        'cloud_name' => env('CLOUDINARY_CLOUD_NAME'),
+        'api_key' => env('CLOUDINARY_API_KEY'),
+        'api_secret' => env('CLOUDINARY_API_SECRET'),
+    ],
+
 ];

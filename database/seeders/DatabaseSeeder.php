@@ -2,24 +2,33 @@
 
 namespace Database\Seeders;
 
+use App\Models\Institution;
 use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-    use WithoutModelEvents;
-
     /**
      * Seed the application's database.
+     *
+     * Model events are left enabled (no WithoutModelEvents) — VehicleSeeder
+     * relies on Vehicle's `created` event to auto-generate seats.
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        $this->call([
+            RoleSeeder::class,
+            InstitutionSeeder::class,
+            VehicleSeeder::class,
+            FaqSeeder::class,
+        ]);
 
-        User::factory()->create([
+        $user = User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
+            'institution_id' => Institution::query()->first()?->id,
         ]);
+
+        $user->assignRole('corps_member');
     }
 }
