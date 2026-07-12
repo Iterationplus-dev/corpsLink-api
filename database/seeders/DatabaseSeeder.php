@@ -26,7 +26,10 @@ class DatabaseSeeder extends Seeder
         $user = User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
-            'institution_id' => Institution::query()->first()?->id,
+            // UNILAG specifically — it's one of the handful of institutions
+            // VehicleSeeder gives demo vehicles to, so this user can
+            // actually exercise the booking flow against seeded data.
+            'institution_id' => Institution::query()->where('abbreviation', 'UNILAG')->first()?->id,
         ]);
 
         $user->assignRole('corps_member');

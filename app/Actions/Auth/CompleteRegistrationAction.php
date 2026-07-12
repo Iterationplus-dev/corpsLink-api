@@ -40,9 +40,13 @@ class CompleteRegistrationAction
                 'state_code' => $pending->state_code,
                 'batch' => $pending->batch,
                 'stream' => $pending->stream,
-                'email_verified_at' => now(),
                 'notification_preferences' => User::DEFAULT_NOTIFICATION_PREFERENCES,
             ]);
+
+            // Not mass-assignable (email_verified_at is a system-managed
+            // timestamp, not user input) — the registration OTP step already
+            // proved ownership of this email, so carry that over directly.
+            $user->forceFill(['email_verified_at' => now()])->save();
 
             $user->assignRole('corps_member');
 

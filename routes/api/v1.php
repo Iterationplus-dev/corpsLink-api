@@ -92,7 +92,11 @@ Route::middleware('auth:sanctum')->prefix('account')->name('account.')->group(fu
     Route::delete('device-tokens/{deviceToken}', [DeviceTokenController::class, 'destroy'])->name('device-tokens.destroy');
 });
 
-Route::middleware('auth:sanctum')->prefix('institutions')->name('institutions.')->group(function () {
+// Public — no auth required. The registration wizard's School step needs
+// to populate the institution picker before the user has an account/token
+// (institutions/{id}/vehicles kept alongside it for the same reason — a
+// mid-registration user browsing institutions has no token to attach).
+Route::prefix('institutions')->name('institutions.')->group(function () {
     Route::get('/', [InstitutionController::class, 'index'])->name('index');
     Route::get('{institution}', [InstitutionController::class, 'show'])->name('show');
     Route::get('{institution}/vehicles', [InstitutionVehicleController::class, 'index'])->name('vehicles.index');

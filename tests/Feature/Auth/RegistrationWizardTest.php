@@ -83,10 +83,12 @@ class RegistrationWizardTest extends TestCase
 
         $complete->assertCreated();
         $complete->assertJsonPath('user.email', 'adaeze.o@example.com');
+        $complete->assertJsonPath('user.emailVerified', true);
         $this->assertNotEmpty($complete->json('tokens.accessToken'));
 
         $user = User::query()->where('email', 'adaeze.o@example.com')->first();
         $this->assertNotNull($user);
+        $this->assertNotNull($user->email_verified_at);
         $this->assertTrue($user->hasRole('corps_member'));
         $this->assertNotNull($user->nextOfKin);
         $this->assertSame(0, PendingRegistration::query()->count());

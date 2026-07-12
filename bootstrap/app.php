@@ -47,6 +47,12 @@ return Application::configure(basePath: dirname(__DIR__))
         // Prunes PendingRegistration, VerificationCode, and SeatHold rows
         // (all Prunable since Phases 1–2) — never actually scheduled until now.
         $schedule->command('model:prune')->daily();
+
+        // Drives the Horizon dashboard's job/queue metrics graphs. Horizon
+        // itself doesn't run on Windows (needs pcntl/posix — see composer.json
+        // platform overrides), but this schedule entry is harmless locally
+        // and is what production (Linux) needs to populate the graphs.
+        $schedule->command('horizon:snapshot')->everyFiveMinutes();
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         $exceptions->shouldRenderJsonWhen(
