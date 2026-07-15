@@ -39,7 +39,7 @@ class ProfileController extends Controller
     {
         $user = $action->handle($request->user(), $request->file('avatar'));
 
-        return $this->success(UserResource::make($user));
+        return $this->success(UserResource::make($user->load(['institution', 'nextOfKin'])));
     }
 
     public function destroy(DeleteAccountRequest $request, DeleteAccountAction $action): JsonResponse

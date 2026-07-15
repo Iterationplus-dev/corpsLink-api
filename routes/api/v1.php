@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\V1\Account\ChecklistController;
 use App\Http\Controllers\Api\V1\Account\DeviceTokenController;
 use App\Http\Controllers\Api\V1\Account\EmailController;
 use App\Http\Controllers\Api\V1\Account\NextOfKinController;
@@ -77,6 +78,11 @@ Route::middleware('auth:sanctum')->prefix('notifications')->name('notifications.
 
     Route::get('preferences', [NotificationPreferenceController::class, 'show'])->name('preferences.show');
     Route::patch('preferences', [NotificationPreferenceController::class, 'update'])->name('preferences.update');
+});
+
+Route::middleware('auth:sanctum')->prefix('checklist')->name('checklist.')->group(function () {
+    Route::get('/', [ChecklistController::class, 'index'])->name('index');
+    Route::patch('{checklistItem}/toggle', [ChecklistController::class, 'toggle'])->name('toggle');
 });
 
 // Extra capabilities this particular frontend build doesn't have screens for

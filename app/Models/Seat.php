@@ -84,7 +84,7 @@ class Seat extends Model
 
     public function row(): int
     {
-        return intdiv($this->seat_number - 1, 4) + 1;
+        return intdiv($this->seat_number - 1, 4);
     }
 
     public function positionInRow(): int
@@ -93,12 +93,15 @@ class Seat extends Model
     }
 
     /**
-     * 1-indexed visual column within the row (1-4), for grid layouts that
-     * want a column number rather than just window/aisle.
+     * 0,1,3,4 — index 2 is intentionally skipped, since the frontend's fixed
+     * 5-column grid template reserves that track for the aisle gap rather
+     * than a seat.
      */
     public function col(): int
     {
-        return $this->positionInRow() + 1;
+        $position = $this->positionInRow();
+
+        return $position < 2 ? $position : $position + 1;
     }
 
     public function isWindow(): bool

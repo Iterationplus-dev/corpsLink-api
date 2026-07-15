@@ -40,4 +40,17 @@ class InstitutionListTest extends TestCase
 
         $response->assertOk();
     }
+
+    public function test_search_matches_regardless_of_case(): void
+    {
+        $institution = Institution::query()->where('abbreviation', 'UNILAG')->firstOrFail();
+
+        $response = $this->getJson('/api/v1/institutions?search=unilag');
+
+        $response->assertOk();
+        $this->assertContains(
+            $institution->id,
+            collect($response->json())->pluck('id')->all(),
+        );
+    }
 }

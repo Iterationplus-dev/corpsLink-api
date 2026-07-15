@@ -20,7 +20,11 @@ class InstitutionFactory extends Factory
 
         return [
             'name' => $name,
-            'abbreviation' => strtoupper(fake()->unique()->lexify('???')),
+            // 3 random letters (17,576 combos) used to collide with the real
+            // seeded dataset's ~650 short acronyms once both existed in the
+            // same database — wider + prefixed keeps fake data unmistakably
+            // synthetic and practically collision-proof against real rows.
+            'abbreviation' => 'TEST-'.strtoupper(fake()->unique()->lexify('??????')),
             'type' => fake()->randomElement(InstitutionType::cases()),
             'state' => fake()->state(),
             'logo_path' => null,

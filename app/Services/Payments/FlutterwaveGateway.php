@@ -4,6 +4,8 @@ namespace App\Services\Payments;
 
 use App\Contracts\PaymentGatewayContract;
 use App\Models\Payment;
+use Illuminate\Http\Client\ConnectionException;
+use Illuminate\Http\Client\RequestException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
@@ -42,9 +44,23 @@ class FlutterwaveGateway implements PaymentGatewayContract
 
     public function verify(string $reference): PaymentVerificationResult
     {
-        $response = Http::withToken($this->secretKey)
-            ->get("{$this->url}/transactions/verify_by_reference", ['tx_ref' => $reference])
-            ->throw();
+        try {
+            $response = Http::withToken($this->secretKey)
+                ->get("{$this->url}/transactions/verify_by_reference", ['tx_ref' => $reference])
+                ->throw();
+        } catch (RequestException|ConnectionException $e) {
+            // Gateway rejected/couldn't find the reference (e.g. checkout was
+            // never completed) or was unreachable — surface as a normal
+            // failed-verification outcome rather than an unhandled 500, so
+            // ConfirmPaymentAction's existing graceful-failure path handles it.
+            return new PaymentVerificationResult(
+                successful: false,
+                amount: 0,
+                currency: 'NGN',
+                gatewayReference: null,
+                raw: ['error' => $e->getMessage()],
+            );
+        }
 
         $data = $response->json('data', []);
 

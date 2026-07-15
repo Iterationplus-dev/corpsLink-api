@@ -48,15 +48,21 @@ class SeatMapTest extends TestCase
 
         $byNumber = collect($response->json())->keyBy('label');
 
-        // Row 1: seats 1-4 → window, aisle, aisle, window.
-        $this->assertSame(1, $byNumber[1]['row']);
+        // Row 0: seats 1-4 → window, aisle, aisle, window.
+        // col skips index 2 (0,1,3,4) — the frontend's fixed 5-column grid
+        // template reserves that track for the aisle gap, not a seat.
+        $this->assertSame(0, $byNumber[1]['row']);
+        $this->assertSame(0, $byNumber[1]['col']);
         $this->assertSame('window', $byNumber[1]['position']);
+        $this->assertSame(1, $byNumber[2]['col']);
         $this->assertSame('aisle', $byNumber[2]['position']);
+        $this->assertSame(3, $byNumber[3]['col']);
         $this->assertSame('aisle', $byNumber[3]['position']);
+        $this->assertSame(4, $byNumber[4]['col']);
         $this->assertSame('window', $byNumber[4]['position']);
 
-        // Row 2 starts at seat 5.
-        $this->assertSame(2, $byNumber[5]['row']);
+        // Row 1 starts at seat 5.
+        $this->assertSame(1, $byNumber[5]['row']);
         $this->assertSame('window', $byNumber[5]['position']);
     }
 }

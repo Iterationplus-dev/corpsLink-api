@@ -3,3906 +3,4557 @@
         "name": "Abubakar Tafawa Balewa University, Bauchi",
         "abbreviation": "ATBU",
         "type": "federal_university",
-        "state": "Bauchi"
+        "state": "Bauchi",
+        "logo_path": "corpslink/institutions/crmbacprohpcmktzbusn"
     },
     {
         "name": "Adeyemi Federal University of Education, Ondo",
         "abbreviation": "AFUED",
         "type": "federal_university",
-        "state": "Ondo"
+        "state": "Ondo",
+        "logo_path": "corpslink/institutions/zliuiptlw2ickn7uylex"
     },
     {
         "name": "Admiralty University of Nigeria, Ibusa",
         "abbreviation": "ADUN",
         "type": "federal_university",
-        "state": "Delta"
+        "state": "Delta",
+        "logo_path": "corpslink/institutions/w5nlph78omxjnmcctuyj"
     },
     {
         "name": "African Aviation and Aerospace University",
         "abbreviation": "AAAU",
         "type": "federal_university",
-        "state": "Nasarawa"
+        "state": "Nasarawa",
+        "logo_path": "corpslink/institutions/qxsue3naxatdbuq3dson"
     },
     {
         "name": "Ahmadu Bello University, Zaria",
         "abbreviation": "ABU",
         "type": "federal_university",
-        "state": "Kaduna"
+        "state": "Kaduna",
+        "logo_path": "corpslink/institutions/gevw1by5f0fgo6ecpv0l"
     },
     {
         "name": "Air Force Institute of Technology, Kaduna",
         "abbreviation": "AFIT",
         "type": "federal_university",
-        "state": "Kaduna"
+        "state": "Kaduna",
+        "logo_path": "corpslink/institutions/dwygd9zwwvmflbq6vujd"
     },
     {
         "name": "Alex Ekwueme Federal University, Ndufu-Alike",
         "abbreviation": "AE-FUNAI",
         "type": "federal_university",
-        "state": "Ebonyi"
+        "state": "Ebonyi",
+        "logo_path": "corpslink/institutions/dccwc1gchzypghaneo8a"
     },
     {
         "name": "Alvan Ikoku Federal University of Education, Owerri",
         "abbreviation": "AIFUE",
         "type": "federal_university",
-        "state": "Imo"
+        "state": "Imo",
+        "logo_path": "corpslink/institutions/uomq8zeycjl6dgc7f8p9"
     },
     {
         "name": "Bayero University, Kano",
         "abbreviation": "BUK",
         "type": "federal_university",
-        "state": "Kano"
+        "state": "Kano",
+        "logo_path": "corpslink/institutions/fyvtz0glooaqebu6dofj"
     },
     {
         "name": "David Nweze Umahi Federal University of Medical Sciences, Uburu",
         "abbreviation": "DNUFUMS",
         "type": "federal_university",
-        "state": "Ebonyi"
+        "state": "Ebonyi",
+        "logo_path": "corpslink/institutions/cmfcskydhas5nlqysa3j"
     },
     {
         "name": "Federal University of Agriculture and Developmental Studies, Iragbiji",
         "abbreviation": "FUADS",
         "type": "federal_university",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/yadegzbatsmkjvpdp8rj"
     },
     {
         "name": "Federal University of Agriculture and Technology, Obio-Akpa",
         "abbreviation": "FUATOBIOAKPA",
         "type": "federal_university",
-        "state": "Akwa Ibom"
+        "state": "Akwa Ibom",
+        "logo_path": "corpslink/institutions/whsfs5xlouvookk68anw"
     },
     {
         "name": "Federal University of Agriculture and Technology, Okeho",
         "abbreviation": "FUATOKEHO",
         "type": "federal_university",
-        "state": "Oyo"
+        "state": "Oyo",
+        "logo_path": "corpslink/institutions/qan2oiypw7hadnraqjmu"
     },
     {
         "name": "Federal University of Agriculture, Abeokuta",
         "abbreviation": "FUNAAB",
         "type": "federal_university",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/onwqdl6xegqtjuvlwe6d"
     },
     {
         "name": "Federal University of Agriculture, Bassambiri",
         "abbreviation": "FUABASSAMBIRI",
         "type": "federal_university",
-        "state": "Bayelsa"
+        "state": "Bayelsa",
+        "logo_path": "corpslink/institutions/up09ncydvoz3uy2b0oor"
     },
     {
         "name": "Federal University of Agriculture, Mubi",
         "abbreviation": "FUAMUBI",
         "type": "federal_university",
-        "state": "Adamawa"
+        "state": "Adamawa",
+        "logo_path": "corpslink/institutions/bpbs9oa5voy63azm0pco"
     },
     {
         "name": "Federal University of Agriculture, Zuru",
         "abbreviation": "FUAZURU",
         "type": "federal_university",
-        "state": "Kebbi"
+        "state": "Kebbi",
+        "logo_path": "corpslink/institutions/anewj5di1pqfp7bsvgdd"
     },
     {
         "name": "Federal University of Allied Health Sciences, Enugu",
         "abbreviation": "FUAHS",
         "type": "federal_university",
-        "state": "Enugu"
+        "state": "Enugu",
+        "logo_path": "corpslink/institutions/wb0g1jfbva71pkfeuacs"
     },
     {
         "name": "Federal University of Applied Sciences, Kachia",
         "abbreviation": "FUASK",
         "type": "federal_university",
-        "state": "Kaduna"
+        "state": "Kaduna",
+        "logo_path": "corpslink/institutions/t1ppqe4f79xiu4nics6p"
     },
     {
         "name": "Federal University of Education, Kontagora",
         "abbreviation": "FUEKONTAGORA",
         "type": "federal_university",
-        "state": "Niger"
+        "state": "Niger",
+        "logo_path": "corpslink/institutions/bagbxtyiaasakvkuq7hc"
     },
     {
         "name": "Federal University of Education, Pankshin",
         "abbreviation": "FUEPANKSHIN",
         "type": "federal_university",
-        "state": "Plateau"
+        "state": "Plateau",
+        "logo_path": "corpslink/institutions/tfid9kfiojzj2zblvcgo"
     },
     {
         "name": "Federal University of Education, Zaria",
         "abbreviation": "FUEZARIA",
         "type": "federal_university",
-        "state": "Kaduna"
+        "state": "Kaduna",
+        "logo_path": "corpslink/institutions/tmoi7i3mfnjauynyac1z"
     },
     {
         "name": "Federal University of Environment and Technology, Tai",
         "abbreviation": "FUETY",
         "type": "federal_university",
-        "state": "Rivers"
+        "state": "Rivers",
+        "logo_path": "corpslink/institutions/bluuiwz4af4aaxuobgeb"
     },
     {
         "name": "Federal University of Health Science and Technology, Tsafe",
         "abbreviation": "FUHSTTSAFE",
         "type": "federal_university",
-        "state": "Zamfara"
+        "state": "Zamfara",
+        "logo_path": "corpslink/institutions/aumsmom4vwlh0khixa5d"
     },
     {
         "name": "Federal University of Health Sciences, Azare",
         "abbreviation": "FUHSAZARE",
         "type": "federal_university",
-        "state": "Bauchi"
+        "state": "Bauchi",
+        "logo_path": "corpslink/institutions/vqn7swdpvhi1ac1zkl2m"
     },
     {
         "name": "Federal University of Health Sciences, Ila Orangun",
         "abbreviation": "FUHSILAORANGUN",
         "type": "federal_university",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/g02dpofrlgf5kmdrbfse"
     },
     {
         "name": "Federal University of Health Sciences, Katsina",
         "abbreviation": "FUHSKATSINA",
         "type": "federal_university",
-        "state": "Katsina"
+        "state": "Katsina",
+        "logo_path": "corpslink/institutions/znriyx8gtz9r61kvva88"
     },
     {
         "name": "Federal University of Health Sciences, Kwale",
         "abbreviation": "FUHSKWALE",
         "type": "federal_university",
-        "state": "Delta"
+        "state": "Delta",
+        "logo_path": "corpslink/institutions/wqegwoi6lyk3muxpo8nr"
     },
     {
         "name": "Federal University of Health Sciences, Otukpo",
         "abbreviation": "FUHSOTUKPO",
         "type": "federal_university",
-        "state": "Benue"
+        "state": "Benue",
+        "logo_path": "corpslink/institutions/bykzkisofos7we6zqty2"
     },
     {
         "name": "Federal University of Medicine and Medical Sciences, Abeokuta",
         "abbreviation": "FUMMED",
         "type": "federal_university",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/lanwtr4d9maalirtknt7"
     },
     {
         "name": "Federal University of Petroleum Resources, Effurun",
         "abbreviation": "FUPRE",
         "type": "federal_university",
-        "state": "Delta"
+        "state": "Delta",
+        "logo_path": "corpslink/institutions/enpkf38xzkfgrsbtqhvh"
     },
     {
         "name": "Federal University of Science and Technology, Epe",
         "abbreviation": "FUSTEPE",
         "type": "federal_university",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/tcnfmoe1lu1zzl1wspk0"
     },
     {
         "name": "Federal University of Science and Technology, Kabo",
         "abbreviation": "FUSTKABO",
         "type": "federal_university",
-        "state": "Kano"
+        "state": "Kano",
+        "logo_path": "corpslink/institutions/faiqssmsrvcdzknadfna"
     },
     {
         "name": "Federal University of Technology and Environmental Studies, Iyin-Ekiti",
         "abbreviation": "FUTES",
         "type": "federal_university",
-        "state": "Ekiti"
+        "state": "Ekiti",
+        "logo_path": "corpslink/institutions/aqlsz78tg75lg7c04yug"
     },
     {
         "name": "Federal University of Technology, Akure",
         "abbreviation": "FUTA",
         "type": "federal_university",
-        "state": "Ondo"
+        "state": "Ondo",
+        "logo_path": "corpslink/institutions/o3gemg5lzbejgymbigq9"
     },
     {
         "name": "Federal University of Technology, Babura",
         "abbreviation": "FUTBABURA",
         "type": "federal_university",
-        "state": "Jigawa"
+        "state": "Jigawa",
+        "logo_path": "corpslink/institutions/oshqoaz4r57xeuo1ws4d"
     },
     {
         "name": "Federal University of Technology, Ikot Abasi",
         "abbreviation": "FUTIKOTABASI",
         "type": "federal_university",
-        "state": "Akwa Ibom"
+        "state": "Akwa Ibom",
+        "logo_path": "corpslink/institutions/wfolrslaf9vtzvpbuqgj"
     },
     {
         "name": "Federal University of Technology, Minna",
         "abbreviation": "FUTMINNA",
         "type": "federal_university",
-        "state": "Niger"
+        "state": "Niger",
+        "logo_path": "corpslink/institutions/zboc0lql4hp9po4ub3em"
     },
     {
         "name": "Federal University of Technology, Owerri",
         "abbreviation": "FUTO",
         "type": "federal_university",
-        "state": "Imo"
+        "state": "Imo",
+        "logo_path": "corpslink/institutions/fglv166tsu91wkkmpzb3"
     },
     {
         "name": "Federal University of Transportation, Daura",
         "abbreviation": "FUTD",
         "type": "federal_university",
-        "state": "Katsina"
+        "state": "Katsina",
+        "logo_path": "corpslink/institutions/sqrox2tbzhhfipmozcvz"
     },
     {
         "name": "Federal University, Birnin Kebbi",
         "abbreviation": "FUBK",
         "type": "federal_university",
-        "state": "Kebbi"
+        "state": "Kebbi",
+        "logo_path": "corpslink/institutions/vshgyaqgrs6cxw4fhlxn"
     },
     {
         "name": "Federal University, Dutse",
         "abbreviation": "FUD",
         "type": "federal_university",
-        "state": "Jigawa"
+        "state": "Jigawa",
+        "logo_path": "corpslink/institutions/fqw1kuw5uhtaxwxxxxvw"
     },
     {
         "name": "Federal University, Dutsin-Ma",
         "abbreviation": "FUDMA",
         "type": "federal_university",
-        "state": "Katsina"
+        "state": "Katsina",
+        "logo_path": "corpslink/institutions/qr0cws2bxsoqqeknfbgl"
     },
     {
         "name": "Federal University, Gashua",
         "abbreviation": "FUGASHUA",
         "type": "federal_university",
-        "state": "Yobe"
+        "state": "Yobe",
+        "logo_path": "corpslink/institutions/khr5n84fywl1jqx0o2u7"
     },
     {
         "name": "Federal University, Gusau",
         "abbreviation": "FUGUSAU",
         "type": "federal_university",
-        "state": "Zamfara"
+        "state": "Zamfara",
+        "logo_path": "corpslink/institutions/j2gvyfrglxaor4bm8ece"
     },
     {
         "name": "Federal University, Kashere",
         "abbreviation": "FUKASHERE",
         "type": "federal_university",
-        "state": "Gombe"
+        "state": "Gombe",
+        "logo_path": "corpslink/institutions/rafv41ultelrxtbsfiiy"
     },
     {
         "name": "Federal University, Lafia",
         "abbreviation": "FULAFIA",
         "type": "federal_university",
-        "state": "Nasarawa"
+        "state": "Nasarawa",
+        "logo_path": "corpslink/institutions/hrvhfooe3bsw37bdwij5"
     },
     {
         "name": "Federal University, Lokoja",
         "abbreviation": "FULOKOJA",
         "type": "federal_university",
-        "state": "Kogi"
+        "state": "Kogi",
+        "logo_path": "corpslink/institutions/u3uvfssycdbj0s2hp43z"
     },
     {
         "name": "Federal University, Otuoke",
         "abbreviation": "FUOTUOKE",
         "type": "federal_university",
-        "state": "Bayelsa"
+        "state": "Bayelsa",
+        "logo_path": "corpslink/institutions/g9ikfr2ipco6zybl8op5"
     },
     {
         "name": "Federal University, Oye-Ekiti",
         "abbreviation": "FUOYE",
         "type": "federal_university",
-        "state": "Ekiti"
+        "state": "Ekiti",
+        "logo_path": "corpslink/institutions/xr3cjq5pvcyqfxkr4sfd"
     },
     {
         "name": "Federal University, Wukari",
         "abbreviation": "FUWUKARI",
         "type": "federal_university",
-        "state": "Taraba"
+        "state": "Taraba",
+        "logo_path": "corpslink/institutions/zpd3qvce2x7oezqiftii"
     },
     {
         "name": "Joseph Sarwuan Tarka University, Makurdi",
         "abbreviation": "JOSTUM",
         "type": "federal_university",
-        "state": "Benue"
+        "state": "Benue",
+        "logo_path": "corpslink/institutions/uoginc2pf3cgudt023o1"
     },
     {
         "name": "Michael Okpara University of Agriculture, Umudike",
         "abbreviation": "MOUAU",
         "type": "federal_university",
-        "state": "Abia"
+        "state": "Abia",
+        "logo_path": "corpslink/institutions/wyeod3txro1ykahfu8ug"
     },
     {
         "name": "Modibbo Adama University, Yola",
         "abbreviation": "MAUTECH",
         "type": "federal_university",
-        "state": "Adamawa"
+        "state": "Adamawa",
+        "logo_path": "corpslink/institutions/djdm0exqhbzpsynujwum"
     },
     {
         "name": "National Open University of Nigeria",
         "abbreviation": "NOUN",
         "type": "federal_university",
-        "state": "FCT"
+        "state": "FCT",
+        "logo_path": "corpslink/institutions/z7bufjo1cpshuhg4ucvr"
     },
     {
         "name": "National University of Science and Technology, Abuja",
         "abbreviation": "NUST",
         "type": "federal_university",
-        "state": "FCT"
+        "state": "FCT",
+        "logo_path": "corpslink/institutions/xhikrhx1ik1lv5i3jkni"
     },
     {
         "name": "Nigeria Police Academy, Wudil",
         "abbreviation": "POLAC",
         "type": "federal_university",
-        "state": "Kano"
+        "state": "Kano",
+        "logo_path": "corpslink/institutions/ihyknzdyhmw72ehffnb1"
     },
     {
         "name": "Nigerian Army University, Biu",
         "abbreviation": "NAUB",
         "type": "federal_university",
-        "state": "Borno"
+        "state": "Borno",
+        "logo_path": "corpslink/institutions/tt0zlvre6vodjnwodnpw"
     },
     {
         "name": "Nigerian Defence Academy, Kaduna",
         "abbreviation": "NDA",
         "type": "federal_university",
-        "state": "Kaduna"
+        "state": "Kaduna",
+        "logo_path": "corpslink/institutions/uriqddmfc8zoxdthk8tx"
     },
     {
         "name": "Nigerian Maritime University, Okerenkoko",
         "abbreviation": "NMU",
         "type": "federal_university",
-        "state": "Delta"
+        "state": "Delta",
+        "logo_path": "corpslink/institutions/qob4sj8fknvihhizflah"
     },
     {
         "name": "Nnamdi Azikiwe University, Awka",
         "abbreviation": "UNIZIK",
         "type": "federal_university",
-        "state": "Anambra"
+        "state": "Anambra",
+        "logo_path": "corpslink/institutions/guxrvhnzxsnb59i8pjsq"
     },
     {
         "name": "Obafemi Awolowo University, Ile-Ife",
         "abbreviation": "OAU",
         "type": "federal_university",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/bmabfpoo7qxgozqkmyun"
     },
     {
         "name": "Tai Solarin Federal University of Education, Ijagun",
         "abbreviation": "TASFUED",
         "type": "federal_university",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/teypklojywdrdp9j6pzn"
     },
     {
         "name": "University of Abuja",
         "abbreviation": "UNIABUJA",
         "type": "federal_university",
-        "state": "FCT"
+        "state": "FCT",
+        "logo_path": "corpslink/institutions/tosztlxh9fdmjd2csndk"
     },
     {
         "name": "University of Benin",
         "abbreviation": "UNIBEN",
         "type": "federal_university",
-        "state": "Edo"
+        "state": "Edo",
+        "logo_path": "corpslink/institutions/ei81aiww6dntpkwwqzz0"
     },
     {
         "name": "University of Calabar",
         "abbreviation": "UNICAL",
         "type": "federal_university",
-        "state": "Cross River"
+        "state": "Cross River",
+        "logo_path": "corpslink/institutions/zs777boin6i0vjddxnj2"
     },
     {
         "name": "University of Ibadan",
         "abbreviation": "UI",
         "type": "federal_university",
-        "state": "Oyo"
+        "state": "Oyo",
+        "logo_path": "corpslink/institutions/psckwoo0xo1feylxcsmr"
     },
     {
         "name": "University of Ilorin",
         "abbreviation": "UNILORIN",
         "type": "federal_university",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/nzszka8d6fj4h0mtzbbk"
     },
     {
         "name": "University of Jos",
         "abbreviation": "UNIJOS",
         "type": "federal_university",
-        "state": "Plateau"
+        "state": "Plateau",
+        "logo_path": "corpslink/institutions/pkcguanaco3wa5a6cwkf"
     },
     {
         "name": "University of Lagos",
         "abbreviation": "UNILAG",
         "type": "federal_university",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/fdku3lb5e3x1lkhgo6nl"
     },
     {
         "name": "University of Maiduguri",
         "abbreviation": "UNIMAID",
         "type": "federal_university",
-        "state": "Borno"
+        "state": "Borno",
+        "logo_path": "corpslink/institutions/t8ibxxsksuktqoucu7qt"
     },
     {
         "name": "University of Maritime Studies, Oron",
         "abbreviation": "UNIMAR",
         "type": "federal_university",
-        "state": "Akwa Ibom"
+        "state": "Akwa Ibom",
+        "logo_path": "corpslink/institutions/b4wcdkpwgxy9wz4qhaga"
     },
     {
         "name": "University of Nigeria, Nsukka",
         "abbreviation": "UNN",
         "type": "federal_university",
-        "state": "Enugu"
+        "state": "Enugu",
+        "logo_path": "corpslink/institutions/bwvvq54i4jrxih2aoke6"
     },
     {
         "name": "University of Port Harcourt",
         "abbreviation": "UNIPORT",
         "type": "federal_university",
-        "state": "Rivers"
+        "state": "Rivers",
+        "logo_path": "corpslink/institutions/ehhwf7ydpi2nuvaugdga"
     },
     {
         "name": "University of Uyo",
         "abbreviation": "UNIUYO",
         "type": "federal_university",
-        "state": "Akwa Ibom"
+        "state": "Akwa Ibom",
+        "logo_path": "corpslink/institutions/zch74tyxqmef3jq7ftih"
     },
     {
         "name": "Usmanu Danfodiyo University, Sokoto",
         "abbreviation": "UDUS",
         "type": "federal_university",
-        "state": "Sokoto"
+        "state": "Sokoto",
+        "logo_path": "corpslink/institutions/kwvonbc5tlbtzmsomobz"
     },
     {
         "name": "Yusuf Maitama Sule Federal University of Education, Kano",
         "abbreviation": "YUMSFUE",
         "type": "federal_university",
-        "state": "Kano"
+        "state": "Kano",
+        "logo_path": "corpslink/institutions/g5xzr39itjtx8o8d9oej"
     },
     {
         "name": "AbdulKadir Kure University, Minna",
         "abbreviation": "AKUM",
         "type": "state_university",
-        "state": "Niger"
+        "state": "Niger",
+        "logo_path": "corpslink/institutions/ukmmrh0xiwk7bumdsj8z"
     },
     {
         "name": "Abia State University, Uturu",
         "abbreviation": "ABSU",
         "type": "state_university",
-        "state": "Abia"
+        "state": "Abia",
+        "logo_path": "corpslink/institutions/iy199xgp2oxgj5xb82nm"
     },
     {
         "name": "Adamawa State University, Mubi",
         "abbreviation": "ADSU",
         "type": "state_university",
-        "state": "Adamawa"
+        "state": "Adamawa",
+        "logo_path": "corpslink/institutions/mcgc0tolklqcn5mmtdv2"
     },
     {
         "name": "Adekunle Ajasin University, Akungba",
         "abbreviation": "AAUA",
         "type": "state_university",
-        "state": "Ondo"
+        "state": "Ondo",
+        "logo_path": "corpslink/institutions/xmpwognktpdgauvjbsam"
     },
     {
         "name": "Akwa Ibom State University, Ikot Akpaden",
         "abbreviation": "AKSU",
         "type": "state_university",
-        "state": "Akwa Ibom"
+        "state": "Akwa Ibom",
+        "logo_path": "corpslink/institutions/ludd2eibaczubrley8mh"
     },
     {
         "name": "Aliko Dangote University of Science and Technology, Wudil",
         "abbreviation": "ADUSTECH",
         "type": "state_university",
-        "state": "Kano"
+        "state": "Kano",
+        "logo_path": "corpslink/institutions/gk7erkcq8marh3lpkg47"
     },
     {
         "name": "Ambrose Alli University, Ekpoma",
         "abbreviation": "AAU",
         "type": "state_university",
-        "state": "Edo"
+        "state": "Edo",
+        "logo_path": "corpslink/institutions/sakh7jaxocugtf0x99of"
     },
     {
         "name": "Bamidele Olumilua University of Education, Science and Technology, Ikere-Ekiti",
         "abbreviation": "BOUESTI",
         "type": "state_university",
-        "state": "Ekiti"
+        "state": "Ekiti",
+        "logo_path": "corpslink/institutions/ucmlfyyiv3ojsca5x2by"
     },
     {
         "name": "Bauchi State University, Gadau",
         "abbreviation": "BASUG",
         "type": "state_university",
-        "state": "Bauchi"
+        "state": "Bauchi",
+        "logo_path": "corpslink/institutions/w200upyb74cr5dfh2vqf"
     },
     {
         "name": "Bayelsa Medical University",
         "abbreviation": "BMU",
         "type": "state_university",
-        "state": "Bayelsa"
+        "state": "Bayelsa",
+        "logo_path": "corpslink/institutions/bxcebf6c1jr4hyxplsjm"
     },
     {
         "name": "Chukwuemeka Odumegwu Ojukwu University, Uli",
         "abbreviation": "COOU",
         "type": "state_university",
-        "state": "Anambra"
+        "state": "Anambra",
+        "logo_path": "corpslink/institutions/y00goo8lm1tuwvlbstdi"
     },
     {
         "name": "Confluence University of Science and Technology, Osara",
         "abbreviation": "CUSTECH",
         "type": "state_university",
-        "state": "Kogi"
+        "state": "Kogi",
+        "logo_path": "corpslink/institutions/ciniwqkwkutzmocydq6m"
     },
     {
         "name": "Delta State University of Science and Technology, Ozoro",
         "abbreviation": "DSUST",
         "type": "state_university",
-        "state": "Delta"
+        "state": "Delta",
+        "logo_path": "corpslink/institutions/yddwe5zkju9k0eesagis"
     },
     {
         "name": "Delta State University, Abraka",
         "abbreviation": "DELSU",
         "type": "state_university",
-        "state": "Delta"
+        "state": "Delta",
+        "logo_path": "corpslink/institutions/rjvyy5lgtioj1a1g77ij"
     },
     {
         "name": "Dennis Osadebe University, Asaba",
         "abbreviation": "DOU",
         "type": "state_university",
-        "state": "Delta"
+        "state": "Delta",
+        "logo_path": "corpslink/institutions/xh4q3g6tpmlys7rwpqni"
     },
     {
         "name": "Ebonyi State University, Abakaliki",
         "abbreviation": "EBSU",
         "type": "state_university",
-        "state": "Ebonyi"
+        "state": "Ebonyi",
+        "logo_path": "corpslink/institutions/evg5mg8v40m7jksjx8mr"
     },
     {
         "name": "Edo State University, Iyamho",
         "abbreviation": "EDSU",
         "type": "state_university",
-        "state": "Edo"
+        "state": "Edo",
+        "logo_path": "corpslink/institutions/frmqxzvuvj8mf5sz9ehs"
     },
     {
         "name": "Ekiti State University",
         "abbreviation": "EKSU",
         "type": "state_university",
-        "state": "Ekiti"
+        "state": "Ekiti",
+        "logo_path": "corpslink/institutions/g8wo60bfosznnk7krnsw"
     },
     {
         "name": "Emmanuel Alayande University of Education, Oyo",
         "abbreviation": "EAUED",
         "type": "state_university",
-        "state": "Oyo"
+        "state": "Oyo",
+        "logo_path": "corpslink/institutions/p1yuihihyhisxetnmfzu"
     },
     {
         "name": "Enugu State University of Science and Technology",
         "abbreviation": "ESUT",
         "type": "state_university",
-        "state": "Enugu"
+        "state": "Enugu",
+        "logo_path": "corpslink/institutions/dgxyvmef47ftrncirovj"
     },
     {
         "name": "First Technical University, Ibadan",
         "abbreviation": "TECHU",
         "type": "state_university",
-        "state": "Oyo"
+        "state": "Oyo",
+        "logo_path": "corpslink/institutions/avrud6sfcbjad0esfbx7"
     },
     {
         "name": "Gombe State University",
         "abbreviation": "GSU",
         "type": "state_university",
-        "state": "Gombe"
+        "state": "Gombe",
+        "logo_path": "corpslink/institutions/ll4e2zn961dbhardm5dl"
     },
     {
         "name": "Ibrahim Badamasi Babangida University, Lapai",
         "abbreviation": "IBBUL",
         "type": "state_university",
-        "state": "Niger"
+        "state": "Niger",
+        "logo_path": "corpslink/institutions/inimurguu3oewciscuan"
     },
     {
         "name": "Ignatius Ajuru University of Education, Rumuolumeni",
         "abbreviation": "IAUE",
         "type": "state_university",
-        "state": "Rivers"
+        "state": "Rivers",
+        "logo_path": "corpslink/institutions/mxc2pc0dfygzeefwugs2"
     },
     {
         "name": "Imo State University, Owerri",
         "abbreviation": "IMSU",
         "type": "state_university",
-        "state": "Imo"
+        "state": "Imo",
+        "logo_path": "corpslink/institutions/m2mlcuiqpswrpoko7c39"
     },
     {
         "name": "Kaduna State University",
         "abbreviation": "KASU",
         "type": "state_university",
-        "state": "Kaduna"
+        "state": "Kaduna",
+        "logo_path": "corpslink/institutions/wmwdhofao5f9eveuf954"
     },
     {
         "name": "Kashim Ibrahim University, Maiduguri",
         "abbreviation": "KIUMAID",
         "type": "state_university",
-        "state": "Borno"
+        "state": "Borno",
+        "logo_path": "corpslink/institutions/ygqkl3o8u8gfecsqmsbp"
     },
     {
         "name": "Kebbi State University of Science and Technology, Aliero",
         "abbreviation": "KSUSTA",
         "type": "state_university",
-        "state": "Kebbi"
+        "state": "Kebbi",
+        "logo_path": "corpslink/institutions/zho86fnravyrfotdfskz"
     },
     {
         "name": "Kingsley Ozumba Mbadiwe University, Ogboko",
         "abbreviation": "KOMU",
         "type": "state_university",
-        "state": "Imo"
+        "state": "Imo",
+        "logo_path": "corpslink/institutions/ze3dvauf2yr0lvlhnlwu"
     },
     {
         "name": "Kogi State University, Kabba",
         "abbreviation": "KSUKABBA",
         "type": "state_university",
-        "state": "Kogi"
+        "state": "Kogi",
+        "logo_path": "corpslink/institutions/eipg4ycqvri2bujskbt8"
     },
     {
         "name": "Kwara State University of Education, Ilorin",
         "abbreviation": "KWASUED",
         "type": "state_university",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/vmdmlcc8lgihyqbeiqu2"
     },
     {
         "name": "Kwara State University, Ilorin",
         "abbreviation": "KWASU",
         "type": "state_university",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/uw6fctzixqm2ubysemmm"
     },
     {
         "name": "Ladoke Akintola University of Technology, Ogbomoso",
         "abbreviation": "LAUTECH",
         "type": "state_university",
-        "state": "Oyo"
+        "state": "Oyo",
+        "logo_path": "corpslink/institutions/sbsa02yvii7tqfpwowm6"
     },
     {
         "name": "Lagos State University",
         "abbreviation": "LASU",
         "type": "state_university",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/n4z0lwzopsvdqxrrxlna"
     },
     {
         "name": "Lagos State University of Education, Ijanikin",
         "abbreviation": "LASUED",
         "type": "state_university",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/xd947ac9nmqn4uktjein"
     },
     {
         "name": "Lagos State University of Science and Technology, Ikorodu",
         "abbreviation": "LASUSTECH",
         "type": "state_university",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/hdwlvdpo4hkfuzchyjhi"
     },
     {
         "name": "Moshood Abiola University of Science and Technology, Abeokuta",
         "abbreviation": "MASUTECH",
         "type": "state_university",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/xy0i2amri30eami5gthf"
     },
     {
         "name": "Nasarawa State University, Keffi",
         "abbreviation": "NSUK",
         "type": "state_university",
-        "state": "Nasarawa"
+        "state": "Nasarawa",
+        "logo_path": "corpslink/institutions/slmvbdxbs3ydhyeuqxoo"
     },
     {
         "name": "Niger Delta University, Yenagoa",
         "abbreviation": "NDU",
         "type": "state_university",
-        "state": "Bayelsa"
+        "state": "Bayelsa",
+        "logo_path": "corpslink/institutions/s36fwajithkmt2c4zjxz"
     },
     {
         "name": "Northwest University, Kano",
         "abbreviation": "NWUKANO",
         "type": "state_university",
-        "state": "Kano"
+        "state": "Kano",
+        "logo_path": "corpslink/institutions/nwilmjv5arxd0udy1sms"
     },
     {
         "name": "Olabisi Onabanjo University, Ago-Iwoye",
         "abbreviation": "OOU",
         "type": "state_university",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/ijpo4zkh9qhuroo6bwbj"
     },
     {
         "name": "Olusegun Agagu University of Science and Technology, Okitipupa",
         "abbreviation": "OAUSTECH",
         "type": "state_university",
-        "state": "Ondo"
+        "state": "Ondo",
+        "logo_path": "corpslink/institutions/fz1lrvvt3dilpxqd09sx"
     },
     {
         "name": "Osun State University, Osogbo",
         "abbreviation": "UNIOSUN",
         "type": "state_university",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/sd4yaab5e7lnbcempcd7"
     },
     {
         "name": "Plateau State University, Bokkos",
         "abbreviation": "PLASU",
         "type": "state_university",
-        "state": "Plateau"
+        "state": "Plateau",
+        "logo_path": "corpslink/institutions/ucivyhteiejwp5ttbvep"
     },
     {
         "name": "Prince Abubakar Audu University, Anyigba",
         "abbreviation": "PAAU",
         "type": "state_university",
-        "state": "Kogi"
+        "state": "Kogi",
+        "logo_path": "corpslink/institutions/jl09gdbwqbb2sxzjw9u9"
     },
     {
         "name": "Rev. Fr. Moses Orshio Adasu University, Makurdi",
         "abbreviation": "MOAU",
         "type": "state_university",
-        "state": "Benue"
+        "state": "Benue",
+        "logo_path": "corpslink/institutions/p4ajjqztvzstpaszuqbu"
     },
     {
         "name": "Rivers State University",
         "abbreviation": "RSU",
         "type": "state_university",
-        "state": "Rivers"
+        "state": "Rivers",
+        "logo_path": "corpslink/institutions/clcs3pnhkb2obbmtovoq"
     },
     {
         "name": "Shehu Shagari University of Education, Sokoto",
         "abbreviation": "SSUED",
         "type": "state_university",
-        "state": "Sokoto"
+        "state": "Sokoto",
+        "logo_path": "corpslink/institutions/qah6jz2t86q9dup6b6ax"
     },
     {
         "name": "Sokoto State University",
         "abbreviation": "SSU",
         "type": "state_university",
-        "state": "Sokoto"
+        "state": "Sokoto",
+        "logo_path": "corpslink/institutions/jqjooqtucnyetxhgn5zo"
     },
     {
         "name": "State University of Medical and Applied Sciences, Igbo-Eno",
         "abbreviation": "SUMAS",
         "type": "state_university",
-        "state": "Enugu"
+        "state": "Enugu",
+        "logo_path": "corpslink/institutions/btxek3uvlzqnpdip0uj9"
     },
     {
         "name": "Sule Lamido University, Kafin Hausa",
         "abbreviation": "SLU",
         "type": "state_university",
-        "state": "Jigawa"
+        "state": "Jigawa",
+        "logo_path": "corpslink/institutions/na5dw5gt4jg47qxh7lke"
     },
     {
         "name": "Taraba State University, Jalingo",
         "abbreviation": "TSUJALINGO",
         "type": "state_university",
-        "state": "Taraba"
+        "state": "Taraba",
+        "logo_path": "corpslink/institutions/wmdpfdbg3jch5borhvu0"
     },
     {
         "name": "Umaru Musa Yar'Adua University, Katsina",
         "abbreviation": "UMYU",
         "type": "state_university",
-        "state": "Katsina"
+        "state": "Katsina",
+        "logo_path": "corpslink/institutions/trjpouwsay3turbcwhlc"
     },
     {
         "name": "University of Africa, Toru-Orua",
         "abbreviation": "UAT",
         "type": "state_university",
-        "state": "Bayelsa"
+        "state": "Bayelsa",
+        "logo_path": "corpslink/institutions/uy1zv5bvrk5gha66hrka"
     },
     {
         "name": "University of Agriculture and Environmental Sciences, Umuagwo",
         "abbreviation": "UAES",
         "type": "state_university",
-        "state": "Imo"
+        "state": "Imo",
+        "logo_path": "corpslink/institutions/p6enhumlbun10lhx9lsr"
     },
     {
         "name": "University of Cross River State, Calabar",
         "abbreviation": "UNICROSS",
         "type": "state_university",
-        "state": "Cross River"
+        "state": "Cross River",
+        "logo_path": "corpslink/institutions/hf00csecyijhuiiowohr"
     },
     {
         "name": "University of Delta, Agbor",
         "abbreviation": "UNIDEL",
         "type": "state_university",
-        "state": "Delta"
+        "state": "Delta",
+        "logo_path": "corpslink/institutions/ynhbqespbamg2rndbt97"
     },
     {
         "name": "University of Ilesa",
         "abbreviation": "UNIILESA",
         "type": "state_university",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/kxrm6ekpn1mpbi5ka6hv"
     },
     {
         "name": "University of Medical Sciences, Ondo City",
         "abbreviation": "UNIMED",
         "type": "state_university",
-        "state": "Ondo"
+        "state": "Ondo",
+        "logo_path": "corpslink/institutions/qtfxlqjhbtakxq0d4hog"
     },
     {
         "name": "Yobe State University, Damaturu",
         "abbreviation": "YSU",
         "type": "state_university",
-        "state": "Yobe"
+        "state": "Yobe",
+        "logo_path": "corpslink/institutions/qgvxmmjnc9kszpefubmm"
     },
     {
         "name": "Zamfara State University",
         "abbreviation": "ZASU",
         "type": "state_university",
-        "state": "Zamfara"
+        "state": "Zamfara",
+        "logo_path": "corpslink/institutions/malipvhdphljilazg2ye"
     },
     {
         "name": "Abdulrasaq Abubakar Toyin University",
         "abbreviation": "AATU",
         "type": "private_university",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/ceoj8qwmltqklui46ek4"
     },
     {
         "name": "Achievers University",
         "abbreviation": "ACHIEVERS",
         "type": "private_university",
-        "state": "Ondo"
+        "state": "Ondo",
+        "logo_path": "corpslink/institutions/dw8ho2pmyvlddezgrkac"
     },
     {
         "name": "Adeleke University",
         "abbreviation": "ADELEKEUNI",
         "type": "private_university",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/iwdyqycrbbwgsmv1skvt"
     },
     {
         "name": "Afe Babalola University",
         "abbreviation": "ABUAD",
         "type": "private_university",
-        "state": "Ekiti"
+        "state": "Ekiti",
+        "logo_path": "corpslink/institutions/nznkt74px66wxct9gzx5"
     },
     {
         "name": "African University of Economics",
         "abbreviation": "AUE",
         "type": "private_university",
-        "state": "FCT"
+        "state": "FCT",
+        "logo_path": "corpslink/institutions/sytor4dmbop3gfl1zxjz"
     },
     {
         "name": "African University of Science and Technology",
         "abbreviation": "AUST",
         "type": "private_university",
-        "state": "FCT"
+        "state": "FCT",
+        "logo_path": "corpslink/institutions/cdyyjfbidqmzwfr9fq39"
     },
     {
         "name": "Ahman Pategi University",
         "abbreviation": "APU",
         "type": "private_university",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/dk3bizmtymbbhigejgyb"
     },
     {
         "name": "Ajayi Crowther University",
         "abbreviation": "ACU",
         "type": "private_university",
-        "state": "Oyo"
+        "state": "Oyo",
+        "logo_path": "corpslink/institutions/hruefnzbnpyibe5jp8pr"
     },
     {
         "name": "Al-Ansar University",
         "abbreviation": "ALANSAR",
         "type": "private_university",
-        "state": "Borno"
+        "state": "Borno",
+        "logo_path": "corpslink/institutions/pmcjlmq5jydrirmuee0f"
     },
     {
         "name": "Al-Bayan University",
         "abbreviation": "ALBAYAN",
         "type": "private_university",
-        "state": "Kogi"
+        "state": "Kogi",
+        "logo_path": "corpslink/institutions/hficjusw53jcjpmcimge"
     },
     {
         "name": "Al-Hikmah University",
         "abbreviation": "ALHIKMAH",
         "type": "private_university",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/mbtku4joo1cby0mmbboi"
     },
     {
         "name": "Al-Istiqama University",
         "abbreviation": "ALISTIQAMA",
         "type": "private_university",
-        "state": "Kano"
+        "state": "Kano",
+        "logo_path": "corpslink/institutions/xmgt3n1nvxiba6rtgx0q"
     },
     {
         "name": "Al-Muhibbah Open University",
         "abbreviation": "ALMUHIBBAH",
         "type": "private_university",
-        "state": "FCT"
+        "state": "FCT",
+        "logo_path": "corpslink/institutions/bppqvfhflacd0pxsivri"
     },
     {
         "name": "Al-Qalam University",
         "abbreviation": "ALQALAM",
         "type": "private_university",
-        "state": "Katsina"
+        "state": "Katsina",
+        "logo_path": "corpslink/institutions/ciyx7pxiupqjxgurih0f"
     },
     {
         "name": "Aletheia University",
         "abbreviation": "ALETHEIA",
         "type": "private_university",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/o8onwoasakrslfvlk8o6"
     },
     {
         "name": "Amadeus University",
         "abbreviation": "AMADEUS",
         "type": "private_university",
-        "state": "Abia"
+        "state": "Abia",
+        "logo_path": "corpslink/institutions/ojdleifnaehdv3nq4ecp"
     },
     {
         "name": "Amaj University",
         "abbreviation": "AMAJ",
         "type": "private_university",
-        "state": "FCT"
+        "state": "FCT",
+        "logo_path": "corpslink/institutions/o5ecmx8xrsd7gl5paupl"
     },
     {
         "name": "American Open University",
         "abbreviation": "AMERICANOPEN",
         "type": "private_university",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/xqr8cz1x0mvuvozfcdgt"
     },
     {
         "name": "American University of Nigeria",
         "abbreviation": "AUN",
         "type": "private_university",
-        "state": "Adamawa"
+        "state": "Adamawa",
+        "logo_path": "corpslink/institutions/xu3avzmygqpokltibzuc"
     },
     {
         "name": "Anan University",
         "abbreviation": "ANANUNI",
         "type": "private_university",
-        "state": "Plateau"
+        "state": "Plateau",
+        "logo_path": "corpslink/institutions/nxcm5daww2eufvtg7y0f"
     },
     {
         "name": "Anchor University, Ayobo",
         "abbreviation": "ANCHOR",
         "type": "private_university",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/btevi84ukmtgdhpgxni8"
     },
     {
         "name": "Arthur Javis University, Akpoyubo",
         "abbreviation": "AJU",
         "type": "private_university",
-        "state": "Cross River"
+        "state": "Cross River",
+        "logo_path": "corpslink/institutions/ucuwrpfh1uo4zk65x4yp"
     },
     {
         "name": "Atiba University, Oyo",
         "abbreviation": "ATIBA",
         "type": "private_university",
-        "state": "Oyo"
+        "state": "Oyo",
+        "logo_path": "corpslink/institutions/yoad5zo7pwh8rcdk67fn"
     },
     {
         "name": "Augustine University",
         "abbreviation": "AUGUSTINE",
         "type": "private_university",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/anptfnu0s1r99r9cvaoy"
     },
     {
         "name": "Ave Maria University",
         "abbreviation": "AVEMARIA",
         "type": "private_university",
-        "state": "Nasarawa"
+        "state": "Nasarawa",
+        "logo_path": "corpslink/institutions/qtg92ftrtktxcnwxj7pn"
     },
     {
         "name": "Azione Verde University",
         "abbreviation": "AZIONEVERDE",
         "type": "private_university",
-        "state": "Imo"
+        "state": "Imo",
+        "logo_path": "corpslink/institutions/g7iuwp9tpuegg9pzvujr"
     },
     {
         "name": "Azman University",
         "abbreviation": "AZMAN",
         "type": "private_university",
-        "state": "Kano"
+        "state": "Kano",
+        "logo_path": "corpslink/institutions/imh3sia254qw2tusvywm"
     },
     {
         "name": "Baba Ahmed University",
         "abbreviation": "BAU",
         "type": "private_university",
-        "state": "Kano"
+        "state": "Kano",
+        "logo_path": "corpslink/institutions/cbidhluwcegio8du2izg"
     },
     {
         "name": "Babcock University",
         "abbreviation": "BABCOCK",
         "type": "private_university",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/w3xgidtaiyz7afibublq"
     },
     {
         "name": "Baze University",
         "abbreviation": "BAZE",
         "type": "private_university",
-        "state": "FCT"
+        "state": "FCT",
+        "logo_path": "corpslink/institutions/znfwbvhvu65tfrpwun60"
     },
     {
         "name": "Bells University of Technology",
         "abbreviation": "BELLSTECH",
         "type": "private_university",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/hwczbudvqazfjmmd6uvx"
     },
     {
         "name": "Benson Idahosa University",
         "abbreviation": "BIU",
         "type": "private_university",
-        "state": "Edo"
+        "state": "Edo",
+        "logo_path": "corpslink/institutions/u9gmpxbovf1rt3u1zuot"
     },
     {
         "name": "Bingham University",
         "abbreviation": "BINGHAM",
         "type": "private_university",
-        "state": "Nasarawa"
+        "state": "Nasarawa",
+        "logo_path": "corpslink/institutions/ghq6sgdvjoqfxly3066y"
     },
     {
         "name": "Bowen University",
         "abbreviation": "BOWEN",
         "type": "private_university",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/mlvjy9htbtsf8atwynpx"
     },
     {
         "name": "Bridget University, Mbaise",
         "abbreviation": "BRIDGET",
         "type": "private_university",
-        "state": "Imo"
+        "state": "Imo",
+        "logo_path": "corpslink/institutions/thbfyxjqjdeva55959au"
     },
     {
         "name": "British Canadian University",
         "abbreviation": "BCU",
         "type": "private_university",
-        "state": "Cross River"
+        "state": "Cross River",
+        "logo_path": "corpslink/institutions/ckkwsahshdhf0cm6dwm8"
     },
     {
         "name": "Caleb University",
         "abbreviation": "CALEB",
         "type": "private_university",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/kwrfiadz95aabhkbrn4e"
     },
     {
         "name": "Canadian University of Nigeria",
         "abbreviation": "CUN2",
         "type": "private_university",
-        "state": "FCT"
+        "state": "FCT",
+        "logo_path": "corpslink/institutions/yiflqfeqw715zrb7cl4v"
     },
     {
         "name": "Capital City University",
         "abbreviation": "CAPITALCITY",
         "type": "private_university",
-        "state": "Kano"
+        "state": "Kano",
+        "logo_path": "corpslink/institutions/fmxn3nd22z3any7m7bto"
     },
     {
         "name": "Caritas University",
         "abbreviation": "CARITAS",
         "type": "private_university",
-        "state": "Enugu"
+        "state": "Enugu",
+        "logo_path": "corpslink/institutions/pqd0suuorm6wqaf4gcvx"
     },
     {
         "name": "Chrisland University",
         "abbreviation": "CHRISLAND",
         "type": "private_university",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/aq4u27ldidtxto9jc9li"
     },
     {
         "name": "Christopher University, Mowe",
         "abbreviation": "CUM",
         "type": "private_university",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/beexwogkgwiewwvxlkov"
     },
     {
         "name": "Claretian University of Nigeria",
         "abbreviation": "CUN",
         "type": "private_university",
-        "state": "Imo"
+        "state": "Imo",
+        "logo_path": "corpslink/institutions/oml87ne3wdbv7u0sa2ti"
     },
     {
         "name": "Clifford University, Owerrinta",
         "abbreviation": "CLIFFORD",
         "type": "private_university",
-        "state": "Abia"
+        "state": "Abia",
+        "logo_path": "corpslink/institutions/po4ksq8o6dmuwiy9wmrd"
     },
     {
         "name": "Coal City University",
         "abbreviation": "CCU",
         "type": "private_university",
-        "state": "Enugu"
+        "state": "Enugu",
+        "logo_path": "corpslink/institutions/qr3jztjxlljeu0tzs3kx"
     },
     {
         "name": "College of Petroleum and Energy Studies",
         "abbreviation": "COPES",
         "type": "private_university",
-        "state": "Kaduna"
+        "state": "Kaduna",
+        "logo_path": "corpslink/institutions/aj94stgbyadwpibwzdgn"
     },
     {
         "name": "Cosmopolitan University, Abuja",
         "abbreviation": "CUAB",
         "type": "private_university",
-        "state": "FCT"
+        "state": "FCT",
+        "logo_path": "corpslink/institutions/xgalj66lqu1tpkp1o1nr"
     },
     {
         "name": "Covenant University",
         "abbreviation": "CU",
         "type": "private_university",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/akjqzsiidzbga8qtjqvr"
     },
     {
         "name": "Crawford University, Igbesa",
         "abbreviation": "CRAWFORD",
         "type": "private_university",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/n8kvf4ytaql0so90ymoy"
     },
     {
         "name": "Crescent University",
         "abbreviation": "CRESCENT",
         "type": "private_university",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/ttasgawtoch4ywbtnpfy"
     },
     {
         "name": "Dominican University, Ibadan",
         "abbreviation": "DUI",
         "type": "private_university",
-        "state": "Oyo"
+        "state": "Oyo",
+        "logo_path": "corpslink/institutions/w4xjdmxk3hr4ipq0fnkl"
     },
     {
         "name": "Dominion University, Ibadan",
         "abbreviation": "DOMINION",
         "type": "private_university",
-        "state": "Oyo"
+        "state": "Oyo",
+        "logo_path": "corpslink/institutions/kdvgh9ccagsbubffasic"
     },
     {
         "name": "Edusoko University",
         "abbreviation": "EDUSOKO",
         "type": "private_university",
-        "state": "Niger"
+        "state": "Niger",
+        "logo_path": "corpslink/institutions/p6n5az6e8ksd2aalrjxi"
     },
     {
         "name": "Edwin Clark University",
         "abbreviation": "ECU",
         "type": "private_university",
-        "state": "Rivers"
+        "state": "Rivers",
+        "logo_path": "corpslink/institutions/b1ykbu9lz1uqviqe4niu"
     },
     {
         "name": "Eko University of Medical and Health Sciences",
         "abbreviation": "EKOUNI",
         "type": "private_university",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/kypnvk96r0ghnhxndlji"
     },
     {
         "name": "El-Amin University",
         "abbreviation": "ELAMIN",
         "type": "private_university",
-        "state": "Niger"
+        "state": "Niger",
+        "logo_path": "corpslink/institutions/lwnn8pepy7vtttrpg85p"
     },
     {
         "name": "Elizade University",
         "abbreviation": "EU",
         "type": "private_university",
-        "state": "Ondo"
+        "state": "Ondo",
+        "logo_path": "corpslink/institutions/fc7gozavgehalmahohpr"
     },
     {
         "name": "Elrazi Medical University",
         "abbreviation": "ELRAZI",
         "type": "private_university",
-        "state": "Kano"
+        "state": "Kano",
+        "logo_path": "corpslink/institutions/nwu3hv1fxybjgm4j21lw"
     },
     {
         "name": "Eranova University",
         "abbreviation": "ERANOVA",
         "type": "private_university",
-        "state": "FCT"
+        "state": "FCT",
+        "logo_path": "corpslink/institutions/lnikmqn0yjkuwj6mgkvj"
     },
     {
         "name": "European University of Nigeria",
         "abbreviation": "EUN",
         "type": "private_university",
-        "state": "FCT"
+        "state": "FCT",
+        "logo_path": "corpslink/institutions/buock2pma8y4lnt2a0lk"
     },
     {
         "name": "Evangel University",
         "abbreviation": "EVANGEL",
         "type": "private_university",
-        "state": "Enugu"
+        "state": "Enugu",
+        "logo_path": "corpslink/institutions/mjdbotrsze0lqrse7vxb"
     },
     {
         "name": "Fountain University",
         "abbreviation": "FOUNTAIN",
         "type": "private_university",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/alz6i0z1ka0jdhdjvu1e"
     },
     {
         "name": "Franco British International University",
         "abbreviation": "FBIU",
         "type": "private_university",
-        "state": "Kaduna"
+        "state": "Kaduna",
+        "logo_path": "corpslink/institutions/gm4v1ol5guugr3l3ww4c"
     },
     {
         "name": "Gerar University of Medical Sciences, Imope Ijebu",
         "abbreviation": "GERAR",
         "type": "private_university",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/udmprzcgrz2cbil6csvx"
     },
     {
         "name": "Glorious Vision University",
         "abbreviation": "GVU",
         "type": "private_university",
-        "state": "Edo"
+        "state": "Edo",
+        "logo_path": "corpslink/institutions/k2s7mytcfyldlgdfgnfv"
     },
     {
         "name": "Godfrey Okoye University",
         "abbreviation": "GOUNI",
         "type": "private_university",
-        "state": "Enugu"
+        "state": "Enugu",
+        "logo_path": "corpslink/institutions/x5oe2lk5yjkghlg1zr4k"
     },
     {
         "name": "Greenfield University",
         "abbreviation": "GREENFIELD",
         "type": "private_university",
-        "state": "Kaduna"
+        "state": "Kaduna",
+        "logo_path": "corpslink/institutions/fpedti9yfegasljq8wpf"
     },
     {
         "name": "Greenland University",
         "abbreviation": "GREENLAND",
         "type": "private_university",
-        "state": "Taraba"
+        "state": "Taraba",
+        "logo_path": "corpslink/institutions/u8xuvyjbalthxqqtos4z"
     },
     {
         "name": "Gregory University",
         "abbreviation": "GUNI",
         "type": "private_university",
-        "state": "Abia"
+        "state": "Abia",
+        "logo_path": "corpslink/institutions/fswf2md16zdpmuevhhij"
     },
     {
         "name": "Hallmark University",
         "abbreviation": "HALLMARK",
         "type": "private_university",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/pryuoxj8wnkqwhdn2pal"
     },
     {
         "name": "Havilla University",
         "abbreviation": "HAVILLA",
         "type": "private_university",
-        "state": "Cross River"
+        "state": "Cross River",
+        "logo_path": "corpslink/institutions/yya8qrzst6cpuojyqlbb"
     },
     {
         "name": "Hensard University",
         "abbreviation": "HENSARD",
         "type": "private_university",
-        "state": "Bayelsa"
+        "state": "Bayelsa",
+        "logo_path": "corpslink/institutions/ambqibg0umc7bueauoef"
     },
     {
         "name": "Hezekiah University",
         "abbreviation": "HEZEKIAH",
         "type": "private_university",
-        "state": "Imo"
+        "state": "Imo",
+        "logo_path": "corpslink/institutions/ud6ysa2x0rzib3zqys8q"
     },
     {
         "name": "Hillside University of Science and Technology",
         "abbreviation": "HILLSIDE",
         "type": "private_university",
-        "state": "Ekiti"
+        "state": "Ekiti",
+        "logo_path": "corpslink/institutions/okfxwgjmacknnmwa5nva"
     },
     {
         "name": "Huda University",
         "abbreviation": "HUDA",
         "type": "private_university",
-        "state": "Zamfara"
+        "state": "Zamfara",
+        "logo_path": "corpslink/institutions/xvgws3uyvuu8s6j7m2cl"
     },
     {
         "name": "Iconic Open University",
         "abbreviation": "ICONIC",
         "type": "private_university",
-        "state": "Sokoto"
+        "state": "Sokoto",
+        "logo_path": "corpslink/institutions/sul0mefdgwswhtqmurhp"
     },
     {
         "name": "Igbinedion University, Okada",
         "abbreviation": "IUO",
         "type": "private_university",
-        "state": "Edo"
+        "state": "Edo",
+        "logo_path": "corpslink/institutions/lkhcbbvwpqq5gjsixayx"
     },
     {
         "name": "Isaac Balami University of Aeronautics and Management",
         "abbreviation": "IBUAM",
         "type": "private_university",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/auqgofkuw70m1iitjec0"
     },
     {
         "name": "JEFAP University",
         "abbreviation": "JEFAP",
         "type": "private_university",
-        "state": "Niger"
+        "state": "Niger",
+        "logo_path": "corpslink/institutions/ym7yymiozaxvqt1drwq0"
     },
     {
         "name": "James Hope University",
         "abbreviation": "JAMESHOPE",
         "type": "private_university",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/ywguhoujkwhpiuca1iq6"
     },
     {
         "name": "Jewel University",
         "abbreviation": "JEWEL",
         "type": "private_university",
-        "state": "Gombe"
+        "state": "Gombe",
+        "logo_path": "corpslink/institutions/pzq9qb2sm5idw1ltccn7"
     },
     {
         "name": "Jimoh Babalola University",
         "abbreviation": "JBU",
         "type": "private_university",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/p2e7txx9yb9wulqd4ott"
     },
     {
         "name": "Joseph Ayo Babalola University",
         "abbreviation": "JABU",
         "type": "private_university",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/zx31jjfmeqybjadzwhid"
     },
     {
         "name": "Karl-Kumm University",
         "abbreviation": "KKU",
         "type": "private_university",
-        "state": "Plateau"
+        "state": "Plateau",
+        "logo_path": "corpslink/institutions/atp6hdtlleqicb7lhg8f"
     },
     {
         "name": "Kevin Eze University",
         "abbreviation": "KEVINEZE",
         "type": "private_university",
-        "state": "Enugu"
+        "state": "Enugu",
+        "logo_path": "corpslink/institutions/zib70ilkkc2igtaluptv"
     },
     {
         "name": "Khadija University",
         "abbreviation": "KHADIJA",
         "type": "private_university",
-        "state": "Jigawa"
+        "state": "Jigawa",
+        "logo_path": "corpslink/institutions/gfisuhoo1k2euxhdkfpy"
     },
     {
         "name": "Khalifa Isiyaku Rabiu University",
         "abbreviation": "KIRU",
         "type": "private_university",
-        "state": "Kano"
+        "state": "Kano",
+        "logo_path": "corpslink/institutions/tswdjjs5jtpr7gmaiit8"
     },
     {
         "name": "Kings University",
         "abbreviation": "KINGSUNI",
         "type": "private_university",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/kstbbzknhvb0qo1enzoc"
     },
     {
         "name": "Kola Daisi University, Ibadan",
         "abbreviation": "KDU",
         "type": "private_university",
-        "state": "Oyo"
+        "state": "Oyo",
+        "logo_path": "corpslink/institutions/hbbuwhuomtfam8kx8xhp"
     },
     {
         "name": "Kwararafa University",
         "abbreviation": "KWARARAFA",
         "type": "private_university",
-        "state": "Taraba"
+        "state": "Taraba",
+        "logo_path": "corpslink/institutions/t4qeook8eaqwizflfgdu"
     },
     {
         "name": "Landmark University",
         "abbreviation": "LMU",
         "type": "private_university",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/k90iqlz3cfomwe8rojwv"
     },
     {
         "name": "Lead City University",
         "abbreviation": "LCU",
         "type": "private_university",
-        "state": "Oyo"
+        "state": "Oyo",
+        "logo_path": "corpslink/institutions/d22gdtzkuk2qmy0n5hqm"
     },
     {
         "name": "Leadership University",
         "abbreviation": "LEADERSHIPUNI",
         "type": "private_university",
-        "state": "FCT"
+        "state": "FCT",
+        "logo_path": "corpslink/institutions/z28cpeft4e5jguncowfk"
     },
     {
         "name": "Legacy University",
         "abbreviation": "LEGACY",
         "type": "private_university",
-        "state": "Anambra"
+        "state": "Anambra",
+        "logo_path": "corpslink/institutions/h1c2srl50ag12ngkr45k"
     },
     {
         "name": "Lens University",
         "abbreviation": "LENS",
         "type": "private_university",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/ynubrnkwbocsl2ews3ph"
     },
     {
         "name": "Lighthouse University",
         "abbreviation": "LIGHTHOUSEUNI",
         "type": "private_university",
-        "state": "Edo"
+        "state": "Edo",
+        "logo_path": "corpslink/institutions/n7krpqxv3pqayincvmyn"
     },
     {
         "name": "Lux Mundi University, Umuahia",
         "abbreviation": "LUXMUNDI",
         "type": "private_university",
-        "state": "Abia"
+        "state": "Abia",
+        "logo_path": "corpslink/institutions/sp6eulvweliygzzgjykj"
     },
     {
         "name": "Madonna University",
         "abbreviation": "MADONNA",
         "type": "private_university",
-        "state": "Anambra"
+        "state": "Anambra",
+        "logo_path": "corpslink/institutions/m2lbqmhdpthtuq8rmnth"
     },
     {
         "name": "Maduka University",
         "abbreviation": "MADUKA",
         "type": "private_university",
-        "state": "Enugu"
+        "state": "Enugu",
+        "logo_path": "corpslink/institutions/dijhragem5owbwli2gqw"
     },
     {
         "name": "Maranatha University",
         "abbreviation": "MARANATHA",
         "type": "private_university",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/tjkujhb7l3cz67s63mw2"
     },
     {
         "name": "Margaret Lawrence University",
         "abbreviation": "MLU",
         "type": "private_university",
-        "state": "Delta"
+        "state": "Delta",
+        "logo_path": "corpslink/institutions/x34anbqtefqrnynr6cc2"
     },
     {
         "name": "Maryam Abacha American University of Nigeria",
         "abbreviation": "MAAUN",
         "type": "private_university",
-        "state": "Kano"
+        "state": "Kano",
+        "logo_path": "corpslink/institutions/xymyaaihhqvfgx2f2xzc"
     },
     {
         "name": "Mcpherson University",
         "abbreviation": "MCPHERSON",
         "type": "private_university",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/vslvl41yfpqr9acprtvf"
     },
     {
         "name": "Mercy Medical University",
         "abbreviation": "MERCYMED",
         "type": "private_university",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/vofifk9la9egmrfwygox"
     },
     {
         "name": "Mewar International University",
         "abbreviation": "MEWAR",
         "type": "private_university",
-        "state": "Nasarawa"
+        "state": "Nasarawa",
+        "logo_path": "corpslink/institutions/s6iomgkcx4g7th0urw50"
     },
     {
         "name": "Micheal and Cecilia Ibru University",
         "abbreviation": "MCIU",
         "type": "private_university",
-        "state": "Delta"
+        "state": "Delta",
+        "logo_path": "corpslink/institutions/quc3yuspmmlzkejifocd"
     },
     {
         "name": "Minaret University",
         "abbreviation": "MINARET",
         "type": "private_university",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/tfgx5eerjx4qjuirjiaf"
     },
     {
         "name": "Miva Open University",
         "abbreviation": "MIVA",
         "type": "private_university",
-        "state": "FCT"
+        "state": "FCT",
+        "logo_path": "corpslink/institutions/gw1kacllvjdexcbgehw4"
     },
     {
         "name": "Monarch University",
         "abbreviation": "MONARCH",
         "type": "private_university",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/ehyfdr8quie6trfyswc7"
     },
     {
         "name": "Mountain Top University",
         "abbreviation": "MTU",
         "type": "private_university",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/cdmtfijlcxq7biefltqh"
     },
     {
         "name": "Mudiame University",
         "abbreviation": "MUDIAME",
         "type": "private_university",
-        "state": "Edo"
+        "state": "Edo",
+        "logo_path": "corpslink/institutions/kxdy3f9jnzybc7dtzmwh"
     },
     {
         "name": "Muhammad Kamalud University",
         "abbreviation": "MKU",
         "type": "private_university",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/ryl88htca22imksezoxd"
     },
     {
         "name": "New City University",
         "abbreviation": "NEWCITY",
         "type": "private_university",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/cnzah51fu5bjfucuqgih"
     },
     {
         "name": "Newgate University",
         "abbreviation": "NEWGATE",
         "type": "private_university",
-        "state": "Niger"
+        "state": "Niger",
+        "logo_path": "corpslink/institutions/zwh6q12c1jgcw85knluo"
     },
     {
         "name": "Nigerian British University",
         "abbreviation": "NBU",
         "type": "private_university",
-        "state": "Abia"
+        "state": "Abia",
+        "logo_path": "corpslink/institutions/nz75emv9yxdx8tdu366b"
     },
     {
         "name": "Nigerian University of Technology and Management",
         "abbreviation": "NUTM",
         "type": "private_university",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/inhlcokxyayzalfcluew"
     },
     {
         "name": "Nile University of Nigeria",
         "abbreviation": "NUN",
         "type": "private_university",
-        "state": "FCT"
+        "state": "FCT",
+        "logo_path": "corpslink/institutions/ko4d8e9tjsix48y3jodf"
     },
     {
         "name": "North Eastern University",
         "abbreviation": "NEU",
         "type": "private_university",
-        "state": "Gombe"
+        "state": "Gombe",
+        "logo_path": "corpslink/institutions/zgqn7uvraw9znhiqka4i"
     },
     {
         "name": "NorthWest University",
         "abbreviation": "NWUSOKOTO",
         "type": "private_university",
-        "state": "Sokoto"
+        "state": "Sokoto",
+        "logo_path": "corpslink/institutions/dbrxffjie3ukhzeuevvf"
     },
     {
         "name": "Novena University",
         "abbreviation": "NOVENA",
         "type": "private_university",
-        "state": "Delta"
+        "state": "Delta",
+        "logo_path": "corpslink/institutions/vqub9zgo0wjyiryaw3lg"
     },
     {
         "name": "Obong University",
         "abbreviation": "OBONG",
         "type": "private_university",
-        "state": "Akwa Ibom"
+        "state": "Akwa Ibom",
+        "logo_path": "corpslink/institutions/vds8embs9epfo8cjkf4v"
     },
     {
         "name": "Oduduwa University",
         "abbreviation": "ODUDUWA",
         "type": "private_university",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/fwwdri0fq08lavfd2fu9"
     },
     {
         "name": "Ojaja University, Eiyenkorin",
         "abbreviation": "OJAJA",
         "type": "private_university",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/dblxig015b1fqbai2jhm"
     },
     {
         "name": "PAMO University of Medical Sciences",
         "abbreviation": "PAMO",
         "type": "private_university",
-        "state": "Rivers"
+        "state": "Rivers",
+        "logo_path": "corpslink/institutions/gyldm3qetjsns0pg2rac"
     },
     {
         "name": "Pan-Atlantic University",
         "abbreviation": "PAU",
         "type": "private_university",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/icurvng2xxmtdr8ufvfd"
     },
     {
         "name": "Paul University",
         "abbreviation": "PAULUNI",
         "type": "private_university",
-        "state": "Anambra"
+        "state": "Anambra",
+        "logo_path": "corpslink/institutions/f2cajphlsmcy1t85asvw"
     },
     {
         "name": "PeaceLand University",
         "abbreviation": "PEACELAND",
         "type": "private_university",
-        "state": "Enugu"
+        "state": "Enugu",
+        "logo_path": "corpslink/institutions/pzqfil0uxon9knxsfzas"
     },
     {
         "name": "Peter University",
         "abbreviation": "PETERUNI",
         "type": "private_university",
-        "state": "Anambra"
+        "state": "Anambra",
+        "logo_path": "corpslink/institutions/rvsjgw64eswiwkwcev41"
     },
     {
         "name": "Philomath University",
         "abbreviation": "PHILOMATH",
         "type": "private_university",
-        "state": "FCT"
+        "state": "FCT",
+        "logo_path": "corpslink/institutions/ygcwhbfiqzyjuxqbgygx"
     },
     {
         "name": "Phoenix University",
         "abbreviation": "PHOENIX",
         "type": "private_university",
-        "state": "Nasarawa"
+        "state": "Nasarawa",
+        "logo_path": "corpslink/institutions/cqbsxlq0o9llggqgewwq"
     },
     {
         "name": "Precious Cornerstone University",
         "abbreviation": "PCU",
         "type": "private_university",
-        "state": "Oyo"
+        "state": "Oyo",
+        "logo_path": "corpslink/institutions/szean8qt87js45zdtc3z"
     },
     {
         "name": "Prime University",
         "abbreviation": "PRIMEUNI",
         "type": "private_university",
-        "state": "FCT"
+        "state": "FCT",
+        "logo_path": "corpslink/institutions/tps4s8rpmao2xbvnijxp"
     },
     {
         "name": "Rayhaan University",
         "abbreviation": "RAYHAAN",
         "type": "private_university",
-        "state": "Kebbi"
+        "state": "Kebbi",
+        "logo_path": "corpslink/institutions/rngibyyvqzagxxhvr4o4"
     },
     {
         "name": "Redeemer's University",
         "abbreviation": "RUN",
         "type": "private_university",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/liij9zptdu0uo9gsof2s"
     },
     {
         "name": "Renaissance University",
         "abbreviation": "RENAISSANCE",
         "type": "private_university",
-        "state": "Enugu"
+        "state": "Enugu",
+        "logo_path": "corpslink/institutions/ygvcrb6qhmxqhhbow1z5"
     },
     {
         "name": "Rhema University",
         "abbreviation": "RHEMA",
         "type": "private_university",
-        "state": "Rivers"
+        "state": "Rivers",
+        "logo_path": "corpslink/institutions/iw8wsssdaht45ugmyvuf"
     },
     {
         "name": "Ritman University",
         "abbreviation": "RITMAN",
         "type": "private_university",
-        "state": "Akwa Ibom"
+        "state": "Akwa Ibom",
+        "logo_path": "corpslink/institutions/oamfth69voiwzlbgqzmk"
     },
     {
         "name": "Saisa University of Medical Sciences and Technology",
         "abbreviation": "SAISA",
         "type": "private_university",
-        "state": "Sokoto"
+        "state": "Sokoto",
+        "logo_path": "corpslink/institutions/w0h9nkoixy8lnbclp2ra"
     },
     {
         "name": "Salem University",
         "abbreviation": "SALEM",
         "type": "private_university",
-        "state": "Kogi"
+        "state": "Kogi",
+        "logo_path": "corpslink/institutions/pjazoyzcvoc3l274p5hj"
     },
     {
         "name": "Sam Maris University",
         "abbreviation": "SAMMARIS",
         "type": "private_university",
-        "state": "Ondo"
+        "state": "Ondo",
+        "logo_path": "corpslink/institutions/qfg8w26rx1mgmjgwd4wa"
     },
     {
         "name": "Shanahan University, Onitsha",
         "abbreviation": "SHANAHAN",
         "type": "private_university",
-        "state": "Anambra"
+        "state": "Anambra",
+        "logo_path": "corpslink/institutions/fjvtopevmubwaue6nc57"
     },
     {
         "name": "Skyline University",
         "abbreviation": "SKYLINE",
         "type": "private_university",
-        "state": "Kano"
+        "state": "Kano",
+        "logo_path": "corpslink/institutions/pju3ci4ybefj7rxougav"
     },
     {
         "name": "Southern Atlantic University",
         "abbreviation": "SAU",
         "type": "private_university",
-        "state": "Akwa Ibom"
+        "state": "Akwa Ibom",
+        "logo_path": "corpslink/institutions/joc9jivulze0dmtmaq1v"
     },
     {
         "name": "Southwestern University",
         "abbreviation": "SWUN",
         "type": "private_university",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/fpruuzpalkskrx7mgdc3"
     },
     {
         "name": "Spiritan University",
         "abbreviation": "SPIRITAN",
         "type": "private_university",
-        "state": "Abia"
+        "state": "Abia",
+        "logo_path": "corpslink/institutions/op0wkcs5giittmpm0foa"
     },
     {
         "name": "Sports University",
         "abbreviation": "SPORTSUNI",
         "type": "private_university",
-        "state": "Delta"
+        "state": "Delta",
+        "logo_path": "corpslink/institutions/rwokvsoym8dkm9qkicjp"
     },
     {
         "name": "Summit University",
         "abbreviation": "SUMMIT",
         "type": "private_university",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/wxqljfllzo68kyt2ybce"
     },
     {
         "name": "Tansian University",
         "abbreviation": "TANSIAN",
         "type": "private_university",
-        "state": "Anambra"
+        "state": "Anambra",
+        "logo_path": "corpslink/institutions/zuzwbpct7nhwtfc9txpg"
     },
     {
         "name": "Tazkiyah University",
         "abbreviation": "TAZKIYAH",
         "type": "private_university",
-        "state": "Kaduna"
+        "state": "Kaduna",
+        "logo_path": "corpslink/institutions/rxy17ga9ovqamslkhnzc"
     },
     {
         "name": "The Duke Medical University",
         "abbreviation": "DUKEMED",
         "type": "private_university",
-        "state": "Cross River"
+        "state": "Cross River",
+        "logo_path": "corpslink/institutions/ws4dmgo8wibu3vem7r0m"
     },
     {
         "name": "Thomas Adewumi University",
         "abbreviation": "TAU",
         "type": "private_university",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/on9z5ixvpvjtqyidfzzu"
     },
     {
         "name": "Tonine Iredia University of Communication",
         "abbreviation": "TIUC",
         "type": "private_university",
-        "state": "Edo"
+        "state": "Edo",
+        "logo_path": "corpslink/institutions/ajc0ujxtlidsmwsnrqen"
     },
     {
         "name": "Topfaith University",
         "abbreviation": "TOPFAITH",
         "type": "private_university",
-        "state": "Akwa Ibom"
+        "state": "Akwa Ibom",
+        "logo_path": "corpslink/institutions/gfiq4chezhhalfug9xar"
     },
     {
         "name": "Trinity University",
         "abbreviation": "TRINITYOGUN",
         "type": "private_university",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/mg7e4rejogfbr8lpffsx"
     },
     {
         "name": "Unique Open University",
         "abbreviation": "UNIQUEOPEN",
         "type": "private_university",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/pwcmgebgbw4i52bxw5bm"
     },
     {
         "name": "University of Fortune",
         "abbreviation": "UNIFORTUNE",
         "type": "private_university",
-        "state": "Ondo"
+        "state": "Ondo",
+        "logo_path": "corpslink/institutions/efqpyueeppabbikgz57b"
     },
     {
         "name": "University of Mkar",
         "abbreviation": "UNIMKAR",
         "type": "private_university",
-        "state": "Benue"
+        "state": "Benue",
+        "logo_path": "corpslink/institutions/s5nykvwjzxmwwuksp32z"
     },
     {
         "name": "University of Offa",
         "abbreviation": "UNIOFFA",
         "type": "private_university",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/hdcait9ikh6ew15scvko"
     },
     {
         "name": "University on the Niger",
         "abbreviation": "UNTN",
         "type": "private_university",
-        "state": "Anambra"
+        "state": "Anambra",
+        "logo_path": "corpslink/institutions/g9shadern0z7zgoq225p"
     },
     {
         "name": "Venite University",
         "abbreviation": "VENITE",
         "type": "private_university",
-        "state": "Ekiti"
+        "state": "Ekiti",
+        "logo_path": "corpslink/institutions/ix2bjqxg1kabwp0xnrv5"
     },
     {
         "name": "Veritas University",
         "abbreviation": "VERITAS",
         "type": "private_university",
-        "state": "FCT"
+        "state": "FCT",
+        "logo_path": "corpslink/institutions/iyhkttjuwuhieewiy0ur"
     },
     {
         "name": "Vision University",
         "abbreviation": "VISIONUNI",
         "type": "private_university",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/gz9uthxbaysty0n9vxcj"
     },
     {
         "name": "Wellspring University",
         "abbreviation": "WELLSPRING",
         "type": "private_university",
-        "state": "Edo"
+        "state": "Edo",
+        "logo_path": "corpslink/institutions/csmlsdtrxvhxnokicght"
     },
     {
         "name": "Wesley University, Ondo",
         "abbreviation": "WESLEY",
         "type": "private_university",
-        "state": "Ondo"
+        "state": "Ondo",
+        "logo_path": "corpslink/institutions/kfkyaxczveyflvwmu6mw"
     },
     {
         "name": "West Midlands Open University",
         "abbreviation": "WMOU",
         "type": "private_university",
-        "state": "Oyo"
+        "state": "Oyo",
+        "logo_path": "corpslink/institutions/xy1maaqcyiziemdlkrqm"
     },
     {
         "name": "Western Delta University",
         "abbreviation": "WDU",
         "type": "private_university",
-        "state": "Delta"
+        "state": "Delta",
+        "logo_path": "corpslink/institutions/apjdl9wkovvbhzjgijri"
     },
     {
         "name": "Westland University, Iwo",
         "abbreviation": "WESTLANDOSUN",
         "type": "private_university",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/zjninlvlzpyg3pnetljc"
     },
     {
         "name": "Wigwe University",
         "abbreviation": "WIGWE",
         "type": "private_university",
-        "state": "Rivers"
+        "state": "Rivers",
+        "logo_path": "corpslink/institutions/hqg4g1mdgndz1hizommz"
     },
     {
         "name": "Abdu Gusau Polytechnic",
         "abbreviation": "AGP",
         "type": "polytechnic",
-        "state": "Zamfara"
+        "state": "Zamfara",
+        "logo_path": "corpslink/institutions/ycndcrv9cxyusqa0fhdv"
     },
     {
         "name": "Abraham Adesanya Polytechnic",
         "abbreviation": "AAPOLY",
         "type": "polytechnic",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/skszdulta8jwlogpia9c"
     },
     {
         "name": "Abubakar Tatari Ali Polytechnic",
         "abbreviation": "ATAP",
         "type": "polytechnic",
-        "state": "Bauchi"
+        "state": "Bauchi",
+        "logo_path": "corpslink/institutions/v9xbblrhn9qdjlh8snns"
     },
     {
         "name": "Adamawa State Polytechnic",
         "abbreviation": "ADSPOLY",
         "type": "polytechnic",
-        "state": "Adamawa"
+        "state": "Adamawa",
+        "logo_path": "corpslink/institutions/v4hq5m3u6lkdtsiyamqu"
     },
     {
         "name": "Adeseun Ogundoyin Polytechnic",
         "abbreviation": "AOPOLY",
         "type": "polytechnic",
-        "state": "Oyo"
+        "state": "Oyo",
+        "logo_path": "corpslink/institutions/aqyreoshiy79cwsgw2zy"
     },
     {
         "name": "Ajayi Polytechnic",
         "abbreviation": "AJAYIPOLY",
         "type": "polytechnic",
-        "state": "Ekiti"
+        "state": "Ekiti",
+        "logo_path": "corpslink/institutions/qgvvwqci4lyggnvsjju9"
     },
     {
         "name": "Akanu Ibiam Federal Polytechnic, Unwana",
         "abbreviation": "AIFP",
         "type": "polytechnic",
-        "state": "Ebonyi"
+        "state": "Ebonyi",
+        "logo_path": "corpslink/institutions/kj8ine2j0238lmjjgncn"
     },
     {
         "name": "Akawe Torkula Polytechnic",
         "abbreviation": "ATPOLY",
         "type": "polytechnic",
-        "state": "Benue"
+        "state": "Benue",
+        "logo_path": "corpslink/institutions/dtc9dx65ztpsbiuhodcm"
     },
     {
         "name": "Akwa Ibom State College of Arts and Science",
         "abbreviation": "AKSCAS",
         "type": "polytechnic",
-        "state": "Akwa Ibom"
+        "state": "Akwa Ibom",
+        "logo_path": "corpslink/institutions/spmjkknlsats8wdg9qxz"
     },
     {
         "name": "Akwa Ibom State Polytechnic",
         "abbreviation": "AKSPOLY",
         "type": "polytechnic",
-        "state": "Akwa Ibom"
+        "state": "Akwa Ibom",
+        "logo_path": "corpslink/institutions/ywfj63ra3alv7txvlpqf"
     },
     {
         "name": "Al-Hikmah Polytechnic",
         "abbreviation": "ALHIKMAHPOLY",
         "type": "polytechnic",
-        "state": "Nasarawa"
+        "state": "Nasarawa",
+        "logo_path": "corpslink/institutions/sfxc4fgelzu5zylfjybk"
     },
     {
         "name": "Allover Central Polytechnic",
         "abbreviation": "ACENTRALPOLY",
         "type": "polytechnic",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/doylselxxkp2mcmgfzzf"
     },
     {
         "name": "American Polytechnic",
         "abbreviation": "AMERICANPOLY",
         "type": "polytechnic",
-        "state": "Oyo"
+        "state": "Oyo",
+        "logo_path": "corpslink/institutions/smcgxa1u0bs7ptsncdri"
     },
     {
         "name": "Anambra State Polytechnic",
         "abbreviation": "ANSPOLY",
         "type": "polytechnic",
-        "state": "Anambra"
+        "state": "Anambra",
+        "logo_path": "corpslink/institutions/kzshga6ya3um9q834qig"
     },
     {
         "name": "Ashi Polytechnic",
         "abbreviation": "ASHIPOLY",
         "type": "polytechnic",
-        "state": "Benue"
+        "state": "Benue",
+        "logo_path": "corpslink/institutions/zp3g9fsfsghpqkzbsuoj"
     },
     {
         "name": "Auchi Polytechnic",
         "abbreviation": "AUCHIPOLY",
         "type": "polytechnic",
-        "state": "Edo"
+        "state": "Edo",
+        "logo_path": "corpslink/institutions/lv6aincia9wwqqom5ijg"
     },
     {
         "name": "Bayelsa State Polytechnic",
         "abbreviation": "BYSPOLY",
         "type": "polytechnic",
-        "state": "Bayelsa"
+        "state": "Bayelsa",
+        "logo_path": "corpslink/institutions/sq1ilyihvux8q0k6m9o2"
     },
     {
         "name": "Bellarks Polytechnic",
         "abbreviation": "BELLARKS",
         "type": "polytechnic",
-        "state": "Benue"
+        "state": "Benue",
+        "logo_path": "corpslink/institutions/ebzbark1bky5k0tc8hnr"
     },
     {
         "name": "Benue State Polytechnic",
         "abbreviation": "BENPOLY",
         "type": "polytechnic",
-        "state": "Benue"
+        "state": "Benue",
+        "logo_path": "corpslink/institutions/g5z9qrs0curzexigoyul"
     },
     {
         "name": "Best Solution Polytechnic",
         "abbreviation": "BESTSOLUTION",
         "type": "polytechnic",
-        "state": "Ondo"
+        "state": "Ondo",
+        "logo_path": "corpslink/institutions/jxlgvsj4w9mtkbb8dand"
     },
     {
         "name": "Binyamu Usman Polytechnic",
         "abbreviation": "BUPOLY",
         "type": "polytechnic",
-        "state": "Jigawa"
+        "state": "Jigawa",
+        "logo_path": "corpslink/institutions/lem1gdke37wygu9wt0v9"
     },
     {
         "name": "Bolmor Polytechnic",
         "abbreviation": "BOLMOR",
         "type": "polytechnic",
-        "state": "Oyo"
+        "state": "Oyo",
+        "logo_path": "corpslink/institutions/rsn5htvjlnlegzayzydn"
     },
     {
         "name": "Brainfill Polytechnic",
         "abbreviation": "BRAINFILL",
         "type": "polytechnic",
-        "state": "Akwa Ibom"
+        "state": "Akwa Ibom",
+        "logo_path": "corpslink/institutions/jy117ql0ola3ecrwfqdp"
     },
     {
         "name": "British Transatlantic Polytechnic",
         "abbreviation": "BTPOLY",
         "type": "polytechnic",
-        "state": "Ondo"
+        "state": "Ondo",
+        "logo_path": "corpslink/institutions/bhhatxkyasxne4oqatlu"
     },
     {
         "name": "Calvary Polytechnic",
         "abbreviation": "CALVARYPOLY",
         "type": "polytechnic",
-        "state": "Delta"
+        "state": "Delta",
+        "logo_path": "corpslink/institutions/gdwfjdrcwmliwwnvjdkk"
     },
     {
         "name": "Captain Elechi Amadi Polytechnic",
         "abbreviation": "CEAPOLY",
         "type": "polytechnic",
-        "state": "Rivers"
+        "state": "Rivers",
+        "logo_path": "corpslink/institutions/vhebetfs8lwkxebcrnbk"
     },
     {
         "name": "Citi Polytechnic",
         "abbreviation": "CITIPOLY",
         "type": "polytechnic",
-        "state": "FCT"
+        "state": "FCT",
+        "logo_path": "corpslink/institutions/va5rezskxsahcempcibv"
     },
     {
         "name": "Coastal Polytechnic",
         "abbreviation": "COASTALPOLY",
         "type": "polytechnic",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/wyju1rmhjp9glja1pxhv"
     },
     {
         "name": "College of Administration, Management and Technology, Potiskum",
         "abbreviation": "CAMTECH",
         "type": "polytechnic",
-        "state": "Yobe"
+        "state": "Yobe",
+        "logo_path": "corpslink/institutions/vlkt0tadrskntsvajxhx"
     },
     {
         "name": "College of Agriculture, Science and Technology, Gujba",
         "abbreviation": "CASTGUJBA",
         "type": "polytechnic",
-        "state": "Yobe"
+        "state": "Yobe",
+        "logo_path": "corpslink/institutions/ueebbnz8j2etqi6rbllw"
     },
     {
         "name": "College of Agriculture, Science and Technology, Lafia",
         "abbreviation": "CASTLAFIA",
         "type": "polytechnic",
-        "state": "Nasarawa"
+        "state": "Nasarawa",
+        "logo_path": "corpslink/institutions/rxhu5fffw37zjf2qxkhq"
     },
     {
         "name": "Covenant Polytechnic",
         "abbreviation": "COVENANTPOLY",
         "type": "polytechnic",
-        "state": "Abia"
+        "state": "Abia",
+        "logo_path": "corpslink/institutions/hanmffsh0r9gp9ykka1q"
     },
     {
         "name": "Cross River Institute of Technology and Management",
         "abbreviation": "CRITM",
         "type": "polytechnic",
-        "state": "Cross River"
+        "state": "Cross River",
+        "logo_path": "corpslink/institutions/hyecdtarzj47da9vhlb6"
     },
     {
         "name": "Crown Polytechnic",
         "abbreviation": "CROWNPOLY",
         "type": "polytechnic",
-        "state": "Ekiti"
+        "state": "Ekiti",
+        "logo_path": "corpslink/institutions/jhwl3azjasol0wtng0wi"
     },
     {
         "name": "D.S. Agbenro ICT Polytechnic, Itori-Ewekoro",
         "abbreviation": "DSAP",
         "type": "polytechnic",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/pdmbhzljens1sxyfooon"
     },
     {
         "name": "Daboss Polytechnic",
         "abbreviation": "DABOSS",
         "type": "polytechnic",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/wdjapco2s4hp62ppvtku"
     },
     {
         "name": "Delta State Maritime Polytechnic",
         "abbreviation": "DSMP",
         "type": "polytechnic",
-        "state": "Delta"
+        "state": "Delta",
+        "logo_path": "corpslink/institutions/r7wjhdywvopopnlyam4f"
     },
     {
         "name": "Delta State Polytechnic, Ogwashi-Uku",
         "abbreviation": "DESPOGWASHI",
         "type": "polytechnic",
-        "state": "Delta"
+        "state": "Delta",
+        "logo_path": "corpslink/institutions/jbp1aryq6usolh3rhamv"
     },
     {
         "name": "Delta State Polytechnic, Otefe-Oghara",
         "abbreviation": "DESPOTEFE",
         "type": "polytechnic",
-        "state": "Delta"
+        "state": "Delta",
+        "logo_path": "corpslink/institutions/wk5qvrncb5kd60y6pidi"
     },
     {
         "name": "Distinct Polytechnic",
         "abbreviation": "DISTINCT",
         "type": "polytechnic",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/fsr2rnzhm1cgbkglurn2"
     },
     {
         "name": "Dorben Polytechnic",
         "abbreviation": "DORBEN",
         "type": "polytechnic",
-        "state": "FCT"
+        "state": "FCT",
+        "logo_path": "corpslink/institutions/ayp6yks966ly9djylrpe"
     },
     {
         "name": "Eastern Polytechnic",
         "abbreviation": "EASTERNPOLY",
         "type": "polytechnic",
-        "state": "Rivers"
+        "state": "Rivers",
+        "logo_path": "corpslink/institutions/nriamzmw5gstd0arur8u"
     },
     {
         "name": "Edo State Polytechnic, Usen",
         "abbreviation": "EDSPOLY",
         "type": "polytechnic",
-        "state": "Edo"
+        "state": "Edo",
+        "logo_path": "corpslink/institutions/wyfwspadc815w3vwzfyp"
     },
     {
         "name": "Edward Olaseni Polytechnic",
         "abbreviation": "EOPOLY",
         "type": "polytechnic",
-        "state": "Ondo"
+        "state": "Ondo",
+        "logo_path": "corpslink/institutions/ozb7b4ks3ndwzcvrb5yl"
     },
     {
         "name": "Ekiti City Polytechnic",
         "abbreviation": "ECPOLY",
         "type": "polytechnic",
-        "state": "Ekiti"
+        "state": "Ekiti",
+        "logo_path": "corpslink/institutions/v1y9rwqqj2r1tuxu7lwz"
     },
     {
         "name": "Ekiti State College of Agriculture and Technology",
         "abbreviation": "EKCAT",
         "type": "polytechnic",
-        "state": "Ekiti"
+        "state": "Ekiti",
+        "logo_path": "corpslink/institutions/xdb4wajncd2for0vvg9h"
     },
     {
         "name": "Eko College of Management and Technology",
         "abbreviation": "EKOCITY",
         "type": "polytechnic",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/kgkij68ypgtnh5rvaz9f"
     },
     {
         "name": "El-Thomp Polytechnic",
         "abbreviation": "ELTHOMP",
         "type": "polytechnic",
-        "state": "Akwa Ibom"
+        "state": "Akwa Ibom",
+        "logo_path": "corpslink/institutions/fwrorriqqlqibfjhmvjq"
     },
     {
         "name": "Enville Polytechnic",
         "abbreviation": "ENVILLE",
         "type": "polytechnic",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/qf8zcossau0e98ehtnrh"
     },
     {
         "name": "Federal Polytechnic of Oil and Gas, Bonny",
         "abbreviation": "FEDPOLYBONNY",
         "type": "polytechnic",
-        "state": "Rivers"
+        "state": "Rivers",
+        "logo_path": "corpslink/institutions/crv9k3vnlacgxyylmfyx"
     },
     {
         "name": "Federal Polytechnic, Ado-Ekiti",
         "abbreviation": "FEDPOLYADO",
         "type": "polytechnic",
-        "state": "Ekiti"
+        "state": "Ekiti",
+        "logo_path": "corpslink/institutions/hv31u9nhn9ot6ebubtan"
     },
     {
         "name": "Federal Polytechnic, Ayede",
         "abbreviation": "FEDPOLYAYEDE",
         "type": "polytechnic",
-        "state": "Oyo"
+        "state": "Oyo",
+        "logo_path": "corpslink/institutions/t9ldryya8juzmg5vrtni"
     },
     {
         "name": "Federal Polytechnic, Bali",
         "abbreviation": "FEDPOLYBALI",
         "type": "polytechnic",
-        "state": "Taraba"
+        "state": "Taraba",
+        "logo_path": "corpslink/institutions/uuquxk7zk3bh5z7hayfq"
     },
     {
         "name": "Federal Polytechnic, Bauchi",
         "abbreviation": "FEDPOLYBAUCHI",
         "type": "polytechnic",
-        "state": "Bauchi"
+        "state": "Bauchi",
+        "logo_path": "corpslink/institutions/hxqr5r1fi4jaiggjmmsn"
     },
     {
         "name": "Federal Polytechnic, Bida",
         "abbreviation": "FEDPOLYBIDA",
         "type": "polytechnic",
-        "state": "Niger"
+        "state": "Niger",
+        "logo_path": "corpslink/institutions/tevkglyt4y9cytyzk0z4"
     },
     {
         "name": "Federal Polytechnic, Damaturu",
         "abbreviation": "FEDPOLYDAMATURU",
         "type": "polytechnic",
-        "state": "Yobe"
+        "state": "Yobe",
+        "logo_path": "corpslink/institutions/tayof6qoy8keju80zpyz"
     },
     {
         "name": "Federal Polytechnic, Daura",
         "abbreviation": "FEDPOLYDAURA",
         "type": "polytechnic",
-        "state": "Katsina"
+        "state": "Katsina",
+        "logo_path": "corpslink/institutions/b83yd1tobyo6huoxe39t"
     },
     {
         "name": "Federal Polytechnic, Ede",
         "abbreviation": "FEDPOLYEDE",
         "type": "polytechnic",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/eyh3uixt7yv8exu74np8"
     },
     {
         "name": "Federal Polytechnic, Ekowe",
         "abbreviation": "FEDPOLYEKOWE",
         "type": "polytechnic",
-        "state": "Bayelsa"
+        "state": "Bayelsa",
+        "logo_path": "corpslink/institutions/jq15ki4rns4u7cbvbha0"
     },
     {
         "name": "Federal Polytechnic, Idah",
         "abbreviation": "FEDPOLYIDAH",
         "type": "polytechnic",
-        "state": "Kogi"
+        "state": "Kogi",
+        "logo_path": "corpslink/institutions/tfbeb4vhwvjeynph9yfn"
     },
     {
         "name": "Federal Polytechnic, Ilaro",
         "abbreviation": "FEDPOLYILARO",
         "type": "polytechnic",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/agtbldipo3coo8eyabrx"
     },
     {
         "name": "Federal Polytechnic, Ile-Oluji",
         "abbreviation": "FEDPOLYILEOLUJI",
         "type": "polytechnic",
-        "state": "Ondo"
+        "state": "Ondo",
+        "logo_path": "corpslink/institutions/zqn27nouqszykdph4xqe"
     },
     {
         "name": "Federal Polytechnic, Kabo",
         "abbreviation": "FEDPOLYKABO",
         "type": "polytechnic",
-        "state": "Kano"
+        "state": "Kano",
+        "logo_path": "corpslink/institutions/mf2iwwjvma3b5liinfd1"
     },
     {
         "name": "Federal Polytechnic, Kaltungo",
         "abbreviation": "FEDPOLYKALTUNGO",
         "type": "polytechnic",
-        "state": "Gombe"
+        "state": "Gombe",
+        "logo_path": "corpslink/institutions/ha2sn3ib2wutpcsn3mua"
     },
     {
         "name": "Federal Polytechnic, Kaura-Namoda",
         "abbreviation": "FEDPOLYKAURANAMODA",
         "type": "polytechnic",
-        "state": "Zamfara"
+        "state": "Zamfara",
+        "logo_path": "corpslink/institutions/p6ii4ixa6ledaxhqmcha"
     },
     {
         "name": "Federal Polytechnic, Monguno",
         "abbreviation": "FEDPOLYMONGUNO",
         "type": "polytechnic",
-        "state": "Borno"
+        "state": "Borno",
+        "logo_path": "corpslink/institutions/bbrqdvajei28dzyt0zgw"
     },
     {
         "name": "Federal Polytechnic, Mubi",
         "abbreviation": "FEDPOLYMUBI",
         "type": "polytechnic",
-        "state": "Adamawa"
+        "state": "Adamawa",
+        "logo_path": "corpslink/institutions/iyxgmzztki0tha434y33"
     },
     {
         "name": "Federal Polytechnic, Nasarawa",
         "abbreviation": "FEDPOLYNASARAWA",
         "type": "polytechnic",
-        "state": "Nasarawa"
+        "state": "Nasarawa",
+        "logo_path": "corpslink/institutions/ncndpzbrqc8ztxnbqfbu"
     },
     {
         "name": "Federal Polytechnic, Nekede",
         "abbreviation": "FEDPOLYNEKEDE",
         "type": "polytechnic",
-        "state": "Imo"
+        "state": "Imo",
+        "logo_path": "corpslink/institutions/usb972efgh6n7ddjmra6"
     },
     {
         "name": "Federal Polytechnic, Ngodo Isuochi",
         "abbreviation": "FEDPOLYNGODO",
         "type": "polytechnic",
-        "state": "Abia"
+        "state": "Abia",
+        "logo_path": "corpslink/institutions/aew8mef6qq6fktqfwvzx"
     },
     {
         "name": "Federal Polytechnic, Nyak Shendam",
         "abbreviation": "FEDPOLYSHENDAM",
         "type": "polytechnic",
-        "state": "Plateau"
+        "state": "Plateau",
+        "logo_path": "corpslink/institutions/qkbrupjbfwdv56ceidkh"
     },
     {
         "name": "Federal Polytechnic, Offa",
         "abbreviation": "FEDPOLYOFFA",
         "type": "polytechnic",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/dxmt3twndtnbd0agxvye"
     },
     {
         "name": "Federal Polytechnic, Ohodo",
         "abbreviation": "FEDPOLYOHODO",
         "type": "polytechnic",
-        "state": "Enugu"
+        "state": "Enugu",
+        "logo_path": "corpslink/institutions/icpbryw1z99flolmahn1"
     },
     {
         "name": "Federal Polytechnic, Oko",
         "abbreviation": "FEDPOLYOKO",
         "type": "polytechnic",
-        "state": "Anambra"
+        "state": "Anambra",
+        "logo_path": "corpslink/institutions/hynuarudjxtmodlebmvt"
     },
     {
         "name": "Federal Polytechnic, Orogun",
         "abbreviation": "FEDPOLYOROGUN",
         "type": "polytechnic",
-        "state": "Delta"
+        "state": "Delta",
+        "logo_path": "corpslink/institutions/bzd1bdimqjuu8wpy7618"
     },
     {
         "name": "Federal Polytechnic, Ugep",
         "abbreviation": "FEDPOLYUGEP",
         "type": "polytechnic",
-        "state": "Cross River"
+        "state": "Cross River",
+        "logo_path": "corpslink/institutions/bd5xcyot4ylyumvuwyx5"
     },
     {
         "name": "Federal Polytechnic, Ukana",
         "abbreviation": "FEDPOLYUKANA",
         "type": "polytechnic",
-        "state": "Akwa Ibom"
+        "state": "Akwa Ibom",
+        "logo_path": "corpslink/institutions/aobs1gmoq764nbjzc62x"
     },
     {
         "name": "Federal Polytechnic, Wannune",
         "abbreviation": "FEDPOLYWANNUNE",
         "type": "polytechnic",
-        "state": "Benue"
+        "state": "Benue",
+        "logo_path": "corpslink/institutions/pdefcx23icfddpaseos1"
     },
     {
         "name": "Fidei Polytechnic",
         "abbreviation": "FIDEI",
         "type": "polytechnic",
-        "state": "Benue"
+        "state": "Benue",
+        "logo_path": "corpslink/institutions/s2ee6wrqcml9pvkrcjdd"
     },
     {
         "name": "First City Polytechnic",
         "abbreviation": "FIRSTCITYPOLY",
         "type": "polytechnic",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/knng42c3o3yocashfwpy"
     },
     {
         "name": "Foundation Polytechnic",
         "abbreviation": "FOUNDATIONPOLY",
         "type": "polytechnic",
-        "state": "Akwa Ibom"
+        "state": "Akwa Ibom",
+        "logo_path": "corpslink/institutions/dkd6d5oluysqgtvpgvdm"
     },
     {
         "name": "Gateway Polytechnic, Saapade",
         "abbreviation": "GATEWAYPOLY",
         "type": "polytechnic",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/cjkfww52kkocdhomxwgs"
     },
     {
         "name": "Gboko Polytechnic",
         "abbreviation": "GBOKOPOLY",
         "type": "polytechnic",
-        "state": "Benue"
+        "state": "Benue",
+        "logo_path": "corpslink/institutions/ynfb55orjkzhihus0yti"
     },
     {
         "name": "Global Polytechnic",
         "abbreviation": "GLOBALPOLY",
         "type": "polytechnic",
-        "state": "Edo"
+        "state": "Edo",
+        "logo_path": "corpslink/institutions/qks6sgr6wwtief6pkfsb"
     },
     {
         "name": "Gloryland Polytechnic",
         "abbreviation": "GLORYLAND",
         "type": "polytechnic",
-        "state": "Kogi"
+        "state": "Kogi",
+        "logo_path": "corpslink/institutions/v5cfxxjc7tbdn3wvwsdw"
     },
     {
         "name": "Gombe State Polytechnic",
         "abbreviation": "GSPOLY",
         "type": "polytechnic",
-        "state": "Gombe"
+        "state": "Gombe",
+        "logo_path": "corpslink/institutions/tsiuubnew38gyckuz4ay"
     },
     {
         "name": "Gozie Anyachebelu Oragram Polytechnic",
         "abbreviation": "GAOPOLY",
         "type": "polytechnic",
-        "state": "Anambra"
+        "state": "Anambra",
+        "logo_path": "corpslink/institutions/jpu9a64bhm5qkqjomabj"
     },
     {
         "name": "Grace Polytechnic",
         "abbreviation": "GRACEPOLY",
         "type": "polytechnic",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/vdui7os81gouft1b5yty"
     },
     {
         "name": "Graceland Polytechnic",
         "abbreviation": "GRACELAND",
         "type": "polytechnic",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/lm2vmtixjuldpgi1zybe"
     },
     {
         "name": "Grundtvig Polytechnic",
         "abbreviation": "GRUNDTVIG",
         "type": "polytechnic",
-        "state": "Anambra"
+        "state": "Anambra",
+        "logo_path": "corpslink/institutions/cdotypvpcfvuyrvxt9sl"
     },
     {
         "name": "Harry Pass Polytechnic",
         "abbreviation": "HARRYPASS",
         "type": "polytechnic",
-        "state": "Benue"
+        "state": "Benue",
+        "logo_path": "corpslink/institutions/iflwozbb8s75jjxsk42n"
     },
     {
         "name": "Harvard Polytechnic",
         "abbreviation": "HARVARDPOLY",
         "type": "polytechnic",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/uidsuiuoiongys3b4xvh"
     },
     {
         "name": "Hassan Usman Katsina Polytechnic",
         "abbreviation": "HUKPOLY",
         "type": "polytechnic",
-        "state": "Katsina"
+        "state": "Katsina",
+        "logo_path": "corpslink/institutions/zuwpp22tas2ummrxomb5"
     },
     {
         "name": "Heritage Polytechnic",
         "abbreviation": "HERITAGEPOLY",
         "type": "polytechnic",
-        "state": "Akwa Ibom"
+        "state": "Akwa Ibom",
+        "logo_path": "corpslink/institutions/s9sn5to6oy989ojduost"
     },
     {
         "name": "Hope Polytechnic",
         "abbreviation": "HOPEPOLY",
         "type": "polytechnic",
-        "state": "Akwa Ibom"
+        "state": "Akwa Ibom",
+        "logo_path": "corpslink/institutions/tv5hzrun4xrxlkz5ausa"
     },
     {
         "name": "Hussaini Adamu Federal Polytechnic",
         "abbreviation": "HAFEDPOLY",
         "type": "polytechnic",
-        "state": "Jigawa"
+        "state": "Jigawa",
+        "logo_path": "corpslink/institutions/yneat5wcdj96kxa3hdiz"
     },
     {
         "name": "I-Con Universal Polytechnic",
         "abbreviation": "ICONUNIV",
         "type": "polytechnic",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/hldl1h9gwvdguyfqhhkt"
     },
     {
         "name": "Ibadan City Polytechnic",
         "abbreviation": "IBADANCITY",
         "type": "polytechnic",
-        "state": "Oyo"
+        "state": "Oyo",
+        "logo_path": "corpslink/institutions/kp5kbltojlmdi77wxd3g"
     },
     {
         "name": "Ibom Metropolitan Polytechnic",
         "abbreviation": "IBOMMET",
         "type": "polytechnic",
-        "state": "Akwa Ibom"
+        "state": "Akwa Ibom",
+        "logo_path": "corpslink/institutions/phmkrac9aygk4njhqxh5"
     },
     {
         "name": "Igbajo Polytechnic",
         "abbreviation": "IGBAJOPOLY",
         "type": "polytechnic",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/a3cvkivpd5fefvayfzzc"
     },
     {
         "name": "Iheachukwu Madubuike Institute of Technology",
         "abbreviation": "IMIT",
         "type": "polytechnic",
-        "state": "Abia"
+        "state": "Abia",
+        "logo_path": "corpslink/institutions/yivqbqrpqhbom1zfkizq"
     },
     {
         "name": "Imo State Polytechnic",
         "abbreviation": "IMOPOLY",
         "type": "polytechnic",
-        "state": "Imo"
+        "state": "Imo",
+        "logo_path": "corpslink/institutions/z1ipf9qi4shywgq5ssk5"
     },
     {
         "name": "Inspire Polytechnic",
         "abbreviation": "INSPIREPOLY",
         "type": "polytechnic",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/ohjuch9w5anvp99u5ghk"
     },
     {
         "name": "Institute of Management and Technology, Enugu",
         "abbreviation": "IMTENUGU",
         "type": "polytechnic",
-        "state": "Enugu"
+        "state": "Enugu",
+        "logo_path": "corpslink/institutions/cohgypgzvv93lr9j6eru"
     },
     {
         "name": "Intercontinental College of Technology",
         "abbreviation": "ICOTECH",
         "type": "polytechnic",
-        "state": "Benue"
+        "state": "Benue",
+        "logo_path": "corpslink/institutions/xyrnwijnn8shqb0qjvmi"
     },
     {
         "name": "Interlink Polytechnic",
         "abbreviation": "INTERLINK",
         "type": "polytechnic",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/u9lxysial5xeudq7ckn9"
     },
     {
         "name": "Isa Mustapha Agwai Polytechnic, Lafia",
         "abbreviation": "IMAPOLY",
         "type": "polytechnic",
-        "state": "Nasarawa"
+        "state": "Nasarawa",
+        "logo_path": "corpslink/institutions/xdjnvwq8vvd2ncxrtb2m"
     },
     {
         "name": "Iwo City Polytechnic",
         "abbreviation": "IWOCITY",
         "type": "polytechnic",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/owuvfpactxy36p6fn5nr"
     },
     {
         "name": "Jigawa State Polytechnic",
         "abbreviation": "JIGPOLY",
         "type": "polytechnic",
-        "state": "Jigawa"
+        "state": "Jigawa",
+        "logo_path": "corpslink/institutions/p2apluynlmpujss98vlh"
     },
     {
         "name": "Kaduna Polytechnic",
         "abbreviation": "KADPOLY",
         "type": "polytechnic",
-        "state": "Kaduna"
+        "state": "Kaduna",
+        "logo_path": "corpslink/institutions/uefcathax4xcxv46ssgs"
     },
     {
         "name": "Kano State Polytechnic",
         "abbreviation": "KANOPOLY",
         "type": "polytechnic",
-        "state": "Kano"
+        "state": "Kano",
+        "logo_path": "corpslink/institutions/oigqmxclq1hrnzmwg5jq"
     },
     {
         "name": "Katsina Institute of Technology and Management",
         "abbreviation": "KITM",
         "type": "polytechnic",
-        "state": "Katsina"
+        "state": "Katsina",
+        "logo_path": "corpslink/institutions/ukvvfvxtasnkffkrxmdq"
     },
     {
         "name": "Kebbi State Polytechnic",
         "abbreviation": "KEBPOLY",
         "type": "polytechnic",
-        "state": "Kebbi"
+        "state": "Kebbi",
+        "logo_path": "corpslink/institutions/y7uvbtqdno5mj0xtpq8f"
     },
     {
         "name": "Kenule Beeson Saro-Wiwa Polytechnic, Bori",
         "abbreviation": "KBSPOLY",
         "type": "polytechnic",
-        "state": "Rivers"
+        "state": "Rivers",
+        "logo_path": "corpslink/institutions/vsgl5daoqhq4fcmhxlmq"
     },
     {
         "name": "Kings Polytechnic",
         "abbreviation": "KINGSPOLY",
         "type": "polytechnic",
-        "state": "Edo"
+        "state": "Edo",
+        "logo_path": "corpslink/institutions/crhjrm5rxttwi59gzpot"
     },
     {
         "name": "Kogi State Polytechnic",
         "abbreviation": "KOGIPOLY",
         "type": "polytechnic",
-        "state": "Kogi"
+        "state": "Kogi",
+        "logo_path": "corpslink/institutions/tasju7kla08po4wodevz"
     },
     {
         "name": "Kwara State Polytechnic",
         "abbreviation": "KWARAPOLY",
         "type": "polytechnic",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/hrriktcxu7sg5azth2ds"
     },
     {
         "name": "Lagos City Polytechnic",
         "abbreviation": "LACIP",
         "type": "polytechnic",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/ip7ygihwovx3dnwcarnn"
     },
     {
         "name": "Landmark Polytechnic",
         "abbreviation": "LANDMARKPOLY",
         "type": "polytechnic",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/kxuvjsgshe3ouotclkse"
     },
     {
         "name": "Lens Polytechnic",
         "abbreviation": "LENSPOLY",
         "type": "polytechnic",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/brk4qpnsvmh8egtclvbk"
     },
     {
         "name": "Lighthouse Polytechnic",
         "abbreviation": "LIGHTHOUSEPOLY",
         "type": "polytechnic",
-        "state": "Edo"
+        "state": "Edo",
+        "logo_path": "corpslink/institutions/ra1tynxg5oz1cerqzy9h"
     },
     {
         "name": "Loam Polytechnic",
         "abbreviation": "LOAMPOLY",
         "type": "polytechnic",
-        "state": "Akwa Ibom"
+        "state": "Akwa Ibom",
+        "logo_path": "corpslink/institutions/jup4da5pr2bnonjdjl1p"
     },
     {
         "name": "Madonna College of Health Technology",
         "abbreviation": "MCHT",
         "type": "polytechnic",
-        "state": "Abia"
+        "state": "Abia",
+        "logo_path": "corpslink/institutions/kkn3b1gthlate0rggjx7"
     },
     {
         "name": "Mai-Idris Alooma Polytechnic, Geidam",
         "abbreviation": "MIAPOLY",
         "type": "polytechnic",
-        "state": "Yobe"
+        "state": "Yobe",
+        "logo_path": "corpslink/institutions/xhqs5fhlzr84shvswdya"
     },
     {
         "name": "Marist Polytechnic",
         "abbreviation": "MARISTPOLY",
         "type": "polytechnic",
-        "state": "Enugu"
+        "state": "Enugu",
+        "logo_path": "corpslink/institutions/ciox2sshvhttqausyfxw"
     },
     {
         "name": "Maritime Academy of Nigeria",
         "abbreviation": "MAN",
         "type": "polytechnic",
-        "state": "Akwa Ibom"
+        "state": "Akwa Ibom",
+        "logo_path": "corpslink/institutions/nfhilcdsqtt5jlt5vxhv"
     },
     {
         "name": "Mater Dei Polytechnic",
         "abbreviation": "MATERDEI",
         "type": "polytechnic",
-        "state": "Enugu"
+        "state": "Enugu",
+        "logo_path": "corpslink/institutions/kvfakscvunmk8utnffwo"
     },
     {
         "name": "Montgomery Polytechnic",
         "abbreviation": "MONTGOMERY",
         "type": "polytechnic",
-        "state": "Ekiti"
+        "state": "Ekiti",
+        "logo_path": "corpslink/institutions/kwhprsitk6bbfdon66mb"
     },
     {
         "name": "Moshood Abiola Polytechnic",
         "abbreviation": "MAPOLY",
         "type": "polytechnic",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/thnyg04cw1zvb1ryzqmg"
     },
     {
         "name": "Mustibrah Polytechnic",
         "abbreviation": "MUSTIBRAH",
         "type": "polytechnic",
-        "state": "Kano"
+        "state": "Kano",
+        "logo_path": "corpslink/institutions/cn4ssuzrvkqlz7fyw7lm"
     },
     {
         "name": "NACABS Polytechnic",
         "abbreviation": "NACABS",
         "type": "polytechnic",
-        "state": "Nasarawa"
+        "state": "Nasarawa",
+        "logo_path": "corpslink/institutions/uedlxchujbo591gv5yw9"
     },
     {
         "name": "NOGAK Polytechnic",
         "abbreviation": "NOGAK",
         "type": "polytechnic",
-        "state": "Cross River"
+        "state": "Cross River",
+        "logo_path": "corpslink/institutions/taoovlb1oejvyd3ivb32"
     },
     {
         "name": "Nation Builders Polytechnic",
         "abbreviation": "NATIONBUILDERS",
         "type": "polytechnic",
-        "state": "Delta"
+        "state": "Delta",
+        "logo_path": "corpslink/institutions/kxe69wcubbn9wz3kp0kq"
     },
     {
         "name": "National Institute of Construction Technology and Management",
         "abbreviation": "NICTM",
         "type": "polytechnic",
-        "state": "Edo"
+        "state": "Edo",
+        "logo_path": "corpslink/institutions/alpetujqwsd2xppdkktt"
     },
     {
         "name": "Newland Polytechnic",
         "abbreviation": "NEWLANDPOLY",
         "type": "polytechnic",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/chkogwxylkfxvcnjgkyw"
     },
     {
         "name": "Niger State Polytechnic",
         "abbreviation": "NSPOLY",
         "type": "polytechnic",
-        "state": "Niger"
+        "state": "Niger",
+        "logo_path": "corpslink/institutions/p9adcnbvfkrc20ocbrjs"
     },
     {
         "name": "Nigerian Army College of Environmental Science and Technology",
         "abbreviation": "NACEST",
         "type": "polytechnic",
-        "state": "Benue"
+        "state": "Benue",
+        "logo_path": "corpslink/institutions/f9mui5oktkqgqdd680mh"
     },
     {
         "name": "Nigerian College of Aviation Technology",
         "abbreviation": "NCAT",
         "type": "polytechnic",
-        "state": "Kaduna"
+        "state": "Kaduna",
+        "logo_path": "corpslink/institutions/upjeo0gmbhsg5djibq2s"
     },
     {
         "name": "Novelty Polytechnic",
         "abbreviation": "NOVELTYPOLY",
         "type": "polytechnic",
-        "state": "Oyo"
+        "state": "Oyo",
+        "logo_path": "corpslink/institutions/zdoz1avc7ofnavv2tfyc"
     },
     {
         "name": "Nuhu Bamalli Polytechnic",
         "abbreviation": "NBPOLY",
         "type": "polytechnic",
-        "state": "Kaduna"
+        "state": "Kaduna",
+        "logo_path": "corpslink/institutions/a2psmpqc2jtkg2q1abej"
     },
     {
         "name": "Odaji Agbo Polytechnic",
         "abbreviation": "ODAJIAGBO",
         "type": "polytechnic",
-        "state": "Cross River"
+        "state": "Cross River",
+        "logo_path": "corpslink/institutions/bedyxma1bg04trfjotml"
     },
     {
         "name": "Oduduwa Polytechnic",
         "abbreviation": "ODUDUWAPOLY",
         "type": "polytechnic",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/vmnwihspijj7ezwysjuk"
     },
     {
         "name": "Ogbonnaya Onu Polytechnic",
         "abbreviation": "OOPOLY",
         "type": "polytechnic",
-        "state": "Abia"
+        "state": "Abia",
+        "logo_path": "corpslink/institutions/fguzc8grl8zukxkhowji"
     },
     {
         "name": "Ogun State Institute of Technology",
         "abbreviation": "OGITECH",
         "type": "polytechnic",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/b8ykngrinvefuazrw6ok"
     },
     {
         "name": "Osun State College of Technology",
         "abbreviation": "OSCOTECH",
         "type": "polytechnic",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/prlggenk2wcl821zklxh"
     },
     {
         "name": "Osun State Polytechnic",
         "abbreviation": "OSPOLY",
         "type": "polytechnic",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/g63b9nq1y7hsvhf5b5mi"
     },
     {
         "name": "Our Saviour Institute of Science and Technology",
         "abbreviation": "OSISATECH",
         "type": "polytechnic",
-        "state": "Enugu"
+        "state": "Enugu",
+        "logo_path": "corpslink/institutions/mygigbhrgvlfazis9jha"
     },
     {
         "name": "Oyo State College of Agriculture and Technology",
         "abbreviation": "OYSCATECH",
         "type": "polytechnic",
-        "state": "Oyo"
+        "state": "Oyo",
+        "logo_path": "corpslink/institutions/lebezmlc1zfwiesf62nk"
     },
     {
         "name": "Paramount Polytechnic",
         "abbreviation": "PARAMOUNTPOLY",
         "type": "polytechnic",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/yduozj9mb9ad0dm4abx1"
     },
     {
         "name": "Petroleum Training Institute",
         "abbreviation": "PTI",
         "type": "polytechnic",
-        "state": "Delta"
+        "state": "Delta",
+        "logo_path": "corpslink/institutions/jcynxzftjwd0edba1cct"
     },
     {
         "name": "Plateau State Polytechnic",
         "abbreviation": "PLAPOLY",
         "type": "polytechnic",
-        "state": "Plateau"
+        "state": "Plateau",
+        "logo_path": "corpslink/institutions/t53fxdarxrxpiggoftyd"
     },
     {
         "name": "Prime Polytechnic",
         "abbreviation": "PRIMEPOLY",
         "type": "polytechnic",
-        "state": "Kogi"
+        "state": "Kogi",
+        "logo_path": "corpslink/institutions/srsmycc5wxg6yyt2oztg"
     },
     {
         "name": "Raindrops Institute of Management and Technology",
         "abbreviation": "RIMTECH",
         "type": "polytechnic",
-        "state": "Imo"
+        "state": "Imo",
+        "logo_path": "corpslink/institutions/qph2956jetq45hpcmihj"
     },
     {
         "name": "Ramat Polytechnic",
         "abbreviation": "RAMATPOLY",
         "type": "polytechnic",
-        "state": "Borno"
+        "state": "Borno",
+        "logo_path": "corpslink/institutions/eujn6vpdyyr38fb5rcmf"
     },
     {
         "name": "Ronik Polytechnic",
         "abbreviation": "RONIKPOLY",
         "type": "polytechnic",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/aedifk3vufhdarrrkaml"
     },
     {
         "name": "Rufus Giwa Polytechnic",
         "abbreviation": "RUGIPO",
         "type": "polytechnic",
-        "state": "Ondo"
+        "state": "Ondo",
+        "logo_path": "corpslink/institutions/zd0y1uiczif5lwpf2mmw"
     },
     {
         "name": "SAF Polytechnic",
         "abbreviation": "SAFPOLY",
         "type": "polytechnic",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/o823sepzmoocdrg3gju5"
     },
     {
         "name": "Shaka Polytechnic",
         "abbreviation": "SHAKAPOLY",
         "type": "polytechnic",
-        "state": "Edo"
+        "state": "Edo",
+        "logo_path": "corpslink/institutions/wnhn03igowzblvamr7ck"
     },
     {
         "name": "Stars Polytechnic",
         "abbreviation": "STARSPOLY",
         "type": "polytechnic",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/uvznyhb9dvnqhkfx1juq"
     },
     {
         "name": "Sure Foundation Polytechnic",
         "abbreviation": "SUREFOUNDATION",
         "type": "polytechnic",
-        "state": "Akwa Ibom"
+        "state": "Akwa Ibom",
+        "logo_path": "corpslink/institutions/ibbhetquvdtftm8lw0rf"
     },
     {
         "name": "Taraba State Polytechnic",
         "abbreviation": "TARPOLY",
         "type": "polytechnic",
-        "state": "Taraba"
+        "state": "Taraba",
+        "logo_path": "corpslink/institutions/xhfgwqavstfq1rukyzts"
     },
     {
         "name": "Temple Gate Polytechnic",
         "abbreviation": "TEMPLEGATE",
         "type": "polytechnic",
-        "state": "Abia"
+        "state": "Abia",
+        "logo_path": "corpslink/institutions/pb89mb206dbpgnyfqjd2"
     },
     {
         "name": "The Oke-Ogun Polytechnic",
         "abbreviation": "OOPOYO",
         "type": "polytechnic",
-        "state": "Oyo"
+        "state": "Oyo",
+        "logo_path": "corpslink/institutions/qncrhwhe7b1kvwhcytnd"
     },
     {
         "name": "The Polytechnic, Adoka",
         "abbreviation": "POLYADOKA",
         "type": "polytechnic",
-        "state": "Benue"
+        "state": "Benue",
+        "logo_path": "corpslink/institutions/xuk7cfuqtwfvv6djhrsl"
     },
     {
         "name": "The Polytechnic, Ibadan",
         "abbreviation": "POLYIBADAN",
         "type": "polytechnic",
-        "state": "Oyo"
+        "state": "Oyo",
+        "logo_path": "corpslink/institutions/nl9a0bd5pbfuh5fakx0g"
     },
     {
         "name": "The Polytechnic, Igbo-Owu",
         "abbreviation": "POLYIGBOOWU",
         "type": "polytechnic",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/wu7v1s187b2qtbferv0c"
     },
     {
         "name": "The Polytechnic, Ile-Ife",
         "abbreviation": "POLYILEIFE",
         "type": "polytechnic",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/d1qy0itayp8pbs8ihaxj"
     },
     {
         "name": "The Polytechnic, Iresi",
         "abbreviation": "POLYIRESI",
         "type": "polytechnic",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/nbh09cu0aat7aembteld"
     },
     {
         "name": "TimeOn Kairos Polytechnic",
         "abbreviation": "TIMEONKAIROS",
         "type": "polytechnic",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/kuougnlh6jpaiuphlpxo"
     },
     {
         "name": "Trinity Polytechnic",
         "abbreviation": "TRINITYPOLY",
         "type": "polytechnic",
-        "state": "Akwa Ibom"
+        "state": "Akwa Ibom",
+        "logo_path": "corpslink/institutions/jwymcopnrd6uw1dftx5n"
     },
     {
         "name": "Ultra Excellence Polytechnic",
         "abbreviation": "ULTRAEXCELLENCE",
         "type": "polytechnic",
-        "state": "Akwa Ibom"
+        "state": "Akwa Ibom",
+        "logo_path": "corpslink/institutions/cxmtwjczktndkx455xhw"
     },
     {
         "name": "Umaru Ali Shinkafi Polytechnic",
         "abbreviation": "UASPOLY",
         "type": "polytechnic",
-        "state": "Sokoto"
+        "state": "Sokoto",
+        "logo_path": "corpslink/institutions/ebcxkvlays9nf1lcg7h0"
     },
     {
         "name": "Unique College of Management and Technology",
         "abbreviation": "UNIQUECMT",
         "type": "polytechnic",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/xeqoiuwe4mbipitfzcke"
     },
     {
         "name": "United Polytechnic",
         "abbreviation": "UNITEDPOLY",
         "type": "polytechnic",
-        "state": "Plateau"
+        "state": "Plateau",
+        "logo_path": "corpslink/institutions/g72adekzj5amic9jfqgx"
     },
     {
         "name": "Villanova Polytechnic",
         "abbreviation": "VILLANOVA",
         "type": "polytechnic",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/ytayjifindhxdtfvijv0"
     },
     {
         "name": "Vineyard Polytechnic",
         "abbreviation": "VINEYARDPOLY",
         "type": "polytechnic",
-        "state": "Nasarawa"
+        "state": "Nasarawa",
+        "logo_path": "corpslink/institutions/jjk1bt792usvdyrpy83w"
     },
     {
         "name": "Waziri Umaru Federal Polytechnic",
         "abbreviation": "WUFPB",
         "type": "polytechnic",
-        "state": "Kebbi"
+        "state": "Kebbi",
+        "logo_path": "corpslink/institutions/x6i1vdi2e9m8lefvvfha"
     },
     {
         "name": "Westland Polytechnic",
         "abbreviation": "WESTLANDPOLY",
         "type": "polytechnic",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/nomwijgzecqdzmjnjqcn"
     },
     {
         "name": "Yaba College of Technology",
         "abbreviation": "YABATECH",
         "type": "polytechnic",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/s891tr6obi6auqifsdbc"
     },
     {
         "name": "A.D. Rufai College of Education for Legal and Islamic Studies, Misau",
         "abbreviation": "ADRCOE",
         "type": "college_of_education",
-        "state": "Bauchi"
+        "state": "Bauchi",
+        "logo_path": "corpslink/institutions/vn7rjtsu7uyprucggq02"
     },
     {
         "name": "AGZ College of Education, Bajoga",
         "abbreviation": "AGZCOE",
         "type": "college_of_education",
-        "state": "Gombe"
+        "state": "Gombe",
+        "logo_path": "corpslink/institutions/l10pab79jxifzjjv0xp3"
     },
     {
         "name": "Abdullahi Maikano College of Education, Wase",
         "abbreviation": "AMCOE",
         "type": "college_of_education",
-        "state": "Plateau"
+        "state": "Plateau",
+        "logo_path": "corpslink/institutions/yfrvbcrqgaguklgyysy0"
     },
     {
         "name": "Abia State College of Education (Technical), Arochukwu",
         "abbreviation": "ASCETECH",
         "type": "college_of_education",
-        "state": "Abia"
+        "state": "Abia",
+        "logo_path": "corpslink/institutions/kyot8lj1qy3ulzonqrv4"
     },
     {
         "name": "Adamawa State College of Education, Hong",
         "abbreviation": "ADSCOE",
         "type": "college_of_education",
-        "state": "Adamawa"
+        "state": "Adamawa",
+        "logo_path": "corpslink/institutions/huhendiiqqqr95wq4bao"
     },
     {
         "name": "Adamu Augie College of Education, Argungu",
         "abbreviation": "AACOE",
         "type": "college_of_education",
-        "state": "Kebbi"
+        "state": "Kebbi",
+        "logo_path": "corpslink/institutions/j2wn1pzhzwjgytasew1r"
     },
     {
         "name": "Adamu Garkuwa College of Education, Toro",
         "abbreviation": "AGCOE",
         "type": "college_of_education",
-        "state": "Bauchi"
+        "state": "Bauchi",
+        "logo_path": "corpslink/institutions/fto46orp3uix9bdfttsl"
     },
     {
         "name": "Adamu Tafawa Balewa College of Education, Kangere",
         "abbreviation": "ATBCOE",
         "type": "college_of_education",
-        "state": "Bauchi"
+        "state": "Bauchi",
+        "logo_path": "corpslink/institutions/chzs3gqixfpxaqy164gl"
     },
     {
         "name": "Adeshina College of Education, Share",
         "abbreviation": "ADCOESHARE",
         "type": "college_of_education",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/px9ykfleqgti8jvent2c"
     },
     {
         "name": "African Thinkers Community of Inquiry College of Education",
         "abbreviation": "ATCICOE",
         "type": "college_of_education",
-        "state": "Enugu"
+        "state": "Enugu",
+        "logo_path": "corpslink/institutions/umhlvqujvrdjisoudr4b"
     },
     {
         "name": "Akwa Ibom State College of Education, Afaha Nsit",
         "abbreviation": "AKSCOE",
         "type": "college_of_education",
-        "state": "Akwa Ibom"
+        "state": "Akwa Ibom",
+        "logo_path": "corpslink/institutions/jl5iwemapringnzetzob"
     },
     {
         "name": "Al-Hikma College of Education, Ankpa",
         "abbreviation": "ALHIKMACOE",
         "type": "college_of_education",
-        "state": "Kogi"
+        "state": "Kogi",
+        "logo_path": "corpslink/institutions/pdpylhho0jiagv8nxluq"
     },
     {
         "name": "Al-Ibadan College of Education, Ibadan",
         "abbreviation": "ALIBADANCOE",
         "type": "college_of_education",
-        "state": "Oyo"
+        "state": "Oyo",
+        "logo_path": "corpslink/institutions/gui2ner29chkl2hlspzz"
     },
     {
         "name": "Ameenudeen College of Education",
         "abbreviation": "AMEENUDEEN",
         "type": "college_of_education",
-        "state": "Kano"
+        "state": "Kano",
+        "logo_path": "corpslink/institutions/swchwkmxiiekqwsrdzny"
     },
     {
         "name": "Ameer Shehu Idris College of Advanced Studies, Zaria",
         "abbreviation": "ASICAS",
         "type": "college_of_education",
-        "state": "Kaduna"
+        "state": "Kaduna",
+        "logo_path": "corpslink/institutions/xfds8dmr7v8vcywwmjgs"
     },
     {
         "name": "Aminu Kano College of Education",
         "abbreviation": "AMINUKANOCOE",
         "type": "college_of_education",
-        "state": "Kano"
+        "state": "Kano",
+        "logo_path": "corpslink/institutions/ctvok0u1talvrkshgntk"
     },
     {
         "name": "Aminu Kano College of Islamic and Legal Studies",
         "abbreviation": "AKCILS",
         "type": "college_of_education",
-        "state": "Kano"
+        "state": "Kano",
+        "logo_path": "corpslink/institutions/seot3jhlj0ozoj4njpxs"
     },
     {
         "name": "Aminu Saleh College of Education, Azare",
         "abbreviation": "ASCOEAZARE",
         "type": "college_of_education",
-        "state": "Bauchi"
+        "state": "Bauchi",
+        "logo_path": "corpslink/institutions/wkz8c5glboe3vgk1k7gn"
     },
     {
         "name": "Angel Crown College of Education, Gidan-Daya",
         "abbreviation": "ANGELCROWN",
         "type": "college_of_education",
-        "state": "FCT"
+        "state": "FCT",
+        "logo_path": "corpslink/institutions/ls7aligpjxjkqq9bgv1x"
     },
     {
         "name": "Annur Institute for Islamic Education, Kwalajawa, Rangaza",
         "abbreviation": "ANNURIIE",
         "type": "college_of_education",
-        "state": "Kano"
+        "state": "Kano",
+        "logo_path": "corpslink/institutions/vl8ylsclwxxv78y8vqey"
     },
     {
         "name": "Ansar-Ud-Deen College of Education, Isolo",
         "abbreviation": "ANSARUDDEEN",
         "type": "college_of_education",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/pbqvrsc0yb3zuy1nus2n"
     },
     {
         "name": "Apa College of Education, Aido Godo-Okpoga",
         "abbreviation": "APACOE",
         "type": "college_of_education",
-        "state": "Benue"
+        "state": "Benue",
+        "logo_path": "corpslink/institutions/pcgpi6rq2ck0aqeys2ux"
     },
     {
         "name": "Arabic and Islamic College of Education, Potiskum",
         "abbreviation": "AICOE",
         "type": "college_of_education",
-        "state": "Yobe"
+        "state": "Yobe",
+        "logo_path": "corpslink/institutions/zpsnys1xjulmzqmtldve"
     },
     {
         "name": "Assanusiyah College of Education, Ipetumodu",
         "abbreviation": "ASSANUSIYAH",
         "type": "college_of_education",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/h8i717wtkqgyi6wunx9w"
     },
     {
         "name": "Atiku Abubakar College of Legal and Islamic Studies, Nguru",
         "abbreviation": "AACLIS",
         "type": "college_of_education",
-        "state": "Yobe"
+        "state": "Yobe",
+        "logo_path": "corpslink/institutions/pno3fehxqerlt2a1j6zb"
     },
     {
         "name": "Awori District College of Education",
         "abbreviation": "AWORICOE",
         "type": "college_of_education",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/h37wjxzehhthkkm7l5a0"
     },
     {
         "name": "Bauchi Institute for Arabic and Islamic Studies",
         "abbreviation": "BIAIS",
         "type": "college_of_education",
-        "state": "Bauchi"
+        "state": "Bauchi",
+        "logo_path": "corpslink/institutions/ob3kavs98zhcnnfi8dfb"
     },
     {
         "name": "Bayo Tijani College of Education, Egan-Igando",
         "abbreviation": "BTCOE",
         "type": "college_of_education",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/lo43y9hpv5as0ueg4azg"
     },
     {
         "name": "Best Legacy College of Education, Ogbomoso",
         "abbreviation": "BLCOE",
         "type": "college_of_education",
-        "state": "Oyo"
+        "state": "Oyo",
+        "logo_path": "corpslink/institutions/esrdzrhep3t6l0czg9ol"
     },
     {
         "name": "Bethel College of Education, Ijare",
         "abbreviation": "BETHELCOE",
         "type": "college_of_education",
-        "state": "Ondo"
+        "state": "Ondo",
+        "logo_path": "corpslink/institutions/e8t1i6ycsylrmcbwbina"
     },
     {
         "name": "Biga College of Education, Arkilla",
         "abbreviation": "BIGACOE",
         "type": "college_of_education",
-        "state": "Sokoto"
+        "state": "Sokoto",
+        "logo_path": "corpslink/institutions/lhcvrnp5yfxqswyuobqs"
     },
     {
         "name": "Bilyamin Othman College of Education, Dass",
         "abbreviation": "BOCOE",
         "type": "college_of_education",
-        "state": "Bauchi"
+        "state": "Bauchi",
+        "logo_path": "corpslink/institutions/cju41tbc88kphyppdacg"
     },
     {
         "name": "Calvin Foundation College of Education, Naka",
         "abbreviation": "CFCOE",
         "type": "college_of_education",
-        "state": "Benue"
+        "state": "Benue",
+        "logo_path": "corpslink/institutions/xpbabxicbp0gr8bykmm6"
     },
     {
         "name": "City College of Education, Garki",
         "abbreviation": "CITYCOE",
         "type": "college_of_education",
-        "state": "FCT"
+        "state": "FCT",
+        "logo_path": "corpslink/institutions/rnlnvdlhgygpt5hrrkgx"
     },
     {
         "name": "College of Education (Technical), Lafiagi",
         "abbreviation": "COETLAFIAGI",
         "type": "college_of_education",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/fnrk2o5o0rtbfrcorlei"
     },
     {
         "name": "College of Education, Agbor",
         "abbreviation": "COEAGBOR",
         "type": "college_of_education",
-        "state": "Delta"
+        "state": "Delta",
+        "logo_path": "corpslink/institutions/zaulexsd3sazg2q14to8"
     },
     {
         "name": "College of Education, Akwanga",
         "abbreviation": "COEAKWANGA",
         "type": "college_of_education",
-        "state": "Nasarawa"
+        "state": "Nasarawa",
+        "logo_path": "corpslink/institutions/git5gr0mgy4adzcn5kfx"
     },
     {
         "name": "College of Education, Ankpa",
         "abbreviation": "COEANKPA",
         "type": "college_of_education",
-        "state": "Kogi"
+        "state": "Kogi",
+        "logo_path": "corpslink/institutions/thzjh1cjwjfusgkkin2e"
     },
     {
         "name": "College of Education, Billiri",
         "abbreviation": "COEBILLIRI",
         "type": "college_of_education",
-        "state": "Gombe"
+        "state": "Gombe",
+        "logo_path": "corpslink/institutions/h7q05qggkjtqrq73bdsq"
     },
     {
         "name": "College of Education, Darazo",
         "abbreviation": "COEDARAZO",
         "type": "college_of_education",
-        "state": "Bauchi"
+        "state": "Bauchi",
+        "logo_path": "corpslink/institutions/hd6nt3asufh2i4onszaz"
     },
     {
         "name": "College of Education, Ekiadolor",
         "abbreviation": "COEEKIADOLOR",
         "type": "college_of_education",
-        "state": "Edo"
+        "state": "Edo",
+        "logo_path": "corpslink/institutions/tvxzwjb3ldhsuxrnjsfy"
     },
     {
         "name": "College of Education, Ero, Akure",
         "abbreviation": "COEEROAKURE",
         "type": "college_of_education",
-        "state": "Ondo"
+        "state": "Ondo",
+        "logo_path": "corpslink/institutions/kih3azxybn66id5ck1b7"
     },
     {
         "name": "College of Education, Foreign Links Campus, Moro",
         "abbreviation": "COEFLCMORO",
         "type": "college_of_education",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/wcpd6u0vgugq8nb7sqst"
     },
     {
         "name": "College of Education, Gidan-Waya, Kafanchan",
         "abbreviation": "COEGIDANWAYA",
         "type": "college_of_education",
-        "state": "Kaduna"
+        "state": "Kaduna",
+        "logo_path": "corpslink/institutions/hf1r4rdsrxstg7vmu7my"
     },
     {
         "name": "College of Education, Gindiri",
         "abbreviation": "COEGINDIRI",
         "type": "college_of_education",
-        "state": "Plateau"
+        "state": "Plateau",
+        "logo_path": "corpslink/institutions/oxvdku7oys5oid8l470e"
     },
     {
         "name": "College of Education, Igueben",
         "abbreviation": "COEIGUEBEN",
         "type": "college_of_education",
-        "state": "Edo"
+        "state": "Edo",
+        "logo_path": "corpslink/institutions/sw3uw1idywvot30n2mh5"
     },
     {
         "name": "College of Education, Ikere",
         "abbreviation": "COEIKERE",
         "type": "college_of_education",
-        "state": "Ekiti"
+        "state": "Ekiti",
+        "logo_path": "corpslink/institutions/apsjtmxxrw0kfjgy55hr"
     },
     {
         "name": "College of Education, Ilesha",
         "abbreviation": "COEILESHA",
         "type": "college_of_education",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/lmu19qbkg2sal5kstip2"
     },
     {
         "name": "College of Education, Irra Road, Ilemona",
         "abbreviation": "COEILEMONA",
         "type": "college_of_education",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/vtlyizpesh5s8puqhwvj"
     },
     {
         "name": "College of Education, Katsina-Ala",
         "abbreviation": "COEKATSINAALA",
         "type": "college_of_education",
-        "state": "Benue"
+        "state": "Benue",
+        "logo_path": "corpslink/institutions/ujdf8vmaswgszq44etfj"
     },
     {
         "name": "College of Education, Kura",
         "abbreviation": "COEKURA",
         "type": "college_of_education",
-        "state": "Kano"
+        "state": "Kano",
+        "logo_path": "corpslink/institutions/v3zl8bvwok1vrmj9yorw"
     },
     {
         "name": "College of Education, Lanlate",
         "abbreviation": "COELANLATE",
         "type": "college_of_education",
-        "state": "Oyo"
+        "state": "Oyo",
+        "logo_path": "corpslink/institutions/tw1foyxrm73q2tzoq3cr"
     },
     {
         "name": "College of Education, Maru",
         "abbreviation": "COEMARU",
         "type": "college_of_education",
-        "state": "Zamfara"
+        "state": "Zamfara",
+        "logo_path": "corpslink/institutions/ezizeogan731slixnt4y"
     },
     {
         "name": "College of Education, Minna",
         "abbreviation": "COEMINNA",
         "type": "college_of_education",
-        "state": "Niger"
+        "state": "Niger",
+        "logo_path": "corpslink/institutions/erbkuvpjzgymiydl7o5s"
     },
     {
         "name": "College of Education, Oju",
         "abbreviation": "COEOJU",
         "type": "college_of_education",
-        "state": "Benue"
+        "state": "Benue",
+        "logo_path": "corpslink/institutions/cfasjttd7qbqixnyth0k"
     },
     {
         "name": "College of Education, Oro",
         "abbreviation": "COEORO",
         "type": "college_of_education",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/ygufkepu3v6wiqfa0psz"
     },
     {
         "name": "College of Education, Waka-Biu",
         "abbreviation": "COEWAKABIU",
         "type": "college_of_education",
-        "state": "Borno"
+        "state": "Borno",
+        "logo_path": "corpslink/institutions/hljbk3w5vuorcsc7rept"
     },
     {
         "name": "College of Education, Warri",
         "abbreviation": "COEWARRI",
         "type": "college_of_education",
-        "state": "Delta"
+        "state": "Delta",
+        "logo_path": "corpslink/institutions/orgr54g6jgb2okcy4wri"
     },
     {
         "name": "College of Education, Zing",
         "abbreviation": "COEZING",
         "type": "college_of_education",
-        "state": "Taraba"
+        "state": "Taraba",
+        "logo_path": "corpslink/institutions/u2nljwg5aoe9njuzumy8"
     },
     {
         "name": "Cornerstone College of Education, Lagos",
         "abbreviation": "CORNERSTONECOE",
         "type": "college_of_education",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/bpykoxxxgru094p2fzyd"
     },
     {
         "name": "Corona College of Education, Lekki",
         "abbreviation": "CORONACOE",
         "type": "college_of_education",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/jm6gwy06qkouubafhuxg"
     },
     {
         "name": "Covenant College of Education, Aba",
         "abbreviation": "COVENANTCOEABA",
         "type": "college_of_education",
-        "state": "Abia"
+        "state": "Abia",
+        "logo_path": "corpslink/institutions/a5l8u7zvib8ljdpalici"
     },
     {
         "name": "Crest Field College of Education, Erin Osun",
         "abbreviation": "CFCOEERIN",
         "type": "college_of_education",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/rrmeg8pax8mvqizsqywn"
     },
     {
         "name": "Cross River State College of Education, Akamkpa",
         "abbreviation": "CRSCOE",
         "type": "college_of_education",
-        "state": "Cross River"
+        "state": "Cross River",
+        "logo_path": "corpslink/institutions/thfkikihvybougl85x4y"
     },
     {
         "name": "Delar College of Education, Ibadan",
         "abbreviation": "DELARCOE",
         "type": "college_of_education",
-        "state": "Oyo"
+        "state": "Oyo",
+        "logo_path": "corpslink/institutions/r3hgb7rqfkiv4ok2vn0f"
     },
     {
         "name": "Delta State College of Physical Education, Mosogar",
         "abbreviation": "DSCOPE",
         "type": "college_of_education",
-        "state": "Delta"
+        "state": "Delta",
+        "logo_path": "corpslink/institutions/mfw8wpbgpfc4j4fssvwt"
     },
     {
         "name": "Diamond College of Education, Aba",
         "abbreviation": "DIAMONDCOE",
         "type": "college_of_education",
-        "state": "Abia"
+        "state": "Abia",
+        "logo_path": "corpslink/institutions/pvf1dcertiywppxidp8k"
     },
     {
         "name": "ECWA College of Education, Igbaja",
         "abbreviation": "ECWAIGBAJA",
         "type": "college_of_education",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/fvvahad1qiehwvtzdjno"
     },
     {
         "name": "ECWA College of Education, Jos",
         "abbreviation": "ECWAJOS",
         "type": "college_of_education",
-        "state": "Plateau"
+        "state": "Plateau",
+        "logo_path": "corpslink/institutions/mojoj7mq5o1wjo8u4sfm"
     },
     {
         "name": "Ebenezer College of Education, Edda",
         "abbreviation": "EBENEZERCOE",
         "type": "college_of_education",
-        "state": "Ebonyi"
+        "state": "Ebonyi",
+        "logo_path": "corpslink/institutions/i29wnbrcgvqq5mzauf22"
     },
     {
         "name": "Ebonyi State College of Education, Ikwo",
         "abbreviation": "EBSCOE",
         "type": "college_of_education",
-        "state": "Ebonyi"
+        "state": "Ebonyi",
+        "logo_path": "corpslink/institutions/uns6k0plgd7oxeoa8jit"
     },
     {
         "name": "Edo State College of Education",
         "abbreviation": "EDSCOE",
         "type": "college_of_education",
-        "state": "Edo"
+        "state": "Edo",
+        "logo_path": "corpslink/institutions/r1prxlkusfs0yexcsfpj"
     },
     {
         "name": "Elder Oyama Memorial College of Education, Ofat, Obubra",
         "abbreviation": "EOMCOE",
         "type": "college_of_education",
-        "state": "Cross River"
+        "state": "Cross River",
+        "logo_path": "corpslink/institutions/x2dtwgbtgnq95ysxvq1m"
     },
     {
         "name": "Elizabeth Memorial College of Education, Odenigbo, Nsukka",
         "abbreviation": "EMCOE",
         "type": "college_of_education",
-        "state": "Enugu"
+        "state": "Enugu",
+        "logo_path": "corpslink/institutions/udiz4hcwqy4jqwodqwcn"
     },
     {
         "name": "Emmanuel Ebije Ikwue College of Education, Otukpo",
         "abbreviation": "EEICOE",
         "type": "college_of_education",
-        "state": "Benue"
+        "state": "Benue",
+        "logo_path": "corpslink/institutions/cjrtycysf2ihd7krhb5b"
     },
     {
         "name": "Enugu State College of Education (Technical)",
         "abbreviation": "ESCETECH",
         "type": "college_of_education",
-        "state": "Enugu"
+        "state": "Enugu",
+        "logo_path": "corpslink/institutions/rubadfvtbykew5lwvtlk"
     },
     {
         "name": "FCT College of Education, Zuba",
         "abbreviation": "FCTCOE",
         "type": "college_of_education",
-        "state": "FCT"
+        "state": "FCT",
+        "logo_path": "corpslink/institutions/efdxoanfqunbvnj84wp4"
     },
     {
         "name": "Federal College of Education (Special), Oyo",
         "abbreviation": "FCESOYO",
         "type": "college_of_education",
-        "state": "Oyo"
+        "state": "Oyo",
+        "logo_path": "corpslink/institutions/nnc9t28ed69ae4zvtcli"
     },
     {
         "name": "Federal College of Education (Technical), Akoka",
         "abbreviation": "FCETAKOKA",
         "type": "college_of_education",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/h1d8cdbblk9r3v9erawp"
     },
     {
         "name": "Federal College of Education (Technical), Asaba",
         "abbreviation": "FCETASABA",
         "type": "college_of_education",
-        "state": "Delta"
+        "state": "Delta",
+        "logo_path": "corpslink/institutions/fpc8n9pgwe7ermqdydwf"
     },
     {
         "name": "Federal College of Education (Technical), Bichi",
         "abbreviation": "FCETBICHI",
         "type": "college_of_education",
-        "state": "Kano"
+        "state": "Kano",
+        "logo_path": "corpslink/institutions/zd4r8lfr0nt8vbtad8j1"
     },
     {
         "name": "Federal College of Education (Technical), Gombe",
         "abbreviation": "FCETGOMBE",
         "type": "college_of_education",
-        "state": "Gombe"
+        "state": "Gombe",
+        "logo_path": "corpslink/institutions/avx3i05p15gyjcybxl6f"
     },
     {
         "name": "Federal College of Education (Technical), Gusau",
         "abbreviation": "FCETGUSAU",
         "type": "college_of_education",
-        "state": "Zamfara"
+        "state": "Zamfara",
+        "logo_path": "corpslink/institutions/pe7wh8m5rw86lvoflzb1"
     },
     {
         "name": "Federal College of Education (Technical), Omoku",
         "abbreviation": "FCETOMOKU",
         "type": "college_of_education",
-        "state": "Rivers"
+        "state": "Rivers",
+        "logo_path": "corpslink/institutions/pm7efv7vb1yond9iumpy"
     },
     {
         "name": "Federal College of Education (Technical), Potiskum",
         "abbreviation": "FCETPOTISKUM",
         "type": "college_of_education",
-        "state": "Yobe"
+        "state": "Yobe",
+        "logo_path": "corpslink/institutions/cjwerotggi7rl1ctvv5i"
     },
     {
         "name": "Federal College of Education (Technical), Umunze",
         "abbreviation": "FCETUMUNZE",
         "type": "college_of_education",
-        "state": "Anambra"
+        "state": "Anambra",
+        "logo_path": "corpslink/institutions/zwinasua2lte419h6okm"
     },
     {
         "name": "Federal College of Education, Abeokuta",
         "abbreviation": "FCEABEOKUTA",
         "type": "college_of_education",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/xsb0lxj8hbko4qdqbyip"
     },
     {
         "name": "Federal College of Education, Eha-Amufu",
         "abbreviation": "FCEEHAAMUFU",
         "type": "college_of_education",
-        "state": "Enugu"
+        "state": "Enugu",
+        "logo_path": "corpslink/institutions/krr9neqp02olbgyzhtlo"
     },
     {
         "name": "Federal College of Education, Ididep",
         "abbreviation": "FCEIDIDEP",
         "type": "college_of_education",
-        "state": "Akwa Ibom"
+        "state": "Akwa Ibom",
+        "logo_path": "corpslink/institutions/ea0s2tuzkww32s7e9m7r"
     },
     {
         "name": "Federal College of Education, Iwo",
         "abbreviation": "FCEIWO",
         "type": "college_of_education",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/gkj65n488pvoqiuckkqq"
     },
     {
         "name": "Federal College of Education, Kano",
         "abbreviation": "FCEKANO",
         "type": "college_of_education",
-        "state": "Kano"
+        "state": "Kano",
+        "logo_path": "corpslink/institutions/ywab0ukhlm3mxjivsqlz"
     },
     {
         "name": "Federal College of Education, Katsina",
         "abbreviation": "FCEKATSINA",
         "type": "college_of_education",
-        "state": "Katsina"
+        "state": "Katsina",
+        "logo_path": "corpslink/institutions/qpijnemcz4eotvqk1ac9"
     },
     {
         "name": "Federal College of Education, Obudu",
         "abbreviation": "FCEOBUDU",
         "type": "college_of_education",
-        "state": "Cross River"
+        "state": "Cross River",
+        "logo_path": "corpslink/institutions/deegmoymycp2aaw0oyia"
     },
     {
         "name": "Federal College of Education, Okene",
         "abbreviation": "FCEOKENE",
         "type": "college_of_education",
-        "state": "Kogi"
+        "state": "Kogi",
+        "logo_path": "corpslink/institutions/f1acvqmgpuggtccpumdr"
     },
     {
         "name": "Federal College of Education, Yola",
         "abbreviation": "FCEYOLA",
         "type": "college_of_education",
-        "state": "Adamawa"
+        "state": "Adamawa",
+        "logo_path": "corpslink/institutions/gjazluradel2k0drvj9a"
     },
     {
         "name": "Festmed College of Education, Ajowa",
         "abbreviation": "FESTMEDCOE",
         "type": "college_of_education",
-        "state": "Ondo"
+        "state": "Ondo",
+        "logo_path": "corpslink/institutions/qtkcku0gjq7uftafwagw"
     },
     {
         "name": "Gboko College of Education, Gboko",
         "abbreviation": "GBOKOCOE",
         "type": "college_of_education",
-        "state": "Benue"
+        "state": "Benue",
+        "logo_path": "corpslink/institutions/jdo7fs7xjequ3negev3t"
     },
     {
         "name": "Global College of Education, Jos",
         "abbreviation": "GLOBALCOEJOS",
         "type": "college_of_education",
-        "state": "Plateau"
+        "state": "Plateau",
+        "logo_path": "corpslink/institutions/rf0gsefneuoo3sg0fzwk"
     },
     {
         "name": "Good Shepherd College of Education, Danlemo Alakuko",
         "abbreviation": "GSCOE",
         "type": "college_of_education",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/odklnhnwti8npdfblmaw"
     },
     {
         "name": "Grace College of Education, Oshogbo",
         "abbreviation": "GRACECOE",
         "type": "college_of_education",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/p9wwmxwmuad82mluadyi"
     },
     {
         "name": "Hamzainab College of Education, Osogbo",
         "abbreviation": "HAMZAINAB",
         "type": "college_of_education",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/mrrkmipwomcjrm2yb6ai"
     },
     {
         "name": "Harvard Wilson College of Education, Aba",
         "abbreviation": "HWCOE",
         "type": "college_of_education",
-        "state": "Abia"
+        "state": "Abia",
+        "logo_path": "corpslink/institutions/upkegsrepwnbailu0mgy"
     },
     {
         "name": "Hill College of Education, Gwanji, Akwanga",
         "abbreviation": "HILLCOE",
         "type": "college_of_education",
-        "state": "Nasarawa"
+        "state": "Nasarawa",
+        "logo_path": "corpslink/institutions/d9m7ishfnxc3klttrwi3"
     },
     {
         "name": "Hope and Anchor College of Education, Suleja",
         "abbreviation": "HACOE",
         "type": "college_of_education",
-        "state": "Niger"
+        "state": "Niger",
+        "logo_path": "corpslink/institutions/cqtcvususdmkki0dcclj"
     },
     {
         "name": "Ilori College of Education, Ede",
         "abbreviation": "ILORICOE",
         "type": "college_of_education",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/ae6l2aosdlh6qgod7jjn"
     },
     {
         "name": "Imam Hamzat College of Education, Ilorin",
         "abbreviation": "IHCOE",
         "type": "college_of_education",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/hkmpgpxkozryvdswkelu"
     },
     {
         "name": "Imam Saidu College of Education, Funtua",
         "abbreviation": "ISCOE",
         "type": "college_of_education",
-        "state": "Katsina"
+        "state": "Katsina",
+        "logo_path": "corpslink/institutions/yter4bhi7hbifnkmisoi"
     },
     {
         "name": "Imo State College of Education, Ihitte/Uboma",
         "abbreviation": "IMSCOE",
         "type": "college_of_education",
-        "state": "Imo"
+        "state": "Imo",
+        "logo_path": "corpslink/institutions/hzlloy9aayqxzcqt04mc"
     },
     {
         "name": "Institute of Ecumenical Education, Thinkers Corner, Enugu",
         "abbreviation": "IEETC",
         "type": "college_of_education",
-        "state": "Enugu"
+        "state": "Enugu",
+        "logo_path": "corpslink/institutions/jydlas8yb6moeje967hu"
     },
     {
         "name": "Ipere College of Education, Agyaragu",
         "abbreviation": "IPERECOE",
         "type": "college_of_education",
-        "state": "Nasarawa"
+        "state": "Nasarawa",
+        "logo_path": "corpslink/institutions/n0t0m1d3euqpgn8u7xjq"
     },
     {
         "name": "Isa Kaita College of Education, Dutsinma",
         "abbreviation": "IKCOE",
         "type": "college_of_education",
-        "state": "Katsina"
+        "state": "Katsina",
+        "logo_path": "corpslink/institutions/f4t2yklp8dqwusuxpjdv"
     },
     {
         "name": "Isaac Jasper Boro College of Education, Sagbama",
         "abbreviation": "IJBCOE",
         "type": "college_of_education",
-        "state": "Bayelsa"
+        "state": "Bayelsa",
+        "logo_path": "corpslink/institutions/pzi1ngxj2egrikht346z"
     },
     {
         "name": "JIBWIS College of Education, Gombe",
         "abbreviation": "JIBWISGOMBE",
         "type": "college_of_education",
-        "state": "Gombe"
+        "state": "Gombe",
+        "logo_path": "corpslink/institutions/rxjn18r1vzhh4d2bqqyj"
     },
     {
         "name": "JIBWIS College of Education, Jamaare",
         "abbreviation": "JIBWISJAMAARE",
         "type": "college_of_education",
-        "state": "Bauchi"
+        "state": "Bauchi",
+        "logo_path": "corpslink/institutions/shz6r8d7x6ep1sh9ra47"
     },
     {
         "name": "JIBWIS College of Education, Keffi",
         "abbreviation": "JIBWISKEFFI",
         "type": "college_of_education",
-        "state": "Nasarawa"
+        "state": "Nasarawa",
+        "logo_path": "corpslink/institutions/sn0o5jqkdzxmc5pzcbhb"
     },
     {
         "name": "JIBWIS College of Education, Potiskum",
         "abbreviation": "JIBWISPOTISKUM",
         "type": "college_of_education",
-        "state": "Yobe"
+        "state": "Yobe",
+        "logo_path": "corpslink/institutions/yhvf5kr8pczvqi4w6det"
     },
     {
         "name": "Jigawa State College of Education and Legal Studies, Ringim",
         "abbreviation": "JSCOELS",
         "type": "college_of_education",
-        "state": "Jigawa"
+        "state": "Jigawa",
+        "logo_path": "corpslink/institutions/d8pbahxjnf4gaqe8sftu"
     },
     {
         "name": "Jigawa State College of Education, Gumel",
         "abbreviation": "JSCOEGUMEL",
         "type": "college_of_education",
-        "state": "Jigawa"
+        "state": "Jigawa",
+        "logo_path": "corpslink/institutions/mjbeefzy3563mk1psmy6"
     },
     {
         "name": "Kano State College of Education and Preliminary Studies",
         "abbreviation": "KSCOEPS",
         "type": "college_of_education",
-        "state": "Kano"
+        "state": "Kano",
+        "logo_path": "corpslink/institutions/lyu7kd8t1xnmbnablqe8"
     },
     {
         "name": "Kashim Ibrahim College of Education, Maiduguri",
         "abbreviation": "KICOEMAID",
         "type": "college_of_education",
-        "state": "Borno"
+        "state": "Borno",
+        "logo_path": "corpslink/institutions/ez6urjxoy2pwpqnb21fo"
     },
     {
         "name": "Kazaure College of Education, Kazaure",
         "abbreviation": "KAZAURECOE",
         "type": "college_of_education",
-        "state": "Jigawa"
+        "state": "Jigawa",
+        "logo_path": "corpslink/institutions/klr1orslzpywgezd8eoq"
     },
     {
         "name": "Kinsey College of Education, Ilorin",
         "abbreviation": "KINSEYCOE",
         "type": "college_of_education",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/ptg9d8sq591bjfqiqqbz"
     },
     {
         "name": "Kogi East College of Education",
         "abbreviation": "KOGIEASTCOE",
         "type": "college_of_education",
-        "state": "Kogi"
+        "state": "Kogi",
+        "logo_path": "corpslink/institutions/pewszrnrlzq3fjjyinrl"
     },
     {
         "name": "Kwararafa College of Education, Otukpo",
         "abbreviation": "KWARARAFACOE",
         "type": "college_of_education",
-        "state": "Benue"
+        "state": "Benue",
+        "logo_path": "corpslink/institutions/kswc5mcbsjk1aruacbxt"
     },
     {
         "name": "Lessel College of Education, Lessel",
         "abbreviation": "LESSELCOE",
         "type": "college_of_education",
-        "state": "Benue"
+        "state": "Benue",
+        "logo_path": "corpslink/institutions/xjjnhzpgqgyxhx8xqxvx"
     },
     {
         "name": "Life Gate College of Education, Afon, Asa",
         "abbreviation": "LIFEGATECOE",
         "type": "college_of_education",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/acr7vrod9etrgwlh5env"
     },
     {
         "name": "Meadow Hall College of Education, Alma Beach Estate",
         "abbreviation": "MEADOWHALLCOE",
         "type": "college_of_education",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/dcdubbmb49b4kgon0qee"
     },
     {
         "name": "Metro College of Education, Adogi",
         "abbreviation": "METROCOE",
         "type": "college_of_education",
-        "state": "Nasarawa"
+        "state": "Nasarawa",
+        "logo_path": "corpslink/institutions/v64mx74m43khegaib2qs"
     },
     {
         "name": "Michael Otedola College of Primary Education, Moforiji",
         "abbreviation": "MOCPED",
         "type": "college_of_education",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/c1x3coqjg9hpfpwemoq3"
     },
     {
         "name": "Michael and Cecilia Foundation College of Education, Agbrha-Otor, Ughelli",
         "abbreviation": "MCFCOE",
         "type": "college_of_education",
-        "state": "Delta"
+        "state": "Delta",
+        "logo_path": "corpslink/institutions/krmwns9xwuc8np3gwdfk"
     },
     {
         "name": "Mohammed Goni College of Legal and Islamic Studies, Maiduguri",
         "abbreviation": "MGCLIS",
         "type": "college_of_education",
-        "state": "Borno"
+        "state": "Borno",
+        "logo_path": "corpslink/institutions/ed9rjuyo0jv97cvyyp5c"
     },
     {
         "name": "Moje College of Education, Erin-Ile",
         "abbreviation": "MOJECOE",
         "type": "college_of_education",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/ilhltgvwxubovin6liep"
     },
     {
         "name": "Mufutau Lanihun College of Education, Ibadan",
         "abbreviation": "MLCOE",
         "type": "college_of_education",
-        "state": "Oyo"
+        "state": "Oyo",
+        "logo_path": "corpslink/institutions/odokhlpk686vuexpxmrj"
     },
     {
         "name": "Muhyideen College of Education, Ilorin",
         "abbreviation": "MUHYIDEENCOE",
         "type": "college_of_education",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/mx3aepskrv7csikrgh66"
     },
     {
         "name": "Murtadha College of Education, Olodo, Ibadan",
         "abbreviation": "MURTADHACOE",
         "type": "college_of_education",
-        "state": "Oyo"
+        "state": "Oyo",
+        "logo_path": "corpslink/institutions/ks2eoz691b7u6wf44f1s"
     },
     {
         "name": "Nana Aishat Memorial College of Education",
         "abbreviation": "NAMCOE",
         "type": "college_of_education",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/ciux4zhczyrjpw3rfqgh"
     },
     {
         "name": "Nigerian Army School of Education, Ilorin",
         "abbreviation": "NASE",
         "type": "college_of_education",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/prefkz6xlvrgqvzncnow"
     },
     {
         "name": "Nosakhare College of Education, Benin City",
         "abbreviation": "NOSAKHARECOE",
         "type": "college_of_education",
-        "state": "Edo"
+        "state": "Edo",
+        "logo_path": "corpslink/institutions/ykmpaqzqhfq4pzkgpmpd"
     },
     {
         "name": "Nwafor Orizu College of Education, Nsugbe",
         "abbreviation": "NOCOE",
         "type": "college_of_education",
-        "state": "Anambra"
+        "state": "Anambra",
+        "logo_path": "corpslink/institutions/ugg4igovaq3ammkox9eh"
     },
     {
         "name": "Onit College of Education, Mbaukwu",
         "abbreviation": "ONITCOE",
         "type": "college_of_education",
-        "state": "Anambra"
+        "state": "Anambra",
+        "logo_path": "corpslink/institutions/zel7qlettoxmvxmdzjyq"
     },
     {
         "name": "Osun State College of Education, Ila-Orangun",
         "abbreviation": "OSCOE",
         "type": "college_of_education",
-        "state": "Osun"
+        "state": "Osun",
+        "logo_path": "corpslink/institutions/pfl3d2bt5ercvshykwlb"
     },
     {
         "name": "Oswald Waller College of Education, Shendam",
         "abbreviation": "OWCOE",
         "type": "college_of_education",
-        "state": "Plateau"
+        "state": "Plateau",
+        "logo_path": "corpslink/institutions/dhg7egmwqcrz0n3axav4"
     },
     {
         "name": "Our Saviour Institute of Science and Technology, College of Education, Ogui",
         "abbreviation": "OSISTCOE",
         "type": "college_of_education",
-        "state": "Enugu"
+        "state": "Enugu",
+        "logo_path": "corpslink/institutions/laa8t5rs0apit5vvb4rc"
     },
     {
         "name": "Pan African College of Education, Offa",
         "abbreviation": "PACOE",
         "type": "college_of_education",
-        "state": "Kwara"
+        "state": "Kwara",
+        "logo_path": "corpslink/institutions/hdfsibixckzheevqsd9n"
     },
     {
         "name": "Peace College of Education, Enokpoli",
         "abbreviation": "PEACECOE",
         "type": "college_of_education",
-        "state": "Kogi"
+        "state": "Kogi",
+        "logo_path": "corpslink/institutions/h8vm2v6rudby57rz4rc6"
     },
     {
         "name": "PeaceLand College of Education, Enugu",
         "abbreviation": "PEACELANDCOE",
         "type": "college_of_education",
-        "state": "Enugu"
+        "state": "Enugu",
+        "logo_path": "corpslink/institutions/ivwpnextr5bmqatkrinc"
     },
     {
         "name": "Peacock College of Education, Jalingo",
         "abbreviation": "PEACOCKCOE",
         "type": "college_of_education",
-        "state": "Taraba"
+        "state": "Taraba",
+        "logo_path": "corpslink/institutions/p7wbhegtubdnedjgbqpu"
     },
     {
         "name": "Piaget College of Education, Ibara, Abeokuta",
         "abbreviation": "PIAGETCOE",
         "type": "college_of_education",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/cczg0bqunddojxiw8uoq"
     },
     {
         "name": "Royal City College of Education, Iyesi, Otta",
         "abbreviation": "ROYALCITYCOE",
         "type": "college_of_education",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/q3kek3w7gumrflhplwsq"
     },
     {
         "name": "Saadatu Rimi College of Education, Kumbotso",
         "abbreviation": "SRCOE",
         "type": "college_of_education",
-        "state": "Kano"
+        "state": "Kano",
+        "logo_path": "corpslink/institutions/vgba8lcxhe59y2gcbsss"
     },
     {
         "name": "Sarkin Yamma Community College of Education, Tilden Fulani",
         "abbreviation": "SYCCOE",
         "type": "college_of_education",
-        "state": "Bauchi"
+        "state": "Bauchi",
+        "logo_path": "corpslink/institutions/ndgyqohxhoilzs7ubnfq"
     },
     {
         "name": "Sinai College of Education and Entrepreneurial Studies, Gboko",
         "abbreviation": "SINAICOE",
         "type": "college_of_education",
-        "state": "Benue"
+        "state": "Benue",
+        "logo_path": "corpslink/institutions/l35zmic7wytikjxcfpcw"
     },
     {
         "name": "St. Augustine College of Education, Yaba",
         "abbreviation": "SACOEYABA",
         "type": "college_of_education",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/owz5uf2hi0tjlvnmwt0p"
     },
     {
         "name": "Steady Flow College of Education, Akarabong, Ikom",
         "abbreviation": "SFCOE",
         "type": "college_of_education",
-        "state": "Cross River"
+        "state": "Cross River",
+        "logo_path": "corpslink/institutions/bu66i3hlbfvekazartlo"
     },
     {
         "name": "Sunnah College of Education, Bauchi",
         "abbreviation": "SUNNAHCOE",
         "type": "college_of_education",
-        "state": "Bauchi"
+        "state": "Bauchi",
+        "logo_path": "corpslink/institutions/jkvzqthgnndgt1deo460"
     },
     {
         "name": "The African Church College of Education, Lagos",
         "abbreviation": "TACCOE",
         "type": "college_of_education",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/g4mrlquxrwrtgenvvue0"
     },
     {
         "name": "The College of Education, Nsukka",
         "abbreviation": "TCOENSUKKA",
         "type": "college_of_education",
-        "state": "Enugu"
+        "state": "Enugu",
+        "logo_path": "corpslink/institutions/dnt2xlsvd3lebjlvbfmn"
     },
     {
         "name": "Topmost College of Education, Ipaja",
         "abbreviation": "TOPMOSTCOE",
         "type": "college_of_education",
-        "state": "Lagos"
+        "state": "Lagos",
+        "logo_path": "corpslink/institutions/bagzwqmm9uupl1odniou"
     },
     {
         "name": "Turath College of Islamic Studies, Goron Dutse",
         "abbreviation": "TURATHCOE",
         "type": "college_of_education",
-        "state": "Kano"
+        "state": "Kano",
+        "logo_path": "corpslink/institutions/sft14giduocwkwmpljdv"
     },
     {
         "name": "Uli College of Education, Uli",
         "abbreviation": "ULICOE",
         "type": "college_of_education",
-        "state": "Anambra"
+        "state": "Anambra",
+        "logo_path": "corpslink/institutions/qivrgtit8uduqpyfseya"
     },
     {
         "name": "Umar Suleiman College of Education, Gashua",
         "abbreviation": "USCOE",
         "type": "college_of_education",
-        "state": "Yobe"
+        "state": "Yobe",
+        "logo_path": "corpslink/institutions/ffoofoh8tuai9uck8yhk"
     },
     {
         "name": "Umar-Ibn El-Kanemi College of Education, Science and Technology, Bama",
         "abbreviation": "UECOEST",
         "type": "college_of_education",
-        "state": "Borno"
+        "state": "Borno",
+        "logo_path": "corpslink/institutions/olgxnbclp4mcfaif5w8e"
     },
     {
         "name": "Unity College of Education, Aukpa-Adoka",
         "abbreviation": "UNITYCOE",
         "type": "college_of_education",
-        "state": "Benue"
+        "state": "Benue",
+        "logo_path": "corpslink/institutions/hfom2d4a90o5jz2zutm1"
     },
     {
         "name": "Upland College of Education, Ipesi-Ifira, Akoko",
         "abbreviation": "UPLANDCOE",
         "type": "college_of_education",
-        "state": "Ondo"
+        "state": "Ondo",
+        "logo_path": "corpslink/institutions/khnuc7kvfdxsyhcmt95c"
     },
     {
         "name": "Yewa Central College of Education, Abeokuta",
         "abbreviation": "YEWACOE",
         "type": "college_of_education",
-        "state": "Ogun"
+        "state": "Ogun",
+        "logo_path": "corpslink/institutions/hmfbnmydsqrju2xpdyou"
     },
     {
         "name": "Yusuf Bala Usman College of Legal and General Studies, Daura",
         "abbreviation": "YBUCOE",
         "type": "college_of_education",
-        "state": "Katsina"
+        "state": "Katsina",
+        "logo_path": "corpslink/institutions/bkqkglv9rf6f75no57g7"
     }
 ]

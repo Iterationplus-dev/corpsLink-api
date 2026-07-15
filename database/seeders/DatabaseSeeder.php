@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
             InstitutionSeeder::class,
             VehicleSeeder::class,
             FaqSeeder::class,
+            ChecklistItemSeeder::class,
         ]);
 
         $user = User::factory()->create([

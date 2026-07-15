@@ -24,6 +24,7 @@ class BookingResource extends JsonResource
         $vehicle = $this->relationLoaded('vehicle') ? $this->vehicle : null;
         $seat = $this->relationLoaded('seat') ? $this->seat : null;
         $user = $this->relationLoaded('user') ? $this->user : null;
+        $payment = $this->relationLoaded('payment') ? $this->payment : null;
 
         return [
             'id' => $this->id,
@@ -49,7 +50,14 @@ class BookingResource extends JsonResource
             'fareDisplay' => $fare['display'],
             'passengerName' => $user?->name,
             'stateCode' => $user?->state_code,
+            'callUpNumber' => $user?->call_up_number,
             'qrPayload' => $this->qrPayload(),
+            // Flat fields the client's receipt/trip cards read directly —
+            // `payment` below also carries the full record, but nesting the
+            // gateway/paid-at there means the client would need to know to
+            // reach into it just for these two, commonly-needed values.
+            'paymentMethod' => $payment?->gateway?->value,
+            'paidAt' => $payment?->paid_at,
             'payment' => PaymentResource::make($this->whenLoaded('payment')),
             'createdAt' => $this->created_at,
         ];

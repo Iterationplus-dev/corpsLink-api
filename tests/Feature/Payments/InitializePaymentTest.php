@@ -69,6 +69,9 @@ class InitializePaymentTest extends TestCase
             'gateway' => 'paystack',
             'status' => 'pending',
         ]);
+
+        Http::assertSent(fn ($request) => $request->url() === 'https://api.paystack.co/transaction/initialize'
+            && $request['callback_url'] === config('services.paystack.callback_url'));
     }
 
     public function test_initializes_a_flutterwave_payment(): void
@@ -94,6 +97,113 @@ class InitializePaymentTest extends TestCase
         $response->assertJsonPath('authorizationUrl', 'https://checkout.flutterwave.com/xyz789');
 
         $this->assertDatabaseHas('payments', ['user_id' => $user->id, 'gateway' => 'flutterwave']);
+    }
+
+    public function test_initializes_a_monnify_payment(): void
+    {
+        Http::fake([
+            'https://sandbox.monnify.com/api/v1/auth/login' => Http::response([
+                'requestSuccessful' => true,
+                'responseBody' => ['accessToken' => 'mnfy_test_token', 'expiresIn' => 3599],
+            ]),
+            'https://sandbox.monnify.com/api/v1/merchant/transactions/init-transaction' => Http::response([
+                'requestSuccessful' => true,
+                'responseBody' => [
+                    'transactionReference' => 'MNFY|20260713|000001',
+                    'checkoutUrl' => 'https://sandbox.sdk.monnify.com/checkout/MNFY|20260713|000001',
+                ],
+            ]),
+        ]);
+
+        $user = User::factory()->create();
+        $vehicle = Vehicle::factory()->create();
+        $seat = $vehicle->seats()->first();
+        $hold = SeatHold::factory()->create(['seat_id' => $seat->id, 'user_id' => $user->id]);
+
+        [, $payment] = $this->createBooking($user, $hold);
+
+        $response = $this->actingAs($user, 'sanctum')
+            ->postJson("/api/v1/payments/{$payment['id']}/initialize", ['gateway' => 'monnify']);
+
+        $response->assertOk();
+        $response->assertJsonPath('authorizationUrl', 'https://sandbox.sdk.monnify.com/checkout/MNFY|20260713|000001');
+
+        $this->assertDatabaseHas('payments', [
+            'user_id' => $user->id,
+            'gateway' => 'monnify',
+            'gateway_reference' => 'MNFY|20260713|000001',
+        ]);
+
+        Http::assertSent(fn ($request) => $request->url() === 'https://sandbox.monnify.com/api/v1/auth/login'
+            && $request->hasHeader('Authorization', 'Basic '.base64_encode(
+                config('services.monnify.api_key').':'.config('services.monnify.secret_key')
+            )));
+
+        Http::assertSent(fn ($request) => $request->url() === 'https://sandbox.monnify.com/api/v1/merchant/transactions/init-transaction'
+            && $request['contractCode'] === config('services.monnify.contract_code')
+            && $request['redirectUrl'] === config('services.monnify.redirect_url')
+            // Suffixed, not the bare Payment reference — Monnify rejects
+            // init-transaction outright if a paymentReference is reused,
+            // which a retried checkout (same Payment row) would otherwise do.
+            && $request['paymentReference'] !== $payment['reference']
+            && str_starts_with($request['paymentReference'], $payment['reference'].'_')
+            && $request->hasHeader('Authorization', 'Bearer mnfy_test_token'));
+    }
+
+    public function test_reinitializing_a_monnify_payment_sends_a_different_reference_each_time(): void
+    {
+        Http::fake([
+            'https://sandbox.monnify.com/api/v1/auth/login' => Http::response([
+                'requestSuccessful' => true,
+                'responseBody' => ['accessToken' => 'mnfy_test_token', 'expiresIn' => 3599],
+            ]),
+            'https://sandbox.monnify.com/api/v1/merchant/transactions/init-transaction' => Http::sequence()
+                ->push([
+                    'requestSuccessful' => true,
+                    'responseBody' => [
+                        'transactionReference' => 'MNFY|attempt-1',
+                        'checkoutUrl' => 'https://sandbox.sdk.monnify.com/checkout/attempt-1',
+                    ],
+                ])
+                ->push([
+                    'requestSuccessful' => true,
+                    'responseBody' => [
+                        'transactionReference' => 'MNFY|attempt-2',
+                        'checkoutUrl' => 'https://sandbox.sdk.monnify.com/checkout/attempt-2',
+                    ],
+                ]),
+        ]);
+
+        $user = User::factory()->create();
+        $vehicle = Vehicle::factory()->create();
+        $seat = $vehicle->seats()->first();
+        $hold = SeatHold::factory()->create(['seat_id' => $seat->id, 'user_id' => $user->id]);
+
+        [, $payment] = $this->createBooking($user, $hold);
+
+        // Simulates the checkout session expiring/being abandoned and the
+        // user retrying — same Payment row, initialize() called again.
+        $first = $this->actingAs($user, 'sanctum')
+            ->postJson("/api/v1/payments/{$payment['id']}/initialize", ['gateway' => 'monnify']);
+        $second = $this->actingAs($user, 'sanctum')
+            ->postJson("/api/v1/payments/{$payment['id']}/initialize", ['gateway' => 'monnify']);
+
+        $first->assertOk();
+        $second->assertOk();
+        $this->assertNotSame($first->json('authorizationUrl'), $second->json('authorizationUrl'));
+
+        $sentReferences = [];
+        Http::assertSent(function ($request) use (&$sentReferences) {
+            if ($request->url() === 'https://sandbox.monnify.com/api/v1/merchant/transactions/init-transaction') {
+                $sentReferences[] = $request['paymentReference'];
+            }
+
+            return true;
+        });
+
+        $this->assertCount(2, array_unique($sentReferences));
+
+        $this->assertDatabaseHas('payments', ['id' => $payment['id'], 'gateway_reference' => 'MNFY|attempt-2']);
     }
 
     public function test_rejects_an_unknown_gateway(): void

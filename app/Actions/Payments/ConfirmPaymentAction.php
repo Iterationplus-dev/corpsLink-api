@@ -3,6 +3,7 @@
 namespace App\Actions\Payments;
 
 use App\Enums\BookingStatus;
+use App\Enums\PaymentGateway;
 use App\Enums\PaymentStatus;
 use App\Events\PaymentConfirmed;
 use App\Exceptions\NoSeatsAvailableException;
@@ -44,7 +45,7 @@ class ConfirmPaymentAction
 
             $booking = $locked->booking()->lockForUpdate()->firstOrFail();
 
-            $result = $this->resolver->resolve($locked->gateway)->verify($locked->reference);
+            $result = $this->resolver->resolve($locked->gateway)->verify($this->verificationReference($locked));
 
             if (! $result->successful) {
                 $locked->update(['status' => PaymentStatus::Failed, 'gateway_response' => $result->raw]);
@@ -95,6 +96,24 @@ class ConfirmPaymentAction
         event(new PaymentConfirmed($outcome['booking']));
 
         return $outcome['booking'];
+    }
+
+    /**
+     * Paystack/Flutterwave always echo back exactly the reference we sent,
+     * so Payment::reference works as the verify() lookup key for them. Monnify
+     * rejects re-initializing with a reused paymentReference outright — so
+     * MonnifyGateway::initialize() sends a fresh, uniquely-suffixed one on
+     * every attempt, and the only stable per-attempt identifier left is
+     * gateway_reference (Monnify's own transactionReference, unchanged by
+     * MonnifyGateway::verify() between calls — unlike Flutterwave's, which
+     * gets overwritten with its internal numeric id after a successful verify).
+     */
+    protected function verificationReference(Payment $payment): string
+    {
+        return match ($payment->gateway) {
+            PaymentGateway::Monnify => $payment->gateway_reference ?? $payment->reference,
+            default => $payment->reference,
+        };
     }
 
     /**

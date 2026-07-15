@@ -50,6 +50,11 @@ return [
         'url' => env('PAYSTACK_URL', 'https://api.paystack.co'),
         'secret_key' => env('PAYSTACK_SECRET_KEY'),
         'public_key' => env('PAYSTACK_PUBLIC_KEY'),
+        // Optional per-transaction override of the dashboard's default
+        // callback URL — same role as Flutterwave's redirect_url below.
+        // Without it Paystack falls back to whatever's set in Settings ›
+        // Preferences, which may not exist yet / may point somewhere stale.
+        'callback_url' => env('PAYSTACK_CALLBACK_URL', env('APP_URL', 'http://localhost').'/payments/callback'),
     ],
 
     'flutterwave' => [
@@ -63,6 +68,16 @@ return [
         // confirmation still goes through POST /payments/{reference}/verify
         // or the webhook, not this redirect.
         'redirect_url' => env('FLUTTERWAVE_REDIRECT_URL', env('APP_URL', 'http://localhost').'/payments/callback'),
+    ],
+
+    'monnify' => [
+        'url' => env('MONNIFY_URL', 'https://sandbox.monnify.com'),
+        'api_key' => env('MONNIFY_API_KEY'),
+        'secret_key' => env('MONNIFY_SECRET_KEY'),
+        // Merchant contract identifier from the Monnify dashboard — required
+        // on every init-transaction call, not optional like the others' keys.
+        'contract_code' => env('MONNIFY_CONTRACT_CODE'),
+        'redirect_url' => env('MONNIFY_REDIRECT_URL', env('APP_URL', 'http://localhost').'/payments/callback'),
     ],
 
     'cloudinary' => [

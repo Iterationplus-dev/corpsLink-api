@@ -11,6 +11,8 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
+use Illuminate\Http\Client\ConnectionException;
+use Illuminate\Http\Client\RequestException;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
@@ -127,6 +129,21 @@ return Application::configure(basePath: dirname(__DIR__))
                             : 'This endpoint does not exist.',
                     ],
                 ], 404);
+            }
+        });
+
+        $exceptions->render(function (RequestException|ConnectionException $e, Request $request) {
+            // Defense in depth: an outbound HTTP call to a third party
+            // (payment gateway, etc.) that failed and wasn't caught closer
+            // to the call site would otherwise render as a raw, unshaped
+            // 500 — indistinguishable from a real bug to the client.
+            if ($request->is('api/*')) {
+                return response()->json([
+                    'error' => [
+                        'code' => 'upstream_error',
+                        'message' => 'We could not reach an external service. Please try again shortly.',
+                    ],
+                ], 502);
             }
         });
 

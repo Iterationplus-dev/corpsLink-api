@@ -4,6 +4,8 @@ namespace App\Services\Payments;
 
 use App\Contracts\PaymentGatewayContract;
 use App\Models\Payment;
+use Illuminate\Http\Client\ConnectionException;
+use Illuminate\Http\Client\RequestException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
@@ -12,6 +14,7 @@ class PaystackGateway implements PaymentGatewayContract
     public function __construct(
         protected string $url,
         protected string $secretKey,
+        protected string $callbackUrl,
     ) {}
 
     /**
@@ -25,6 +28,7 @@ class PaystackGateway implements PaymentGatewayContract
                 'amount' => (int) round(((float) $payment->amount) * 100), // kobo
                 'currency' => $payment->currency,
                 'reference' => $payment->reference,
+                'callback_url' => $this->callbackUrl,
             ])
             ->throw();
 
@@ -36,9 +40,23 @@ class PaystackGateway implements PaymentGatewayContract
 
     public function verify(string $reference): PaymentVerificationResult
     {
-        $response = Http::withToken($this->secretKey)
-            ->get("{$this->url}/transaction/verify/{$reference}")
-            ->throw();
+        try {
+            $response = Http::withToken($this->secretKey)
+                ->get("{$this->url}/transaction/verify/{$reference}")
+                ->throw();
+        } catch (RequestException|ConnectionException $e) {
+            // Gateway rejected/couldn't find the reference (e.g. checkout was
+            // never completed) or was unreachable — surface as a normal
+            // failed-verification outcome rather than an unhandled 500, so
+            // ConfirmPaymentAction's existing graceful-failure path handles it.
+            return new PaymentVerificationResult(
+                successful: false,
+                amount: 0,
+                currency: 'NGN',
+                gatewayReference: null,
+                raw: ['error' => $e->getMessage()],
+            );
+        }
 
         $data = $response->json('data', []);
 
