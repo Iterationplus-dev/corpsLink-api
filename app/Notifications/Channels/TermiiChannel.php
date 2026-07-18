@@ -2,6 +2,7 @@
 
 namespace App\Notifications\Channels;
 
+use App\Notifications\Channels\Concerns\NormalizesNigerianPhoneNumber;
 use Illuminate\Notifications\Notification;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
@@ -15,13 +16,15 @@ use RuntimeException;
  */
 class TermiiChannel
 {
+    use NormalizesNigerianPhoneNumber;
+
     public function send(object $notifiable, Notification $notification): void
     {
         if (! method_exists($notification, 'toTermii')) {
             return;
         }
 
-        $phone = $notifiable->phone ?? null;
+        $phone = $this->resolvePhone($notifiable, $notification);
 
         if (! $phone) {
             return;
@@ -49,24 +52,5 @@ class TermiiChannel
         if ($response->failed()) {
             throw new RuntimeException('Termii SMS failed: '.$response->body());
         }
-    }
-
-    /**
-     * Local Nigerian numbers (080XXXXXXXX, how users.phone is stored) to
-     * the international format (234XXXXXXXXXX) Termii expects.
-     */
-    protected function normalize(string $phone): string
-    {
-        $digits = preg_replace('/\D/', '', $phone) ?? $phone;
-
-        if (str_starts_with($digits, '0')) {
-            return '234'.substr($digits, 1);
-        }
-
-        if (str_starts_with($digits, '234')) {
-            return $digits;
-        }
-
-        return '234'.$digits;
     }
 }

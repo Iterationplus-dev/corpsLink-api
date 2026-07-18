@@ -4,6 +4,7 @@ namespace App\Actions\Account;
 
 use App\Enums\VerificationPurpose;
 use App\Models\User;
+use App\Notifications\Channels\WhatsAppChannel;
 use App\Notifications\EmailChangeOtpNotification;
 use App\Services\AuditLogService;
 use App\Services\VerificationCodeService;
@@ -20,9 +21,9 @@ class RequestEmailChangeAction
     {
         $issued = $this->codes->generate($user->email, VerificationPurpose::EmailChange, $user, $newEmail);
 
-        Notification::route('mail', $newEmail)->notify(
-            new EmailChangeOtpNotification($issued['code'], config('corpslink.otp.expiry_minutes')),
-        );
+        Notification::route('mail', $newEmail)
+            ->route(WhatsAppChannel::class, $user->phone)
+            ->notify(new EmailChangeOtpNotification($issued['code'], config('corpslink.otp.expiry_minutes')));
 
         $this->auditLog->record('email_change_requested', $user, $user, ['new_email' => $newEmail]);
     }

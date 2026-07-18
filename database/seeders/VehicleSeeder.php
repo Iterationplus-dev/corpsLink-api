@@ -98,7 +98,7 @@ class VehicleSeeder extends Seeder
                                 'seat_id' => $seat->id,
                                 'user_id' => User::factory([
                                     'institution_id' => $institution->id,
-                                    'email' => "seat-hold-{$unique}@placeholder.corpslink.test",
+                                    'email' => "seat-hold-{$unique}@placeholder.corperslink.test",
                                     'phone' => '080'.str_pad((string) $seat->id, 8, '0', STR_PAD_LEFT),
                                     'call_up_number' => "NYSC/PH/2026/{$seat->id}",
                                 ]),

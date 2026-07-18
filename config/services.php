@@ -46,6 +46,19 @@ return [
         'sender_id' => env('TERMII_SENDER_ID', 'CorpsLink'),
     ],
 
+    'whatsapp' => [
+        'url' => env('WHATSAPP_URL', 'https://graph.facebook.com'),
+        'api_version' => env('WHATSAPP_API_VERSION', 'v21.0'),
+        'phone_number_id' => env('WHATSAPP_PHONE_NUMBER_ID'),
+        'access_token' => env('WHATSAPP_ACCESS_TOKEN'),
+        // Name/language of the Meta-approved template used for every OTP
+        // message — WhatsApp Cloud API only allows free-form text within an
+        // existing 24h conversation, so OTPs (first contact) must use a
+        // pre-approved template with {{1}} = code, {{2}} = expiry minutes.
+        'otp_template' => env('WHATSAPP_OTP_TEMPLATE', 'otp_code'),
+        'otp_template_language' => env('WHATSAPP_OTP_TEMPLATE_LANGUAGE', 'en_US'),
+    ],
+
     'paystack' => [
         'url' => env('PAYSTACK_URL', 'https://api.paystack.co'),
         'secret_key' => env('PAYSTACK_SECRET_KEY'),

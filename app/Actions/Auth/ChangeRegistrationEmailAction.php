@@ -5,6 +5,7 @@ namespace App\Actions\Auth;
 use App\Enums\VerificationPurpose;
 use App\Exceptions\RegistrationExpiredException;
 use App\Models\PendingRegistration;
+use App\Notifications\Channels\WhatsAppChannel;
 use App\Notifications\RegistrationOtpNotification;
 use App\Services\VerificationCodeService;
 use Illuminate\Support\Facades\Notification;
@@ -27,9 +28,9 @@ class ChangeRegistrationEmailAction
 
         $issued = $this->codes->generate($pending->email, VerificationPurpose::RegistrationEmail);
 
-        Notification::route('mail', $pending->email)->notify(
-            new RegistrationOtpNotification($issued['code'], config('corpslink.otp.expiry_minutes')),
-        );
+        Notification::route('mail', $pending->email)
+            ->route(WhatsAppChannel::class, $pending->phone)
+            ->notify(new RegistrationOtpNotification($issued['code'], config('corpslink.otp.expiry_minutes')));
 
         return $pending;
     }
