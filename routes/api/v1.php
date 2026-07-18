@@ -18,6 +18,7 @@ use App\Http\Controllers\Api\V1\Auth\PasswordController as AuthPasswordControlle
 use App\Http\Controllers\Api\V1\Auth\RegistrationController;
 use App\Http\Controllers\Api\V1\Auth\TwoFactorController;
 use App\Http\Controllers\Api\V1\Bookings\BookingController;
+use App\Http\Controllers\Api\V1\HealthController;
 use App\Http\Controllers\Api\V1\Institutions\InstitutionController;
 use App\Http\Controllers\Api\V1\Institutions\VehicleController as InstitutionVehicleController;
 use App\Http\Controllers\Api\V1\Payments\PaymentController;
@@ -25,6 +26,11 @@ use App\Http\Controllers\Api\V1\Support\FaqController;
 use App\Http\Controllers\Api\V1\Vehicles\SeatController;
 use App\Http\Controllers\Api\V1\Vehicles\VehicleController;
 use Illuminate\Support\Facades\Route;
+
+// Public — used by uptime monitors/load balancers to verify the API and its
+// database connection are reachable, separate from the app-boot-only /up
+// route Laravel registers outside the api/ prefix.
+Route::get('health', [HealthController::class, 'show'])->name('health.show');
 
 Route::prefix('auth')->name('auth.')->group(function () {
     Route::prefix('register')->name('register.')->group(function () {
