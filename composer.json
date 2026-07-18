@@ -8,6 +8,7 @@
     "require": {
         "php": "^8.3",
         "dedoc/scramble": "*",
+        "fakerphp/faker": "^1.23",
         "kreait/laravel-firebase": "*",
         "laravel/framework": "^13.8",
         "laravel/horizon": "*",
@@ -17,7 +18,6 @@
         "spatie/laravel-permission": "*"
     },
     "require-dev": {
-        "fakerphp/faker": "^1.23",
         "laravel/boost": "^2.4",
         "laravel/pail": "^1.2.5",
         "laravel/pao": "^1.0.6",
