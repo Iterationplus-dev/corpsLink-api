@@ -150,9 +150,15 @@ jobs:
 
       - name: Health Check
         run: |
+          # Checked against the origin over SSH, not the public https://api.corperslink.com
+          # URL — Cloudflare blocks the GitHub Actions runner's requests (403) even
+          # though the deployed app itself is healthy, so the public URL isn't a
+          # reliable signal here (same issue the frontend pipeline hit). -k: the
+          # origin's local cert is issued for the public hostname/Cloudflare Origin
+          # CA, not "localhost".
           for i in {1..20}; do
-            code=$(curl -fsS --max-time 10 -o /dev/null -w "%{http_code}" \
-              https://api.corperslink.com/up || true)
+            code=$(ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" \
+              "curl -fsSk --max-time 10 -o /dev/null -w '%{http_code}' -H 'Host: api.corperslink.com' https://localhost/up" || true)
 
             if [ "$code" = "200" ]; then
               echo "Application is healthy."
