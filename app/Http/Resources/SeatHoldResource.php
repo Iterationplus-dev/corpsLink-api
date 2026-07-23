@@ -18,7 +18,7 @@ class SeatHoldResource extends JsonResource
     public function toArray(Request $request): array
     {
         $vehicle = $this->relationLoaded('seat') ? $this->seat->vehicle : null;
-        $fare = Money::fromNaira($vehicle?->fare ?? 0);
+        $fare = Money::fromNaira($vehicle === null ? 0 : $vehicle->fare);
 
         return [
             'id' => $this->id,

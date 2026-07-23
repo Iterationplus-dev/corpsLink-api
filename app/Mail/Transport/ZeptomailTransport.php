@@ -9,6 +9,7 @@ use Symfony\Component\Mailer\SentMessage;
 use Symfony\Component\Mailer\Transport\AbstractTransport;
 use Symfony\Component\Mime\Address;
 use Symfony\Component\Mime\Email;
+use Symfony\Component\Mime\Message;
 use Symfony\Component\Mime\MessageConverter;
 
 /**
@@ -27,7 +28,13 @@ class ZeptomailTransport extends AbstractTransport
 
     protected function doSend(SentMessage $message): void
     {
-        $email = MessageConverter::toEmail($message->getOriginalMessage());
+        $original = $message->getOriginalMessage();
+
+        if (! $original instanceof Message) {
+            throw new RuntimeException('ZeptoMail transport received a raw message it cannot convert to an email.');
+        }
+
+        $email = MessageConverter::toEmail($original);
 
         $response = Http::withHeaders([
             'Authorization' => $this->authorizationHeader(),

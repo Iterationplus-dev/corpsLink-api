@@ -26,6 +26,7 @@ class ResendOtpAction
             'register' => $this->resendRegistration->handle($registrationId),
             'reset_password' => $this->forgotPassword->handle($email),
             'change_email' => $this->resendChangeEmail($user, $email),
+            default => throw new \InvalidArgumentException("Unsupported OTP resend context: {$context}"),
         };
     }
 

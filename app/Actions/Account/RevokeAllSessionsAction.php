@@ -11,7 +11,7 @@ class RevokeAllSessionsAction
 
     public function handle(User $user, bool $keepCurrentSession = false): void
     {
-        $currentTokenId = $keepCurrentSession ? $user->currentAccessToken()?->id : null;
+        $currentTokenId = $keepCurrentSession ? $user->currentAccessToken()->id : null;
 
         $user->tokens()
             ->when($currentTokenId, fn ($query) => $query->where('id', '!=', $currentTokenId))

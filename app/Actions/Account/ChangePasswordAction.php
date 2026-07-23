@@ -15,7 +15,7 @@ class ChangePasswordAction
     {
         $user->forceFill(['password' => Hash::make($newPassword)])->save();
 
-        $currentTokenId = $user->currentAccessToken()?->id;
+        $currentTokenId = $user->currentAccessToken()->id;
 
         $user->tokens()->when($currentTokenId, fn ($query) => $query->where('id', '!=', $currentTokenId))->delete();
 

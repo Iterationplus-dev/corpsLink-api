@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Enums\InstitutionType;
 use App\Models\Institution;
+use Faker\Provider\en_US\Address;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -26,7 +27,7 @@ class InstitutionFactory extends Factory
             // synthetic and practically collision-proof against real rows.
             'abbreviation' => 'TEST-'.strtoupper(fake()->unique()->lexify('??????')),
             'type' => fake()->randomElement(InstitutionType::cases()),
-            'state' => fake()->state(),
+            'state' => Address::state(),
             'logo_path' => null,
             'is_active' => true,
         ];
