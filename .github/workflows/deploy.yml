@@ -118,14 +118,21 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Load deploy secrets
+        run: |
+          {
+            echo "SSH_USER=$(printf '%s' "${{ secrets.SSH_USER }}" | tr -d '\r\n')"
+            echo "SSH_HOST=$(printf '%s' "${{ secrets.SSH_HOST }}" | tr -d '\r\n')"
+            echo "SSH_PORT=$(printf '%s' "${{ secrets.SSH_PORT }}" | tr -d '\r\n')"
+            echo "DEPLOY_PATH=$(printf '%s' "${{ secrets.DEPLOY_PATH }}" | tr -d '\r\n')"
+          } >> "$GITHUB_ENV"
+
       - name: Configure SSH
         run: |
           mkdir -p -m 700 ~/.ssh
           install -m 600 /dev/null ~/.ssh/id_ed25519
-          printf '%s\n' "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
-          ssh-keyscan \
-            -p "${{ secrets.SSH_PORT }}" \
-            "${{ secrets.SSH_HOST }}" >> ~/.ssh/known_hosts
+          printf '%s\n' "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/id_ed25519
+          ssh-keyscan -p "$SSH_PORT" "$SSH_HOST" >> ~/.ssh/known_hosts
 
       - name: Show key fingerprint
         run: |
@@ -135,9 +142,9 @@ jobs:
       - name: Deploy Release
         run: |
           ssh -v \
-            -p "${{ secrets.SSH_PORT }}" \
-            "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}" \
-            "DEPLOY_PATH='${{ secrets.DEPLOY_PATH }}' \
+            -p "$SSH_PORT" \
+            "$SSH_USER@$SSH_HOST" \
+            "DEPLOY_PATH='$DEPLOY_PATH' \
              REPO='git@github.com:Iterationplus-dev/corpersLink-api.git' \
              bash -s" < scripts/deploy.sh
 
