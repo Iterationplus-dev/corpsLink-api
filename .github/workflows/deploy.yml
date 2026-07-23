@@ -1,0 +1,159 @@
+name: Deploy CorpersLink Backend API
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-backend
+  cancel-in-progress: false
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    timeout-minutes: 15
+
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_DB: testing
+          POSTGRES_USER: test
+          POSTGRES_PASSWORD: test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+      redis:
+        image: redis:7
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.4"
+          coverage: none
+          tools: composer:v2
+          extensions: >
+            pgsql,
+            redis,
+            mbstring,
+            xml,
+            curl,
+            bcmath,
+            intl,
+            gd,
+            zip
+          ini-values: memory_limit=512M
+
+      - name: Cache Composer
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.composer/cache/files
+            vendor
+          key: composer-${{ runner.os }}-${{ hashFiles('composer.lock') }}
+          restore-keys: |
+            composer-${{ runner.os }}-
+
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-interaction --no-progress
+
+      - name: Prepare application
+        run: |
+          cp .env.example .env
+          php artisan key:generate
+
+      - name: Code Style
+        run: ./vendor/bin/pint --test
+
+      - name: Static Analysis
+        run: ./vendor/bin/phpstan analyse --no-progress
+
+      - name: Run Tests
+        run: php artisan test
+        env:
+          APP_ENV: testing
+          DB_CONNECTION: pgsql
+          DB_HOST: 127.0.0.1
+          DB_PORT: 5432
+          DB_DATABASE: testing
+          DB_USERNAME: test
+          DB_PASSWORD: test
+          REDIS_HOST: 127.0.0.1
+          REDIS_PORT: 6379
+
+  deploy:
+    needs: test
+
+    runs-on: ubuntu-latest
+
+    timeout-minutes: 30
+
+    environment: production
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Configure SSH
+        run: |
+          mkdir -p -m 700 ~/.ssh
+          install -m 600 /dev/null ~/.ssh/id_ed25519
+          printf '%s\n' "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+          ssh-keyscan \
+            -p "${{ secrets.SSH_PORT }}" \
+            "${{ secrets.SSH_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Deploy Release
+        run: |
+          ssh \
+            -p "${{ secrets.SSH_PORT }}" \
+            "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}" \
+            "DEPLOY_PATH='${{ secrets.DEPLOY_PATH }}' \
+             REPO='git@github.com:Iterationplus-dev/corpersLink-api.git' \
+             bash -s" < scripts/deploy.sh
+
+      - name: Health Check
+        run: |
+          for i in {1..20}; do
+            code=$(curl -fsS --max-time 10 -o /dev/null -w "%{http_code}" \
+              https://api.corperslink.com/up || true)
+
+            if [ "$code" = "200" ]; then
+              echo "Application is healthy."
+              exit 0
+            fi
+
+            echo "Attempt $i failed (HTTP $code)"
+            sleep 5
+          done
+
+          echo "Health check failed."
+          exit 1
+
+      - name: Remove SSH key
+        if: always()
+        run: rm -f ~/.ssh/id_ed25519
