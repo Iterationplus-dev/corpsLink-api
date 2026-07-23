@@ -99,7 +99,10 @@ class VehicleSeeder extends Seeder
                                 'user_id' => User::factory([
                                     'institution_id' => $institution->id,
                                     'email' => "seat-hold-{$unique}@placeholder.corperslink.test",
-                                    'phone' => '080'.str_pad((string) $seat->id, 8, '0', STR_PAD_LEFT),
+                                    // '070' prefix, not '080': this pinned value bypasses UserFactory's
+                                    // fake()->unique() pool entirely, so sharing its '080'########## format
+                                    // could still collide with a factory-made user's random phone (and did).
+                                    'phone' => '070'.str_pad((string) $seat->id, 8, '0', STR_PAD_LEFT),
                                     'call_up_number' => "NYSC/PH/2026/{$seat->id}",
                                 ]),
                             ]);
