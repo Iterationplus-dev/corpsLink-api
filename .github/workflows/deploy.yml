@@ -1,4 +1,4 @@
-name: Deploying CorpersLink Backend API
+name: Deploy CorpersLink Backend API
 
 on:
   push:
@@ -127,9 +127,14 @@ jobs:
             -p "${{ secrets.SSH_PORT }}" \
             "${{ secrets.SSH_HOST }}" >> ~/.ssh/known_hosts
 
+      - name: Show key fingerprint
+        run: |
+          echo "Fingerprint of the key this run is offering to the server:"
+          ssh-keygen -lf ~/.ssh/id_ed25519
+
       - name: Deploy Release
         run: |
-          ssh \
+          ssh -v \
             -p "${{ secrets.SSH_PORT }}" \
             "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}" \
             "DEPLOY_PATH='${{ secrets.DEPLOY_PATH }}' \
