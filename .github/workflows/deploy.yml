@@ -145,7 +145,7 @@ jobs:
             -p "$SSH_PORT" \
             "$SSH_USER@$SSH_HOST" \
             "DEPLOY_PATH='$DEPLOY_PATH' \
-             REPO='git@github.com:Iterationplus-dev/corpersLink-api.git' \
+             REPO='git@github.com:Iterationplus-dev/corpsLink-api.git' \
              bash -s" < scripts/deploy.sh
 
       - name: Health Check
