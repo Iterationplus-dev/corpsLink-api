@@ -1,4 +1,4 @@
-name: Deploy CorpersLink Backend API
+name: Deploying CorpersLink Backend API
 
 on:
   push:
