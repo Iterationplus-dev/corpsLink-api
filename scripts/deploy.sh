@@ -59,7 +59,11 @@ ln -s "$SHARED/.env" .env
 
 echo ">>> Installing Composer dependencies"
 
-composer install \
+# error_reporting override: the server's PHP 8.4 floods stdout with
+# "Constant E_STRICT is deprecated" notices from Composer's own vendored
+# code on every package extraction, drowning genuine output/errors and
+# blowing past CI log-capture limits. E_ALL & ~E_DEPRECATED = 24575.
+php -d error_reporting=24575 "$(command -v composer)" install \
     --no-dev \
     --prefer-dist \
     --no-interaction \
@@ -67,9 +71,17 @@ composer install \
 
 echo ">>> Setting permissions"
 
-chown -R usir:www-data storage bootstrap/cache
+# storage is a symlink into $SHARED — persistent across every release, and
+# still being actively written to by the currently-running app (PHP-FPM
+# compiling new Blade view caches from live traffic) right up until the
+# maintenance-mode/symlink-switch below. Recursively chown/chmod-ing it on
+# every deploy races that live traffic: a view cache file www-data compiles
+# mid-deploy is one usir doesn't own, and non-root chown/chmod on a file you
+# don't own fails outright. Its ownership/permissions only need setting up
+# once, at shared/storage provisioning time — not on every release.
+chown -R usir:www-data bootstrap/cache
 
-chmod -R ug+rwx storage bootstrap/cache
+chmod -R ug+rwx bootstrap/cache
 
 if [ -L "$CURRENT" ]; then
     echo ">>> Maintenance mode"
