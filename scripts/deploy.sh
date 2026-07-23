@@ -67,7 +67,7 @@ composer install \
 
 echo ">>> Setting permissions"
 
-chown -R deployer:www-data storage bootstrap/cache
+chown -R usir:www-data storage bootstrap/cache
 
 chmod -R ug+rwx storage bootstrap/cache
 
