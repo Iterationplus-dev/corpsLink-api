@@ -43,7 +43,7 @@ return [
     'termii' => [
         'url' => env('TERMII_URL', 'https://v3.api.termii.com'),
         'api_key' => env('TERMII_API_KEY'),
-        'sender_id' => env('TERMII_SENDER_ID', 'CorpsLink'),
+        'sender_id' => env('TERMII_SENDER_ID', 'CorpersLink'),
     ],
 
     'whatsapp' => [

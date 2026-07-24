@@ -46,7 +46,7 @@ class DepartureReminderNotification extends Notification implements ShouldQueue
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-            ->subject('Departure reminder — CorpsLink')
+            ->subject('Departure reminder — CorpersLink')
             ->greeting('Your trip is coming up')
             ->line($this->summary())
             ->line("Departure: {$this->booking->vehicle->departure_at->format('D d M Y, g:i A')}")
@@ -55,7 +55,7 @@ class DepartureReminderNotification extends Notification implements ShouldQueue
 
     public function toTermii(object $notifiable): string
     {
-        return 'CorpsLink: '.$this->summary();
+        return 'CorpersLink: '.$this->summary();
     }
 
     /**

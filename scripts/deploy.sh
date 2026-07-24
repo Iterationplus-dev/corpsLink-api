@@ -57,6 +57,17 @@ rm -rf storage
 ln -s "$SHARED/storage" storage
 ln -s "$SHARED/.env" .env
 
+echo ">>> Linking Firebase credentials"
+
+# storage is the $SHARED/storage symlink just above, so this creates/updates
+# a path inside the persistent shared tree, not per-release — the actual
+# secret file lives separately in $SHARED/firebase (kept out of storage/ on
+# purpose), bridged here so FIREBASE_CREDENTIALS in .env can stay a stable,
+# storage-relative path instead of a DEPLOY_PATH-specific absolute one.
+mkdir -p storage/app/firebase
+
+ln -sfn "$SHARED/firebase/service-account.json" storage/app/firebase/service-account.json
+
 echo ">>> Installing Composer dependencies"
 
 # error_reporting override: the server's PHP 8.4 floods stdout with

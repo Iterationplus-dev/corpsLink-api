@@ -2,6 +2,7 @@
 
 namespace App\Notifications\Channels;
 
+use App\Models\DeviceToken;
 use Illuminate\Notifications\Notification;
 use Illuminate\Support\Facades\Log;
 use Kreait\Firebase\Contract\Messaging;
@@ -43,12 +44,33 @@ class FcmChannel
         try {
             /** @var Messaging $messaging */
             $messaging = app(Messaging::class);
-            $messaging->sendMulticast($message, $tokens->all());
+            $report = $messaging->sendMulticast($message, $tokens->all());
+
+            $this->pruneStaleTokens($report->invalidTokens(), $report->unknownTokens());
         } catch (Throwable $e) {
             // A push failure shouldn't fail the whole notification dispatch
             // the way a failed SMS/email would — stale device tokens are
             // routine, not exceptional.
             Log::warning('FCM push failed.', ['error' => $e->getMessage()]);
         }
+    }
+
+    /**
+     * Devices that uninstalled the app or had their token rotated are
+     * reported back per-send, not upfront — without pruning them here they'd
+     * accumulate forever, wasting an API call on every future push.
+     *
+     * @param  list<non-empty-string>  $invalidTokens
+     * @param  list<non-empty-string>  $unknownTokens
+     */
+    protected function pruneStaleTokens(array $invalidTokens, array $unknownTokens): void
+    {
+        $staleTokens = [...$invalidTokens, ...$unknownTokens];
+
+        if ($staleTokens === []) {
+            return;
+        }
+
+        DeviceToken::query()->whereIn('token', $staleTokens)->delete();
     }
 }

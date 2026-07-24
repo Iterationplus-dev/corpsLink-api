@@ -22,8 +22,8 @@ class WelcomeNotification extends Notification implements ShouldQueue
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-            ->subject('Welcome to CorpsLink 🎉')
-            ->greeting("Welcome to CorpsLink, {$notifiable->name}!")
+            ->subject('Welcome to CorpersLink 🎉')
+            ->greeting("Welcome to CorpersLink, {$notifiable->name}!")
             ->line('Your account is verified. Find your institution to book your first camp trip.')
             ->line('Campus transport, sorted.');
     }
@@ -35,7 +35,7 @@ class WelcomeNotification extends Notification implements ShouldQueue
     {
         return [
             'type' => 'welcome',
-            'title' => 'Welcome to CorpsLink 🎉',
+            'title' => 'Welcome to CorpersLink 🎉',
             'body' => 'Your account is verified. Find your institution to book your first camp trip.',
         ];
     }

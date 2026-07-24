@@ -27,7 +27,7 @@ class TwoFactorCodeNotification extends Notification implements ShouldQueue
 
     public function toTermii(object $notifiable): string
     {
-        return "Your CorpsLink sign-in code is {$this->code}. It expires in {$this->expiryMinutes} minutes. Don't share this code.";
+        return "Your CorpersLink sign-in code is {$this->code}. It expires in {$this->expiryMinutes} minutes. Don't share this code.";
     }
 
     /**

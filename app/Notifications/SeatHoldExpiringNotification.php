@@ -44,7 +44,7 @@ class SeatHoldExpiringNotification extends Notification implements ShouldQueue
 
     public function toTermii(object $notifiable): string
     {
-        return "CorpsLink: Seat {$this->seatHold->seat->seat_number} hold expires in {$this->minutesRemaining} minutes. Complete payment to keep it.";
+        return "CorpersLink: Seat {$this->seatHold->seat->seat_number} hold expires in {$this->minutesRemaining} minutes. Complete payment to keep it.";
     }
 
     /**

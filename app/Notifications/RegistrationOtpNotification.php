@@ -29,8 +29,8 @@ class RegistrationOtpNotification extends Notification implements ShouldQueue
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-            ->subject('Verify your email — CorpsLink')
-            ->greeting('Welcome to CorpsLink')
+            ->subject('Verify your email — CorpersLink')
+            ->greeting('Welcome to CorpersLink')
             ->line('Use the code below to verify your email address and continue creating your account.')
             ->line(new HtmlString("<div style=\"font-size:28px;font-weight:700;letter-spacing:6px;\">{$this->code}</div>"))
             ->line("This code expires in {$this->expiryMinutes} minutes.")

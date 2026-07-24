@@ -29,9 +29,9 @@ class PasswordResetOtpNotification extends Notification implements ShouldQueue
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-            ->subject('Reset your password — CorpsLink')
+            ->subject('Reset your password — CorpersLink')
             ->greeting('Password reset requested')
-            ->line('Use the code below to reset your CorpsLink password.')
+            ->line('Use the code below to reset your CorpersLink password.')
             ->line(new HtmlString("<div style=\"font-size:28px;font-weight:700;letter-spacing:6px;\">{$this->code}</div>"))
             ->line("This code expires in {$this->expiryMinutes} minutes.")
             ->line("If you didn't request a password reset, no action is needed — your password won't change.");
