@@ -19,7 +19,7 @@ class DeviceTokenResource extends JsonResource
         return [
             'id' => $this->id,
             'platform' => $this->platform,
-            'last_used_at' => $this->last_used_at,
+            'lastUsedAt' => $this->last_used_at,
         ];
     }
 }
