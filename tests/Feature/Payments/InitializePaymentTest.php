@@ -208,6 +208,15 @@ class InitializePaymentTest extends TestCase
 
     public function test_initializes_an_opay_payment(): void
     {
+        // Pinned explicitly rather than relying on whatever real OPAY_* values
+        // happen to be configured in the running environment (the assertSent
+        // below checks the request against these, not the ambient config).
+        config([
+            'services.opay.public_key' => 'OPAYPUB_test_123',
+            'services.opay.merchant_id' => '256611111111111',
+            'services.opay.country' => 'NG',
+        ]);
+
         Http::fake([
             'https://testapi.opaycheckout.com/api/v1/international/cashier/create' => Http::response([
                 'code' => '00000',
@@ -241,8 +250,8 @@ class InitializePaymentTest extends TestCase
         ]);
 
         Http::assertSent(fn ($request) => $request->url() === 'https://testapi.opaycheckout.com/api/v1/international/cashier/create'
-            && $request->hasHeader('Authorization', 'Bearer '.config('services.opay.public_key'))
-            && $request->hasHeader('MerchantId', config('services.opay.merchant_id'))
+            && $request->hasHeader('Authorization', 'Bearer OPAYPUB_test_123')
+            && $request->hasHeader('MerchantId', '256611111111111')
             && $request['amount']['total'] === 250000
             && $request['country'] === 'NG');
     }
