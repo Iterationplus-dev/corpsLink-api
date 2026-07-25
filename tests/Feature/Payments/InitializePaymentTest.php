@@ -206,6 +206,47 @@ class InitializePaymentTest extends TestCase
         $this->assertDatabaseHas('payments', ['id' => $payment['id'], 'gateway_reference' => 'MNFY|attempt-2']);
     }
 
+    public function test_initializes_an_opay_payment(): void
+    {
+        Http::fake([
+            'https://testapi.opaycheckout.com/api/v1/international/cashier/create' => Http::response([
+                'code' => '00000',
+                'message' => 'SUCCESSFUL',
+                'data' => [
+                    'reference' => 'CL-PAY-abc123',
+                    'orderNo' => '256611110000000001',
+                    'cashierUrl' => 'https://sandbox.cashier.opaycheckout.com/checkout/abc123',
+                    'status' => 'INITIAL',
+                ],
+            ]),
+        ]);
+
+        $user = User::factory()->create();
+        $vehicle = Vehicle::factory()->create(['fare' => 2500]);
+        $seat = $vehicle->seats()->first();
+        $hold = SeatHold::factory()->create(['seat_id' => $seat->id, 'user_id' => $user->id]);
+
+        [, $payment] = $this->createBooking($user, $hold);
+
+        $response = $this->actingAs($user, 'sanctum')
+            ->postJson("/api/v1/payments/{$payment['id']}/initialize", ['gateway' => 'opay']);
+
+        $response->assertOk();
+        $response->assertJsonPath('authorizationUrl', 'https://sandbox.cashier.opaycheckout.com/checkout/abc123');
+
+        $this->assertDatabaseHas('payments', [
+            'user_id' => $user->id,
+            'gateway' => 'opay',
+            'gateway_reference' => '256611110000000001',
+        ]);
+
+        Http::assertSent(fn ($request) => $request->url() === 'https://testapi.opaycheckout.com/api/v1/international/cashier/create'
+            && $request->hasHeader('Authorization', 'Bearer '.config('services.opay.public_key'))
+            && $request->hasHeader('MerchantId', config('services.opay.merchant_id'))
+            && $request['amount']['total'] === 250000
+            && $request['country'] === 'NG');
+    }
+
     public function test_rejects_an_unknown_gateway(): void
     {
         $user = User::factory()->create();

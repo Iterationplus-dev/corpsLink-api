@@ -116,6 +116,96 @@ class WebhookTest extends TestCase
         $this->postJson('/api/v1/payments/webhook/bank-transfer', [])->assertStatus(401);
     }
 
+    protected function pendingOpayPayment(User $user, Vehicle $vehicle, Seat $seat): Payment
+    {
+        $hold = SeatHold::factory()->create(['seat_id' => $seat->id, 'user_id' => $user->id]);
+        $result = app(CreateBookingAction::class)->handle($user, $hold->id);
+
+        $payment = $result['payment'];
+        $payment->update(['gateway' => PaymentGateway::Opay]);
+
+        return $payment->fresh();
+    }
+
+    protected function fakeOpayVerify(Payment $payment): void
+    {
+        Http::fake([
+            'https://testapi.opaycheckout.com/api/v1/international/cashier/status' => Http::response([
+                'code' => '00000',
+                'message' => 'SUCCESSFUL',
+                'data' => [
+                    'reference' => $payment->reference,
+                    'orderNo' => '256611110000000001',
+                    'status' => 'SUCCESS',
+                    'amount' => ['total' => (int) round(((float) $payment->amount) * 100), 'currency' => 'NGN'],
+                ],
+            ]),
+        ]);
+    }
+
+    /**
+     * Mirrors OpayGateway::sign() — sort keys recursively, then HMAC-SHA512
+     * the JSON-encoded result.
+     *
+     * @param  array<string, mixed>  $payload
+     */
+    protected function opaySignature(array $payload, string $secret): string
+    {
+        $sort = function (array $data) use (&$sort): array {
+            foreach ($data as $key => $value) {
+                if (is_array($value)) {
+                    $data[$key] = $sort($value);
+                }
+            }
+            ksort($data);
+
+            return $data;
+        };
+
+        return hash_hmac('sha512', json_encode($sort($payload), JSON_UNESCAPED_SLASHES), $secret);
+    }
+
+    public function test_opay_valid_signature_finalizes_the_payment(): void
+    {
+        config(['services.opay.secret_key' => 'opay_secret_test_123']);
+
+        $user = User::factory()->create();
+        $vehicle = Vehicle::factory()->create();
+        $seat = $vehicle->seats()->first();
+        $payment = $this->pendingOpayPayment($user, $vehicle, $seat);
+
+        $this->fakeOpayVerify($payment);
+
+        $payload = ['payload' => ['reference' => $payment->reference, 'status' => 'SUCCESS'], 'type' => 'transaction-status'];
+        $payload['sha512'] = $this->opaySignature($payload['payload'], 'opay_secret_test_123');
+
+        $response = $this->postJson('/api/v1/payments/webhook/opay', $payload);
+
+        $response->assertOk();
+        $this->assertDatabaseHas('bookings', ['payment_id' => $payment->id, 'seat_id' => $seat->id, 'status' => 'confirmed']);
+    }
+
+    public function test_opay_invalid_signature_is_rejected(): void
+    {
+        config(['services.opay.secret_key' => 'opay_secret_test_123']);
+
+        $user = User::factory()->create();
+        $vehicle = Vehicle::factory()->create();
+        $seat = $vehicle->seats()->first();
+        $payment = $this->pendingOpayPayment($user, $vehicle, $seat);
+
+        $payload = [
+            'payload' => ['reference' => $payment->reference, 'status' => 'SUCCESS'],
+            'type' => 'transaction-status',
+            'sha512' => 'not-the-right-signature',
+        ];
+
+        $response = $this->postJson('/api/v1/payments/webhook/opay', $payload);
+
+        $response->assertStatus(401);
+        $this->assertDatabaseMissing('bookings', ['payment_id' => $payment->id, 'status' => 'confirmed']);
+    }
+
     protected function pendingMonnifyPayment(User $user, Vehicle $vehicle, Seat $seat): Payment
     {
         $hold = SeatHold::factory()->create(['seat_id' => $seat->id, 'user_id' => $user->id]);

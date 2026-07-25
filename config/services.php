@@ -93,6 +93,25 @@ return [
         'redirect_url' => env('MONNIFY_REDIRECT_URL', env('APP_URL', 'http://localhost').'/payments/callback'),
     ],
 
+    'opay' => [
+        'url' => env('OPAY_URL', 'https://testapi.opaycheckout.com'),
+        'public_key' => env('OPAY_PUBLIC_KEY'),
+        'secret_key' => env('OPAY_SECRET_KEY'),
+        // Merchant account id from the Opay dashboard — required on every
+        // Cashier API call via the MerchantId header, alongside the key.
+        'merchant_id' => env('OPAY_MERCHANT_ID'),
+        'country' => env('OPAY_COUNTRY', 'NG'),
+        // Unlike the others, Opay's callbackUrl is a real server-to-server
+        // webhook field distinct from returnUrl below — defaults to this
+        // API's own webhook route rather than a frontend page.
+        'callback_url' => env('OPAY_CALLBACK_URL', env('APP_URL', 'http://localhost').'/api/v1/payments/webhook/opay'),
+        // Where Opay's hosted checkout redirects the browser after payment —
+        // same role as Flutterwave's/Monnify's redirect_url above. Actual
+        // confirmation still goes through POST /payments/{id}/verify or the
+        // webhook, not this redirect.
+        'return_url' => env('OPAY_RETURN_URL', env('APP_URL', 'http://localhost').'/payments/callback'),
+    ],
+
     'cloudinary' => [
         'cloud_name' => env('CLOUDINARY_CLOUD_NAME'),
         'api_key' => env('CLOUDINARY_API_KEY'),

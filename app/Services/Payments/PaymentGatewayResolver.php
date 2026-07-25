@@ -28,6 +28,15 @@ class PaymentGatewayResolver
                 config('services.monnify.contract_code'),
                 config('services.monnify.redirect_url'),
             ),
+            PaymentGatewayEnum::Opay => new OpayGateway(
+                config('services.opay.url'),
+                config('services.opay.public_key'),
+                config('services.opay.secret_key'),
+                config('services.opay.merchant_id'),
+                config('services.opay.country'),
+                config('services.opay.callback_url'),
+                config('services.opay.return_url'),
+            ),
         };
     }
 }
