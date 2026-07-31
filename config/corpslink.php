@@ -21,6 +21,23 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | SMS
+    |--------------------------------------------------------------------------
+    |
+    | SmsChannel (app/Notifications/Channels/SmsChannel.php) tries these
+    | providers in order, moving to the next one only if the current one is
+    | unconfigured or its send actually fails — e.g. the default order falls
+    | back to Twilio if Termii is down; reverse it here to make Twilio
+    | primary instead. Unknown provider names are ignored.
+    |
+    */
+
+    'sms' => [
+        'providers' => explode(',', (string) env('CORPSLINK_SMS_PROVIDERS', 'twilio,termii')),
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
     | Registration Wizard
     |--------------------------------------------------------------------------
     |

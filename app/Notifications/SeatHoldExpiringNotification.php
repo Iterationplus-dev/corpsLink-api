@@ -4,7 +4,7 @@ namespace App\Notifications;
 
 use App\Models\SeatHold;
 use App\Notifications\Channels\FcmChannel;
-use App\Notifications\Channels\TermiiChannel;
+use App\Notifications\Channels\SmsChannel;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
@@ -28,7 +28,7 @@ class SeatHoldExpiringNotification extends Notification implements ShouldQueue
             return [];
         }
 
-        return ['mail', 'database', TermiiChannel::class, FcmChannel::class];
+        return ['mail', 'database', SmsChannel::class, FcmChannel::class];
     }
 
     public function toMail(object $notifiable): MailMessage
@@ -42,7 +42,7 @@ class SeatHoldExpiringNotification extends Notification implements ShouldQueue
             ->line("Hold expires at {$this->seatHold->expires_at->format('g:i A')}.");
     }
 
-    public function toTermii(object $notifiable): string
+    public function toSms(object $notifiable): string
     {
         return "CorpersLink: Seat {$this->seatHold->seat->seat_number} hold expires in {$this->minutesRemaining} minutes. Complete payment to keep it.";
     }

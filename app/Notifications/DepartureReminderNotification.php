@@ -4,7 +4,7 @@ namespace App\Notifications;
 
 use App\Models\Booking;
 use App\Notifications\Channels\FcmChannel;
-use App\Notifications\Channels\TermiiChannel;
+use App\Notifications\Channels\SmsChannel;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
@@ -31,7 +31,7 @@ class DepartureReminderNotification extends Notification implements ShouldQueue
         // The 1-hour reminder is time-critical enough to warrant SMS; the
         // 24-hour one is a lighter heads-up.
         return $this->hoursBefore === 1
-            ? ['mail', 'database', TermiiChannel::class, FcmChannel::class]
+            ? ['mail', 'database', SmsChannel::class, FcmChannel::class]
             : ['mail', 'database', FcmChannel::class];
     }
 
@@ -53,7 +53,7 @@ class DepartureReminderNotification extends Notification implements ShouldQueue
             ->line("Booking reference: {$this->booking->reference}");
     }
 
-    public function toTermii(object $notifiable): string
+    public function toSms(object $notifiable): string
     {
         return 'CorpersLink: '.$this->summary();
     }

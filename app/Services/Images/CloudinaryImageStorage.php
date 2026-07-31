@@ -9,7 +9,7 @@ use RuntimeException;
 
 /**
  * Talks to Cloudinary's REST API directly via Http — no SDK, same pattern
- * as ZeptomailTransport/TermiiChannel/PaystackGateway. Cloudinary's signed
+ * as ZeptomailTransport/SmsChannel/PaystackGateway. Cloudinary's signed
  * requests only need SHA-1 request signing, not the OAuth2 JWT exchange
  * that justified pulling in an SDK for Firebase.
  *

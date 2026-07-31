@@ -10,7 +10,7 @@ use RuntimeException;
 
 /**
  * Sends template messages through Meta's WhatsApp Cloud API. Same pattern
- * as TermiiChannel — a plain HTTP call, no SDK.
+ * as SmsChannel's underlying gateways — a plain HTTP call, no SDK.
  *
  * @see https://developers.facebook.com/docs/whatsapp/cloud-api/reference/messages
  */

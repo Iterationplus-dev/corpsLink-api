@@ -46,6 +46,15 @@ return [
         'sender_id' => env('TERMII_SENDER_ID', 'CorpersLink'),
     ],
 
+    'twilio' => [
+        'url' => env('TWILIO_URL', 'https://api.twilio.com/2010-04-01'),
+        'account_sid' => env('TWILIO_ACCOUNT_SID'),
+        'auth_token' => env('TWILIO_AUTH_TOKEN'),
+        // The Twilio phone number (E.164) or Messaging Service SID SMS is
+        // sent from — required on every send, no default possible.
+        'from' => env('TWILIO_FROM_NUMBER'),
+    ],
+
     'whatsapp' => [
         'url' => env('WHATSAPP_URL', 'https://graph.facebook.com'),
         'api_version' => env('WHATSAPP_API_VERSION', 'v21.0'),
