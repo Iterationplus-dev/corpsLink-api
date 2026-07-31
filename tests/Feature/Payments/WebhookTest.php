@@ -116,6 +116,44 @@ class WebhookTest extends TestCase
         $this->postJson('/api/v1/payments/webhook/bank-transfer', [])->assertStatus(401);
     }
 
+    public function test_paystack_webhook_with_a_suffixed_attempt_reference_finalizes_the_payment(): void
+    {
+        // Realistic post-initialize() state: gateway_reference holds the
+        // attempt-suffixed reference PaystackGateway::initialize() actually
+        // sent, not the bare Payment::reference.
+        config(['services.paystack.secret_key' => 'whsec_test_123']);
+
+        $user = User::factory()->create();
+        $vehicle = Vehicle::factory()->create();
+        $seat = $vehicle->seats()->first();
+        $payment = $this->pendingPaystackPayment($user, $vehicle, $seat);
+        $payment->update(['gateway_reference' => "{$payment->reference}_abc12345"]);
+        $payment->refresh();
+
+        Http::fake([
+            "https://api.paystack.co/transaction/verify/{$payment->gateway_reference}" => Http::response([
+                'status' => true,
+                'data' => [
+                    'status' => 'success',
+                    'amount' => (int) round(((float) $payment->amount) * 100),
+                    'currency' => 'NGN',
+                    'reference' => $payment->gateway_reference,
+                ],
+            ]),
+        ]);
+
+        // Paystack's webhook echoes back the suffixed reference it was sent.
+        $payload = ['event' => 'charge.success', 'data' => ['reference' => $payment->gateway_reference]];
+        $body = json_encode($payload);
+        $signature = hash_hmac('sha512', $body, 'whsec_test_123');
+
+        $response = $this->withHeaders(['X-Paystack-Signature' => $signature])
+            ->postJson('/api/v1/payments/webhook/paystack', $payload);
+
+        $response->assertOk();
+        $this->assertDatabaseHas('bookings', ['payment_id' => $payment->id, 'seat_id' => $seat->id, 'status' => 'confirmed']);
+    }
+
     protected function pendingOpayPayment(User $user, Vehicle $vehicle, Seat $seat): Payment
     {
         $hold = SeatHold::factory()->create(['seat_id' => $seat->id, 'user_id' => $user->id]);

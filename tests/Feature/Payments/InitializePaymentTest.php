@@ -74,6 +74,52 @@ class InitializePaymentTest extends TestCase
             && $request['callback_url'] === config('services.paystack.callback_url'));
     }
 
+    public function test_reinitializing_a_paystack_payment_sends_a_different_reference_each_time(): void
+    {
+        // Regression test: Paystack rejects a repeated `reference` with
+        // "Duplicate Transaction Reference" (400) — this bit a real user in
+        // production (payment retried after an abandoned first checkout)
+        // before PaystackGateway::initialize() started suffixing per attempt.
+        Http::fake([
+            'https://api.paystack.co/transaction/initialize' => Http::sequence()
+                ->push(['status' => true, 'data' => ['authorization_url' => 'https://checkout.paystack.com/attempt-1', 'reference' => 'attempt-1-ref']])
+                ->push(['status' => true, 'data' => ['authorization_url' => 'https://checkout.paystack.com/attempt-2', 'reference' => 'attempt-2-ref']]),
+        ]);
+
+        $user = User::factory()->create();
+        $vehicle = Vehicle::factory()->create();
+        $seat = $vehicle->seats()->first();
+        $hold = SeatHold::factory()->create(['seat_id' => $seat->id, 'user_id' => $user->id]);
+
+        [, $payment] = $this->createBooking($user, $hold);
+
+        $first = $this->actingAs($user, 'sanctum')
+            ->postJson("/api/v1/payments/{$payment['id']}/initialize", ['gateway' => 'paystack']);
+        $second = $this->actingAs($user, 'sanctum')
+            ->postJson("/api/v1/payments/{$payment['id']}/initialize", ['gateway' => 'paystack']);
+
+        $first->assertOk();
+        $second->assertOk();
+        $this->assertNotSame($first->json('authorizationUrl'), $second->json('authorizationUrl'));
+
+        $sentReferences = [];
+        Http::assertSent(function ($request) use (&$sentReferences) {
+            if ($request->url() === 'https://api.paystack.co/transaction/initialize') {
+                $sentReferences[] = $request['reference'];
+            }
+
+            return true;
+        });
+
+        $this->assertCount(2, array_unique($sentReferences));
+        foreach ($sentReferences as $sent) {
+            $this->assertNotSame($payment['reference'], $sent);
+            $this->assertStringStartsWith($payment['reference'].'_', $sent);
+        }
+
+        $this->assertDatabaseHas('payments', ['id' => $payment['id'], 'gateway_reference' => 'attempt-2-ref']);
+    }
+
     public function test_initializes_a_flutterwave_payment(): void
     {
         Http::fake([
@@ -246,14 +292,68 @@ class InitializePaymentTest extends TestCase
         $this->assertDatabaseHas('payments', [
             'user_id' => $user->id,
             'gateway' => 'opay',
-            'gateway_reference' => '256611110000000001',
+            'gateway_reference' => 'CL-PAY-abc123',
         ]);
 
-        Http::assertSent(fn ($request) => $request->url() === 'https://testapi.opaycheckout.com/api/v1/international/cashier/create'
-            && $request->hasHeader('Authorization', 'Bearer OPAYPUB_test_123')
-            && $request->hasHeader('MerchantId', '256611111111111')
-            && $request['amount']['total'] === 250000
-            && $request['country'] === 'NG');
+        Http::assertSent(function ($request) use ($payment) {
+            if ($request->url() !== 'https://testapi.opaycheckout.com/api/v1/international/cashier/create') {
+                return false;
+            }
+
+            return $request->hasHeader('Authorization', 'Bearer OPAYPUB_test_123')
+                && $request->hasHeader('MerchantId', '256611111111111')
+                && $request['amount']['total'] === 250000
+                && $request['country'] === 'NG'
+                // Suffixed, not the bare Payment reference — Opay rejects
+                // cashier/create outright if a reference is reused, which a
+                // retried checkout (same Payment row) would otherwise do.
+                && $request['reference'] !== $payment['reference']
+                && str_starts_with($request['reference'], $payment['reference'].'_');
+        });
+    }
+
+    public function test_reinitializing_an_opay_payment_sends_a_different_reference_each_time(): void
+    {
+        config([
+            'services.opay.public_key' => 'OPAYPUB_test_123',
+            'services.opay.merchant_id' => '256611111111111',
+            'services.opay.country' => 'NG',
+        ]);
+
+        Http::fake([
+            'https://testapi.opaycheckout.com/api/v1/international/cashier/create' => Http::sequence()
+                ->push(['data' => ['reference' => 'attempt-1-ref', 'orderNo' => 'ORD-1', 'cashierUrl' => 'https://sandbox.cashier.opaycheckout.com/checkout/attempt-1']])
+                ->push(['data' => ['reference' => 'attempt-2-ref', 'orderNo' => 'ORD-2', 'cashierUrl' => 'https://sandbox.cashier.opaycheckout.com/checkout/attempt-2']]),
+        ]);
+
+        $user = User::factory()->create();
+        $vehicle = Vehicle::factory()->create();
+        $seat = $vehicle->seats()->first();
+        $hold = SeatHold::factory()->create(['seat_id' => $seat->id, 'user_id' => $user->id]);
+
+        [, $payment] = $this->createBooking($user, $hold);
+
+        $first = $this->actingAs($user, 'sanctum')
+            ->postJson("/api/v1/payments/{$payment['id']}/initialize", ['gateway' => 'opay']);
+        $second = $this->actingAs($user, 'sanctum')
+            ->postJson("/api/v1/payments/{$payment['id']}/initialize", ['gateway' => 'opay']);
+
+        $first->assertOk();
+        $second->assertOk();
+        $this->assertNotSame($first->json('authorizationUrl'), $second->json('authorizationUrl'));
+
+        $sentReferences = [];
+        Http::assertSent(function ($request) use (&$sentReferences) {
+            if ($request->url() === 'https://testapi.opaycheckout.com/api/v1/international/cashier/create') {
+                $sentReferences[] = $request['reference'];
+            }
+
+            return true;
+        });
+
+        $this->assertCount(2, array_unique($sentReferences));
+
+        $this->assertDatabaseHas('payments', ['id' => $payment['id'], 'gateway_reference' => 'attempt-2-ref']);
     }
 
     public function test_rejects_an_unknown_gateway(): void

@@ -8,6 +8,7 @@ use Illuminate\Http\Client\ConnectionException;
 use Illuminate\Http\Client\RequestException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Str;
 
 /**
  * Opay's Cashier (international) API. Two different auth schemes apply
@@ -38,10 +39,20 @@ class OpayGateway implements PaymentGatewayContract
      */
     public function initialize(Payment $payment): array
     {
+        // Opay rejects cashier/create outright if `reference` was ever used
+        // before — even for a prior attempt that expired/failed. A retried
+        // checkout (session timed out, user backs out and tries again)
+        // reuses the same Payment row, so a fresh suffix per attempt is
+        // required here — same fix already applied to Paystack/Monnify (see
+        // PaystackGateway::initialize()). Opay's response echoes back
+        // exactly the reference we sent (unlike its own orderNo), so that
+        // echoed value is what gets stored as gateway_reference.
+        $attemptReference = "{$payment->reference}_".Str::random(8);
+
         $response = Http::withToken($this->publicKey)
             ->withHeaders(['MerchantId' => $this->merchantId])
             ->post("{$this->url}/api/v1/international/cashier/create", [
-                'reference' => $payment->reference,
+                'reference' => $attemptReference,
                 'country' => $this->country,
                 'amount' => [
                     'total' => (int) round(((float) $payment->amount) * 100), // kobo
@@ -62,7 +73,7 @@ class OpayGateway implements PaymentGatewayContract
 
         return [
             'authorization_url' => $response->json('data.cashierUrl'),
-            'gateway_reference' => $response->json('data.orderNo'),
+            'gateway_reference' => $response->json('data.reference'),
         ];
     }
 
@@ -112,9 +123,17 @@ class OpayGateway implements PaymentGatewayContract
         return hash_equals($this->sign($payload), $signature);
     }
 
+    /**
+     * payload.reference here is our attempt-suffixed value
+     * ("{payment->reference}_{random}") — strip the suffix so the webhook
+     * controller's plain Payment::where('reference', ...) lookup still
+     * matches. Our own reference format never contains an underscore.
+     */
     public function referenceFromWebhook(Request $request): ?string
     {
-        return $request->input('payload.reference');
+        $reference = $request->input('payload.reference');
+
+        return $reference ? explode('_', $reference)[0] : null;
     }
 
     /**

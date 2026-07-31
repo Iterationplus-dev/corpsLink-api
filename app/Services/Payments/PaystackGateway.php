@@ -8,6 +8,7 @@ use Illuminate\Http\Client\ConnectionException;
 use Illuminate\Http\Client\RequestException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Str;
 
 class PaystackGateway implements PaymentGatewayContract
 {
@@ -22,12 +23,20 @@ class PaystackGateway implements PaymentGatewayContract
      */
     public function initialize(Payment $payment): array
     {
+        // Paystack rejects init-transaction outright ("Duplicate Transaction
+        // Reference") if `reference` was ever used before — even for a prior
+        // attempt that expired/failed. A retried checkout (session timed
+        // out, user backs out and tries again) reuses the same Payment row,
+        // so a fresh suffix per attempt is required here — same fix already
+        // applied to Monnify (see MonnifyGateway::initialize()).
+        $attemptReference = "{$payment->reference}_".Str::random(8);
+
         $response = Http::withToken($this->secretKey)
             ->post("{$this->url}/transaction/initialize", [
                 'email' => $payment->user->email,
                 'amount' => (int) round(((float) $payment->amount) * 100), // kobo
                 'currency' => $payment->currency,
-                'reference' => $payment->reference,
+                'reference' => $attemptReference,
                 'callback_url' => $this->callbackUrl,
             ])
             ->throw();
@@ -83,8 +92,16 @@ class PaystackGateway implements PaymentGatewayContract
         );
     }
 
+    /**
+     * data.reference here is our attempt-suffixed value
+     * ("{payment->reference}_{random}") — strip the suffix so the webhook
+     * controller's plain Payment::where('reference', ...) lookup still
+     * matches. Our own reference format never contains an underscore.
+     */
     public function referenceFromWebhook(Request $request): ?string
     {
-        return $request->input('data.reference');
+        $reference = $request->input('data.reference');
+
+        return $reference ? explode('_', $reference)[0] : null;
     }
 }

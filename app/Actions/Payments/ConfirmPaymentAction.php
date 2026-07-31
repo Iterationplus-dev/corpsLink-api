@@ -99,19 +99,21 @@ class ConfirmPaymentAction
     }
 
     /**
-     * Paystack/Flutterwave always echo back exactly the reference we sent,
-     * so Payment::reference works as the verify() lookup key for them. Monnify
-     * rejects re-initializing with a reused paymentReference outright — so
-     * MonnifyGateway::initialize() sends a fresh, uniquely-suffixed one on
-     * every attempt, and the only stable per-attempt identifier left is
-     * gateway_reference (Monnify's own transactionReference, unchanged by
-     * MonnifyGateway::verify() between calls — unlike Flutterwave's, which
-     * gets overwritten with its internal numeric id after a successful verify).
+     * Flutterwave always echoes back exactly the reference we sent, so
+     * Payment::reference works as the verify() lookup key for it. Paystack,
+     * Opay, and Monnify all reject re-initializing with a reused reference
+     * outright — so their gateways send a fresh, uniquely-suffixed one on
+     * every attempt (see PaystackGateway::initialize() /
+     * OpayGateway::initialize() / MonnifyGateway::initialize()), and the
+     * only stable per-attempt identifier left is gateway_reference. That
+     * stays stable across verify() calls for all three — unlike
+     * Flutterwave's, which gets overwritten with its internal numeric id
+     * after a successful verify.
      */
     protected function verificationReference(Payment $payment): string
     {
         return match ($payment->gateway) {
-            PaymentGateway::Monnify => $payment->gateway_reference ?? $payment->reference,
+            PaymentGateway::Paystack, PaymentGateway::Opay, PaymentGateway::Monnify => $payment->gateway_reference ?? $payment->reference,
             default => $payment->reference,
         };
     }
