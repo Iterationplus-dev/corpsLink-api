@@ -33,8 +33,10 @@ class SmsChannelTest extends TestCase
 
     public function test_it_sends_via_termii_to_the_normalized_international_number(): void
     {
+        Config::set('corpslink.sms.providers', ['termii', 'twilio']);
         Config::set('services.termii.api_key', 'test-key');
         Config::set('services.termii.sender_id', 'CorpsLink');
+        Config::set('services.twilio.account_sid', null);
         Http::fake(['*' => Http::response(['message_id' => 'abc'], 200)]);
 
         $notifiable = (object) ['phone' => '08012345678'];
@@ -52,7 +54,9 @@ class SmsChannelTest extends TestCase
 
     public function test_it_leaves_an_already_international_number_untouched(): void
     {
+        Config::set('corpslink.sms.providers', ['termii', 'twilio']);
         Config::set('services.termii.api_key', 'test-key');
+        Config::set('services.twilio.account_sid', null);
         Http::fake(['*' => Http::response(['message_id' => 'abc'], 200)]);
 
         $notifiable = (object) ['phone' => '2348012345678'];
@@ -65,6 +69,7 @@ class SmsChannelTest extends TestCase
 
     public function test_it_skips_silently_when_no_provider_is_configured(): void
     {
+        Config::set('corpslink.sms.providers', ['termii', 'twilio']);
         Config::set('services.termii.api_key', null);
         Config::set('services.twilio.account_sid', null);
         Http::fake();
@@ -92,6 +97,11 @@ class SmsChannelTest extends TestCase
 
     public function test_it_falls_back_to_twilio_when_termii_fails(): void
     {
+        // Pinned rather than relying on the app's default provider order,
+        // which is environment-specific config (currently flipped to
+        // twilio-first in production while Termii is down) — this test is
+        // specifically about the termii-fails-so-twilio-is-tried-next path.
+        Config::set('corpslink.sms.providers', ['termii', 'twilio']);
         Config::set('services.termii.api_key', 'test-key');
         Config::set('services.twilio.account_sid', 'AC_test');
         Config::set('services.twilio.auth_token', 'test-token');
@@ -118,6 +128,7 @@ class SmsChannelTest extends TestCase
 
     public function test_it_skips_an_unconfigured_termii_and_sends_via_twilio_directly(): void
     {
+        Config::set('corpslink.sms.providers', ['termii', 'twilio']);
         Config::set('services.termii.api_key', null);
         Config::set('services.twilio.account_sid', 'AC_test');
         Config::set('services.twilio.auth_token', 'test-token');
@@ -157,6 +168,7 @@ class SmsChannelTest extends TestCase
 
     public function test_it_throws_when_every_configured_provider_fails(): void
     {
+        Config::set('corpslink.sms.providers', ['termii', 'twilio']);
         Config::set('services.termii.api_key', 'test-key');
         Config::set('services.twilio.account_sid', 'AC_test');
         Config::set('services.twilio.auth_token', 'test-token');
