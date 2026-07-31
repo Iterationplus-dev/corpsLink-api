@@ -9,7 +9,11 @@ use Illuminate\Http\Request;
 interface PaymentGatewayContract
 {
     /**
-     * @return array{authorization_url: ?string, gateway_reference: ?string}
+     * access_code is Paystack-specific (its native mobile SDK charges cards
+     * in-app using it instead of the hosted authorization_url) — gateways
+     * that don't have an equivalent just omit the key.
+     *
+     * @return array{authorization_url: ?string, gateway_reference: ?string, access_code?: ?string}
      */
     public function initialize(Payment $payment): array;
 

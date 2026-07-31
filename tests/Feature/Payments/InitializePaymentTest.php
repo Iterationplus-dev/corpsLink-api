@@ -61,6 +61,7 @@ class InitializePaymentTest extends TestCase
 
         $response->assertOk();
         $response->assertJsonPath('authorizationUrl', 'https://checkout.paystack.com/abc123');
+        $response->assertJsonPath('accessCode', 'abc123');
 
         $this->assertDatabaseHas('payments', [
             'user_id' => $user->id,

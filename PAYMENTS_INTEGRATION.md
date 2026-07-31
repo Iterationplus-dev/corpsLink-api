@@ -46,14 +46,16 @@ Auth: `auth:sanctum` — caller must own the payment (403 otherwise).
 ```json
 {
   "authorizationUrl": "https://sandbox.cashier.opaycheckout.com/checkout/abc123",
-  "reference": "CL-PAY-a1b2c3d4e5f6"
+  "reference": "CL-PAY-a1b2c3d4e5f6",
+  "accessCode": null
 }
 ```
 
-- `authorizationUrl` — open this in an in-app browser / WebView (or `SFSafariViewController` / Chrome Custom Tabs) for the user to complete payment on Opay's hosted checkout page.
+- `authorizationUrl` — open this in an in-app browser / WebView (or `SFSafariViewController` / Chrome Custom Tabs) for the user to complete payment on the gateway's hosted checkout page.
 - `reference` — CorpsLink's own payment reference. Keep it around for support/debugging; you don't need to pass it back to the API yourself (the `{payment}` id already identifies which payment you're verifying).
+- `accessCode` — **Paystack only**, `null` for every other gateway. Required by Paystack's native mobile SDK (`PaystackNative.chargeCard()` on Android) to charge a card in-app instead of opening `authorizationUrl` in a WebView. If you're using the native in-app charge flow, use this instead of the hosted checkout page; if you're using the hosted checkout page (any gateway, including Paystack), ignore this field entirely.
 
-**Note:** `initialize` can be called again for the same `payment` if the user backs out and retries (e.g. the checkout session expired) — it will return a fresh `authorizationUrl`.
+**Note:** `initialize` can be called again for the same `payment` if the user backs out and retries (e.g. the checkout session expired) — it will return a fresh `authorizationUrl` (and a fresh `accessCode` for Paystack). Each attempt uses a new gateway-side transaction reference internally, so retries are always safe — this used to fail with a "Duplicate Transaction Reference" error on Paystack/Opay before it was fixed server-side.
 
 ---
 

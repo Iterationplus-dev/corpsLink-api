@@ -15,7 +15,7 @@ class InitializePaymentAction
      * Booking by CreateBookingAction) — this just picks a gateway and
      * asks it for a checkout URL.
      *
-     * @return array{payment: Payment, authorization_url: ?string}
+     * @return array{payment: Payment, authorization_url: ?string, access_code: ?string}
      */
     public function handle(Payment $payment, PaymentGateway $gateway): array
     {
@@ -25,6 +25,10 @@ class InitializePaymentAction
 
         $payment->update(['gateway_reference' => $result['gateway_reference']]);
 
-        return ['payment' => $payment, 'authorization_url' => $result['authorization_url']];
+        return [
+            'payment' => $payment,
+            'authorization_url' => $result['authorization_url'],
+            'access_code' => $result['access_code'] ?? null,
+        ];
     }
 }

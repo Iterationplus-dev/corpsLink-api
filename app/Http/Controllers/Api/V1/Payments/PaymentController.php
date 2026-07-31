@@ -36,6 +36,9 @@ class PaymentController extends Controller
         return $this->success([
             'authorizationUrl' => $result['authorization_url'],
             'reference' => $result['payment']->reference,
+            // Paystack-only — the native Android SDK needs this to charge a
+            // card in-app; null for every other gateway.
+            'accessCode' => $result['access_code'],
         ]);
     }
 

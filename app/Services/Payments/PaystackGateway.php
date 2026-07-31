@@ -19,7 +19,7 @@ class PaystackGateway implements PaymentGatewayContract
     ) {}
 
     /**
-     * @return array{authorization_url: ?string, gateway_reference: ?string}
+     * @return array{authorization_url: ?string, gateway_reference: ?string, access_code: ?string}
      */
     public function initialize(Payment $payment): array
     {
@@ -44,6 +44,9 @@ class PaystackGateway implements PaymentGatewayContract
         return [
             'authorization_url' => $response->json('data.authorization_url'),
             'gateway_reference' => $response->json('data.reference'),
+            // Required by the native Paystack Android SDK to charge a card
+            // in-app, as an alternative to the hosted authorization_url.
+            'access_code' => $response->json('data.access_code'),
         ];
     }
 
