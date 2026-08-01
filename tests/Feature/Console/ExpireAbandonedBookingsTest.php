@@ -28,10 +28,6 @@ class ExpireAbandonedBookingsTest extends TestCase
         $vehicle = Vehicle::factory()->create();
         $booking = $this->pendingBooking($user, $vehicle);
 
-        // Simulate enough time passing that both the booking and its
-        // backing hold are old, then let the hold actually lapse.
-        // created_at isn't mass-fillable, hence forceFill.
-        $booking->forceFill(['created_at' => now()->subMinutes(config('corpslink.seat_hold.duration_minutes') + 5)])->save();
         SeatHold::query()->where('seat_id', $booking->seat_id)->update(['expires_at' => now()->subMinute()]);
 
         Artisan::call('corpslink:expire-abandoned-bookings');
@@ -45,7 +41,6 @@ class ExpireAbandonedBookingsTest extends TestCase
         $vehicle = Vehicle::factory()->create();
         $booking = $this->pendingBooking($user, $vehicle);
 
-        $booking->forceFill(['created_at' => now()->subMinutes(config('corpslink.seat_hold.duration_minutes') + 5)])->save();
         // Hold is still active — user could be mid-checkout on the gateway.
 
         Artisan::call('corpslink:expire-abandoned-bookings');
@@ -62,5 +57,39 @@ class ExpireAbandonedBookingsTest extends TestCase
         Artisan::call('corpslink:expire-abandoned-bookings');
 
         $this->assertSame('pending_payment', $booking->fresh()->status->value);
+    }
+
+    /**
+     * Regression test: the command used to gate expiry on
+     * `bookings.created_at + hold-duration`, a clock disconnected from the
+     * hold's own `expires_at`. If the hold sat around for a while before
+     * CreateBookingAction converted it into a booking, the hold could lapse
+     * well before that booking.created_at-based deadline arrived — leaving
+     * the seat stuck looking "taken" long after the UI's countdown said it
+     * would free up. Expiry must track the hold's real expires_at, not the
+     * booking's age.
+     */
+    public function test_it_expires_a_booking_whose_hold_lapsed_soon_after_a_delayed_booking_creation(): void
+    {
+        $user = User::factory()->create();
+        $vehicle = Vehicle::factory()->create();
+        $seat = $vehicle->seats()->first();
+
+        // The hold was claimed a while ago and is nearly done; the booking
+        // is only created from it now, right before the hold lapses.
+        $hold = SeatHold::factory()->create([
+            'seat_id' => $seat->id,
+            'user_id' => $user->id,
+            'expires_at' => now()->addMinute(),
+        ]);
+        $booking = app(CreateBookingAction::class)->handle($user, $hold->id)['booking'];
+
+        // The hold lapses moments later — the booking itself is still
+        // brand new, well inside the old (buggy) created_at-based window.
+        SeatHold::query()->whereKey($hold->id)->update(['expires_at' => now()->subMinute()]);
+
+        Artisan::call('corpslink:expire-abandoned-bookings');
+
+        $this->assertSame('expired', $booking->fresh()->status->value);
     }
 }
