@@ -17,9 +17,12 @@ class VerifyPaymentRequest extends FormRequest
     public function rules(): array
     {
         return [
-            // Accepted for contract parity with the frontend, but not
-            // strictly needed — the Payment is already resolved via the
-            // route-bound {payment} id, which is what's actually verified.
+            // Ignored for every gateway except Monnify, where a native-SDK
+            // charge (bypassing our own initialize() checkout) produces a
+            // transactionReference our backend never otherwise learns —
+            // see ConfirmPaymentAction::handle(). Harmless to send for the
+            // hosted-checkout flow too; it's only trusted when it differs
+            // from the Payment's own reference.
             'reference' => ['sometimes', 'string'],
         ];
     }

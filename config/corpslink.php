@@ -38,6 +38,23 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | WhatsApp
+    |--------------------------------------------------------------------------
+    |
+    | WhatsAppChannel (app/Notifications/Channels/WhatsAppChannel.php) tries
+    | these providers in order, moving to the next one only if the current
+    | one is unconfigured or its send actually fails — same fallback
+    | behavior as the SMS providers above. Unknown provider names are
+    | ignored.
+    |
+    */
+
+    'whatsapp' => [
+        'providers' => explode(',', (string) env('CORPSLINK_WHATSAPP_PROVIDERS', 'meta,twilio')),
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
     | Registration Wizard
     |--------------------------------------------------------------------------
     |

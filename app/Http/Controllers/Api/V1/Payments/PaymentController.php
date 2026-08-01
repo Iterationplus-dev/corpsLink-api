@@ -46,7 +46,7 @@ class PaymentController extends Controller
     {
         $this->authorize('view', $payment);
 
-        $booking = $action->handle($payment);
+        $booking = $action->handle($payment, $request->validated('reference'));
 
         return $this->success(BookingResource::make($booking));
     }

@@ -17,6 +17,123 @@ class VerifyPaymentTest extends TestCase
 {
     use RefreshDatabase;
 
+    protected function pendingMonnifyPayment(User $user, Vehicle $vehicle, Seat $seat): Payment
+    {
+        $hold = SeatHold::factory()->create(['seat_id' => $seat->id, 'user_id' => $user->id]);
+        $result = app(CreateBookingAction::class)->handle($user, $hold->id);
+
+        $payment = $result['payment'];
+        // gateway_reference set here to mimic a real initialize() call —
+        // it's Monnify's transactionReference for our own (unrelated,
+        // possibly-abandoned) hosted-checkout attempt, distinct from
+        // whatever the native SDK actually settles under.
+        $payment->update(['gateway' => PaymentGateway::Monnify, 'gateway_reference' => 'MNFY|HOSTED|000001']);
+
+        return $payment->fresh();
+    }
+
+    protected function fakeMonnifyVerify(string $transactionReference, string $status, float $amountNaira): void
+    {
+        Http::fake([
+            'https://sandbox.monnify.com/api/v1/auth/login' => Http::response([
+                'requestSuccessful' => true,
+                'responseBody' => ['accessToken' => 'mnfy_test_token', 'expiresIn' => 3599],
+            ]),
+            'https://sandbox.monnify.com/api/v2/merchant/transactions/query*' => Http::response([
+                'requestSuccessful' => true,
+                'responseBody' => [
+                    'paymentStatus' => $status,
+                    'amountPaid' => $amountNaira,
+                    'currencyCode' => 'NGN',
+                    'transactionReference' => $transactionReference,
+                ],
+            ]),
+        ]);
+    }
+
+    public function test_monnify_native_sdk_reference_is_used_when_it_differs_from_the_payment_reference(): void
+    {
+        $user = User::factory()->create();
+        $vehicle = Vehicle::factory()->create(['fare' => 1500]);
+        $seat = $vehicle->seats()->first();
+        $payment = $this->pendingMonnifyPayment($user, $vehicle, $seat);
+
+        // The native SDK's own transactionReference — never touched our
+        // initialize() endpoint, so it's not what gateway_reference holds.
+        $this->fakeMonnifyVerify('MNFY|NATIVE|999999', 'PAID', 1500);
+
+        $response = $this->actingAs($user, 'sanctum')
+            ->postJson("/api/v1/payments/{$payment->id}/verify", ['reference' => 'MNFY|NATIVE|999999']);
+
+        $response->assertOk();
+        $response->assertJsonPath('status', 'confirmed');
+        $this->assertSame('successful', $payment->fresh()->status->value);
+        $this->assertSame('MNFY|NATIVE|999999', $payment->fresh()->gateway_reference);
+
+        Http::assertSent(function ($request) {
+            if (! str_starts_with($request->url(), 'https://sandbox.monnify.com/api/v2/merchant/transactions/query')) {
+                return false;
+            }
+
+            parse_str(parse_url($request->url(), PHP_URL_QUERY), $query);
+
+            return ($query['transactionReference'] ?? null) === 'MNFY|NATIVE|999999';
+        });
+    }
+
+    public function test_monnify_falls_back_to_stored_gateway_reference_when_client_echoes_back_payment_reference(): void
+    {
+        $user = User::factory()->create();
+        $vehicle = Vehicle::factory()->create(['fare' => 1500]);
+        $seat = $vehicle->seats()->first();
+        $payment = $this->pendingMonnifyPayment($user, $vehicle, $seat);
+
+        $this->fakeMonnifyVerify('MNFY|HOSTED|000001', 'PAID', 1500);
+
+        // Old hosted-checkout contract: the client just echoes back the
+        // reference `initialize` gave it, which is Payment::reference, not
+        // a real Monnify identifier — must not be trusted as one.
+        $response = $this->actingAs($user, 'sanctum')
+            ->postJson("/api/v1/payments/{$payment->id}/verify", ['reference' => $payment->reference]);
+
+        $response->assertOk();
+
+        Http::assertSent(function ($request) {
+            if (! str_starts_with($request->url(), 'https://sandbox.monnify.com/api/v2/merchant/transactions/query')) {
+                return false;
+            }
+
+            parse_str(parse_url($request->url(), PHP_URL_QUERY), $query);
+
+            return ($query['transactionReference'] ?? null) === 'MNFY|HOSTED|000001';
+        });
+    }
+
+    public function test_monnify_rejects_a_reference_already_claimed_by_another_successful_payment(): void
+    {
+        $user = User::factory()->create();
+        $vehicle = Vehicle::factory()->create(['fare' => 1500]);
+        $seats = $vehicle->seats()->orderBy('seat_number')->take(2)->get();
+
+        Payment::factory()->successful()->create([
+            'gateway' => PaymentGateway::Monnify,
+            'gateway_reference' => 'MNFY|NATIVE|999999',
+            'amount' => 1500,
+        ]);
+
+        $payment = $this->pendingMonnifyPayment($user, $vehicle, $seats[1]);
+
+        $this->fakeMonnifyVerify('MNFY|NATIVE|999999', 'PAID', 1500);
+
+        $response = $this->actingAs($user, 'sanctum')
+            ->postJson("/api/v1/payments/{$payment->id}/verify", ['reference' => 'MNFY|NATIVE|999999']);
+
+        $response->assertStatus(422);
+        $response->assertJsonPath('error.code', 'payment_failed');
+        $this->assertSame('failed', $payment->fresh()->status->value);
+        $this->assertDatabaseMissing('bookings', ['payment_id' => $payment->id, 'status' => 'confirmed']);
+    }
+
     protected function fakeVerify(string $status, float $amountNaira, string $reference): void
     {
         Http::fake([

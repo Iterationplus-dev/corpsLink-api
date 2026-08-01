@@ -2,21 +2,25 @@
 
 namespace App\Notifications\Channels;
 
+use App\Enums\WhatsAppGateway;
 use App\Notifications\Channels\Concerns\NormalizesNigerianPhoneNumber;
+use App\Services\WhatsApp\WhatsAppGatewayResolver;
 use Illuminate\Notifications\Notification;
-use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use RuntimeException;
 
 /**
- * Sends template messages through Meta's WhatsApp Cloud API. Same pattern
- * as SmsChannel's underlying gateways — a plain HTTP call, no SDK.
- *
- * @see https://developers.facebook.com/docs/whatsapp/cloud-api/reference/messages
+ * Tries each provider in `corpslink.whatsapp.providers` order (default:
+ * Meta, then Twilio) until one sends successfully. A provider missing its
+ * credentials is skipped, not counted as a failure; only when every
+ * configured provider actually rejects/fails the message does this throw —
+ * same fallback behavior as SmsChannel.
  */
 class WhatsAppChannel
 {
     use NormalizesNigerianPhoneNumber;
+
+    public function __construct(protected WhatsAppGatewayResolver $resolver) {}
 
     public function send(object $notifiable, Notification $notification): void
     {
@@ -30,43 +34,45 @@ class WhatsAppChannel
             return;
         }
 
-        $phoneNumberId = config('services.whatsapp.phone_number_id');
-        $accessToken = config('services.whatsapp.access_token');
+        $to = $this->normalize($phone);
+        $params = $notification->toWhatsApp($notifiable);
+        $failures = [];
 
-        if (! $phoneNumberId || ! $accessToken) {
-            Log::debug('WhatsApp message skipped — no Cloud API credentials configured.', ['phone' => $phone]);
+        foreach ($this->configuredProviders() as $provider) {
+            $gateway = $this->resolver->resolve($provider);
+
+            if (! $gateway->isConfigured()) {
+                continue;
+            }
+
+            try {
+                $gateway->send($to, $params);
+
+                return;
+            } catch (RuntimeException $e) {
+                $failures[$provider->value] = $e->getMessage();
+                Log::warning("WhatsApp message via {$provider->value} failed, trying next provider.", ['phone' => $to]);
+            }
+        }
+
+        if (! $failures) {
+            Log::debug('WhatsApp message skipped — no WhatsApp provider configured.', ['phone' => $to]);
 
             return;
         }
 
-        $params = $notification->toWhatsApp($notifiable);
+        throw new RuntimeException('All WhatsApp providers failed: '.json_encode($failures));
+    }
 
-        $response = Http::baseUrl(config('services.whatsapp.url'))
-            ->withToken($accessToken)
-            ->timeout(10)
-            ->connectTimeout(5)
-            ->post('/'.config('services.whatsapp.api_version').'/'.$phoneNumberId.'/messages', [
-                'messaging_product' => 'whatsapp',
-                'recipient_type' => 'individual',
-                'to' => $this->normalize($phone),
-                'type' => 'template',
-                'template' => [
-                    'name' => config('services.whatsapp.otp_template'),
-                    'language' => ['code' => config('services.whatsapp.otp_template_language')],
-                    'components' => [
-                        [
-                            'type' => 'body',
-                            'parameters' => array_map(
-                                fn (string $value) => ['type' => 'text', 'text' => $value],
-                                $params,
-                            ),
-                        ],
-                    ],
-                ],
-            ]);
-
-        if ($response->failed()) {
-            throw new RuntimeException('WhatsApp message failed: '.$response->body());
-        }
+    /**
+     * @return array<int, WhatsAppGateway>
+     */
+    protected function configuredProviders(): array
+    {
+        return collect(config('corpslink.whatsapp.providers', []))
+            ->map(fn (string $name) => WhatsAppGateway::tryFrom($name))
+            ->filter()
+            ->values()
+            ->all();
     }
 }

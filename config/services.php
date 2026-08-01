@@ -53,6 +53,11 @@ return [
         // The Twilio phone number (E.164) or Messaging Service SID SMS is
         // sent from — required on every send, no default possible.
         'from' => env('TWILIO_FROM_NUMBER'),
+        // Twilio's WhatsApp-enabled sender number (E.164, no "whatsapp:"
+        // prefix — the gateway adds that) and the Content API template SID
+        // used for OTP messages, both distinct from the plain-SMS `from`.
+        'whatsapp_from' => env('TWILIO_WHATSAPP_FROM_NUMBER'),
+        'whatsapp_content_sid' => env('TWILIO_WHATSAPP_OTP_CONTENT_SID'),
     ],
 
     'whatsapp' => [

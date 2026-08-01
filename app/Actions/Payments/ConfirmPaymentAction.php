@@ -14,6 +14,7 @@ use App\Models\Seat;
 use App\Models\SeatHold;
 use App\Services\Payments\PaymentGatewayResolver;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class ConfirmPaymentAction
 {
@@ -27,16 +28,21 @@ class ConfirmPaymentAction
      * Called from both the client-triggered verify endpoint and the
      * gateway webhook, whichever reaches it first.
      *
+     * @param  ?string  $clientReference  Only meaningful for Monnify — see
+     *                                    verificationReference(). Ignored
+     *                                    for every other gateway and by
+     *                                    the webhook caller (always null).
+     *
      * @throws PaymentVerificationFailedException|NoSeatsAvailableException
      */
-    public function handle(Payment $payment): Booking
+    public function handle(Payment $payment, ?string $clientReference = null): Booking
     {
         // The transaction must always commit — even on failure we need the
         // "mark payment failed" write to persist, so domain failures are
         // returned as a tagged outcome and only thrown *after* commit
         // (throwing inside DB::transaction rolls back everything in it,
         // including that write).
-        $outcome = DB::transaction(function () use ($payment) {
+        $outcome = DB::transaction(function () use ($payment, $clientReference) {
             $locked = Payment::query()->whereKey($payment->id)->lockForUpdate()->firstOrFail();
 
             if ($locked->isSuccessful()) {
@@ -45,7 +51,7 @@ class ConfirmPaymentAction
 
             $booking = $locked->booking()->lockForUpdate()->firstOrFail();
 
-            $result = $this->resolver->resolve($locked->gateway)->verify($this->verificationReference($locked));
+            $result = $this->resolver->resolve($locked->gateway)->verify($this->verificationReference($locked, $clientReference));
 
             if (! $result->successful) {
                 $locked->update(['status' => PaymentStatus::Failed, 'gateway_response' => $result->raw]);
@@ -57,6 +63,28 @@ class ConfirmPaymentAction
                 $locked->update(['status' => PaymentStatus::Failed, 'gateway_response' => $result->raw]);
 
                 return ['error' => PaymentVerificationFailedException::make('The amount paid did not match the expected fare.')];
+            }
+
+            // A Monnify transactionReference trusted from client input (see
+            // verificationReference()) names a real transaction at Monnify,
+            // but nothing so far confirms *this* payment is the one that
+            // transaction belongs to — a copied reference would otherwise
+            // let someone else's paid transaction confirm an unrelated
+            // booking as long as the amount happened to match. Every other
+            // gateway's gateway_reference is always our own uniquely
+            // generated value, so it can't collide this way.
+            if ($result->gatewayReference && Payment::query()
+                ->where('gateway_reference', $result->gatewayReference)
+                ->whereKeyNot($locked->id)
+                ->where('status', PaymentStatus::Successful)
+                ->exists()) {
+                $locked->update(['status' => PaymentStatus::Failed, 'gateway_response' => $result->raw]);
+                Log::warning('Payment verification rejected — gateway reference already claimed by another payment.', [
+                    'payment_id' => $locked->id,
+                    'gateway_reference' => $result->gatewayReference,
+                ]);
+
+                return ['error' => PaymentVerificationFailedException::make('This payment reference has already been used.')];
             }
 
             $locked->update([
@@ -109,9 +137,24 @@ class ConfirmPaymentAction
      * stays stable across verify() calls for all three — unlike
      * Flutterwave's, which gets overwritten with its internal numeric id
      * after a successful verify.
+     *
+     * Monnify is the exception within the exception: its native mobile SDK
+     * lets the client charge the user directly, without ever going through
+     * our own initialize() checkout — so the transactionReference Monnify
+     * actually settled under is one only the client knows, not the
+     * (unrelated, likely-abandoned) one our own init-transaction call
+     * stored as gateway_reference. When the client supplies a $clientReference
+     * that isn't just it echoing back Payment::reference (the hosted-checkout
+     * contract, where the field is accepted but not otherwise meaningful),
+     * trust it over our own stored value. handle()'s reference-reuse guard
+     * is what keeps this safe against a copied/replayed reference.
      */
-    protected function verificationReference(Payment $payment): string
+    protected function verificationReference(Payment $payment, ?string $clientReference = null): string
     {
+        if ($payment->gateway === PaymentGateway::Monnify && $clientReference && $clientReference !== $payment->reference) {
+            return $clientReference;
+        }
+
         return match ($payment->gateway) {
             PaymentGateway::Paystack, PaymentGateway::Opay, PaymentGateway::Monnify => $payment->gateway_reference ?? $payment->reference,
             default => $payment->reference,

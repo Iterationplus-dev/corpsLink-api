@@ -75,7 +75,13 @@ If the user abandons the WebView without ever reaching the return URL, you can s
 **POST** `/api/v1/payments/{payment}/verify`
 Auth: `auth:sanctum` — caller must own the payment (403 otherwise).
 
-**Request body:** none required (an optional `reference` field is accepted for parity but ignored — the `{payment}` id in the URL is what's checked).
+**Request body:** none required for Paystack, Flutterwave, or Opay (an optional `reference` field is accepted for parity but ignored — the `{payment}` id in the URL is what's checked).
+
+**Monnify native-SDK charges only:** if you charge in-app via Monnify's native mobile SDK instead of opening `authorizationUrl` in a WebView, you **must** send the `transactionReference` the SDK returned as `reference` in this request body — that transaction was never routed through this API's `initialize` call, so it's the only way the server learns which Monnify transaction to check. Sending your own `reference` (echoing back the one this API gave you from `initialize`, or omitting the field) still works and falls back to the hosted-checkout behavior above.
+
+```json
+{ "reference": "<transactionReference from Monnify's native SDK>" }
+```
 
 **Response `200`** (payment successful — the booking, now confirmed):
 
