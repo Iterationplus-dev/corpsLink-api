@@ -28,8 +28,8 @@ class ConfirmPaymentAction
      * Called from both the client-triggered verify endpoint and the
      * gateway webhook, whichever reaches it first.
      *
-     * @param  ?string  $clientReference  Only meaningful for Monnify — see
-     *                                    verificationReference(). Ignored
+     * @param  ?string  $clientReference  Only meaningful for Monnify/Opay —
+     *                                    see verificationReference(). Ignored
      *                                    for every other gateway and by
      *                                    the webhook caller (always null).
      *
@@ -138,20 +138,31 @@ class ConfirmPaymentAction
      * Flutterwave's, which gets overwritten with its internal numeric id
      * after a successful verify.
      *
-     * Monnify is the exception within the exception: its native mobile SDK
-     * lets the client charge the user directly, without ever going through
-     * our own initialize() checkout — so the transactionReference Monnify
-     * actually settled under is one only the client knows, not the
-     * (unrelated, likely-abandoned) one our own init-transaction call
-     * stored as gateway_reference. When the client supplies a $clientReference
-     * that isn't just it echoing back Payment::reference (the hosted-checkout
-     * contract, where the field is accepted but not otherwise meaningful),
-     * trust it over our own stored value. handle()'s reference-reuse guard
-     * is what keeps this safe against a copied/replayed reference.
+     * Monnify and Opay are both the exception within the exception: each
+     * has a native mobile SDK that lets the client charge the user
+     * directly, without ever going through our own initialize() checkout —
+     * so the reference that gateway actually settled the charge under is
+     * one only the client knows, not the (unrelated, likely-abandoned) one
+     * our own initialize() call stored as gateway_reference. When the
+     * client supplies a $clientReference that isn't just it echoing back
+     * Payment::reference (the hosted-checkout contract, where the field is
+     * accepted but not otherwise meaningful), trust it over our own stored
+     * value. handle()'s reference-reuse guard is what keeps this safe
+     * against a copied/replayed reference.
+     *
+     * Note this doesn't cover every native-SDK edge case for Opay: if its
+     * SDK's own charge result never gives the client anything besides our
+     * own Payment::reference to send back (see OpayGateway::verify()'s
+     * docblock on how that value is then routed), this can't distinguish
+     * "that's the real reference the SDK charged under" from "the client is
+     * just echoing the old hosted-checkout contract" — so that specific
+     * case still falls through to gateway_reference below, same as today.
      */
     protected function verificationReference(Payment $payment, ?string $clientReference = null): string
     {
-        if ($payment->gateway === PaymentGateway::Monnify && $clientReference && $clientReference !== $payment->reference) {
+        $trustsClientReference = in_array($payment->gateway, [PaymentGateway::Monnify, PaymentGateway::Opay], true);
+
+        if ($trustsClientReference && $clientReference && $clientReference !== $payment->reference) {
             return $clientReference;
         }
 

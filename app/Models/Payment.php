@@ -17,6 +17,15 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 ])]
 class Payment extends Model
 {
+    /**
+     * Every Payment::reference this API generates starts with this — the
+     * one string other than "does an active Payment/Booking row have this
+     * value" that reliably tells our own merchant references apart from a
+     * gateway-native identifier (e.g. Opay's orderNo) a client hands back
+     * at verify() time. See OpayGateway::verify().
+     */
+    public const REFERENCE_PREFIX = 'CL-PAY-';
+
     /** @use HasFactory<PaymentFactory> */
     use HasFactory;
 

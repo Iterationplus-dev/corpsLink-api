@@ -77,9 +77,20 @@ class OpayGateway implements PaymentGatewayContract
         ];
     }
 
+    /**
+     * $reference is either our own merchant reference (the suffixed
+     * attempt reference from initialize(), stored as gateway_reference —
+     * the hosted-checkout path) or, for a native-SDK charge that never
+     * went through our own cashier/create call, Opay's own orderNo handed
+     * back by the client (see ConfirmPaymentAction::verificationReference()).
+     * cashier/status accepts either as an alternative lookup key; a value
+     * that doesn't carry our own Payment::REFERENCE_PREFIX can't be one of
+     * ours, so it must be the latter.
+     */
     public function verify(string $reference): PaymentVerificationResult
     {
-        $body = ['reference' => $reference, 'country' => $this->country];
+        $lookupKey = str_starts_with($reference, Payment::REFERENCE_PREFIX) ? 'reference' : 'orderNo';
+        $body = [$lookupKey => $reference, 'country' => $this->country];
 
         try {
             $response = Http::withToken($this->sign($body))

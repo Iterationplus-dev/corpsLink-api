@@ -75,13 +75,19 @@ If the user abandons the WebView without ever reaching the return URL, you can s
 **POST** `/api/v1/payments/{payment}/verify`
 Auth: `auth:sanctum` — caller must own the payment (403 otherwise).
 
-**Request body:** none required for Paystack, Flutterwave, or Opay (an optional `reference` field is accepted for parity but ignored — the `{payment}` id in the URL is what's checked).
+**Request body:** none required for Paystack or Flutterwave (an optional `reference` field is accepted for parity but ignored — the `{payment}` id in the URL is what's checked).
 
-**Monnify native-SDK charges only:** if you charge in-app via Monnify's native mobile SDK instead of opening `authorizationUrl` in a WebView, you **must** send the `transactionReference` the SDK returned as `reference` in this request body — that transaction was never routed through this API's `initialize` call, so it's the only way the server learns which Monnify transaction to check. Sending your own `reference` (echoing back the one this API gave you from `initialize`, or omitting the field) still works and falls back to the hosted-checkout behavior above.
+**Monnify/Opay native-SDK charges only:** if you charge in-app via Monnify's or Opay's native mobile SDK instead of opening `authorizationUrl` in a WebView, you **must** send the reference the SDK returned as `reference` in this request body — that transaction was never routed through this API's `initialize` call, so it's the only way the server learns which one to check. Sending your own `reference` (echoing back the one this API gave you from `initialize`, or omitting the field) still works and falls back to the hosted-checkout behavior above.
 
 ```json
 { "reference": "<transactionReference from Monnify's native SDK>" }
 ```
+
+```json
+{ "reference": "<orderNo from Opay's native SDK charge result>" }
+```
+
+**Opay caveat:** send Opay's own `orderNo` from the SDK's result, not this API's own reference — the server tells the two apart by format (its own references always look like `CL-PAY-...`) and will not correctly resolve a native-SDK charge if you send anything else. If Opay's SDK result doesn't give you an `orderNo` at all, ask backend before falling back to this API's own reference — that fallback isn't currently guaranteed to resolve correctly.
 
 **Response `200`** (payment successful — the booking, now confirmed):
 

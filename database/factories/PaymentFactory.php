@@ -28,7 +28,7 @@ class PaymentFactory extends Factory
             'seat_id' => $seat->id,
             'vehicle_id' => $vehicle->id,
             'gateway' => fake()->randomElement(PaymentGateway::cases()),
-            'reference' => 'CL-PAY-'.Str::upper(Str::random(12)),
+            'reference' => Payment::REFERENCE_PREFIX.Str::upper(Str::random(12)),
             'gateway_reference' => null,
             'amount' => $vehicle->fare,
             'currency' => 'NGN',

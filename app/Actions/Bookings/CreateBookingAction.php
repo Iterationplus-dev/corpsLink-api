@@ -58,7 +58,7 @@ class CreateBookingAction
                 'seat_id' => $hold->seat_id,
                 'vehicle_id' => $vehicle->id,
                 'gateway' => null,
-                'reference' => 'CL-PAY-'.Str::upper(Str::random(12)),
+                'reference' => Payment::REFERENCE_PREFIX.Str::upper(Str::random(12)),
                 'amount' => $vehicle->fare,
                 'currency' => config('corpslink.payments.currency'),
                 'status' => PaymentStatus::Pending,

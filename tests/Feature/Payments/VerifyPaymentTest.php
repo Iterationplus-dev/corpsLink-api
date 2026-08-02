@@ -134,6 +134,117 @@ class VerifyPaymentTest extends TestCase
         $this->assertDatabaseMissing('bookings', ['payment_id' => $payment->id, 'status' => 'confirmed']);
     }
 
+    protected function pendingOpayPayment(User $user, Vehicle $vehicle, Seat $seat): Payment
+    {
+        $hold = SeatHold::factory()->create(['seat_id' => $seat->id, 'user_id' => $user->id]);
+        $result = app(CreateBookingAction::class)->handle($user, $hold->id);
+
+        $payment = $result['payment'];
+        // gateway_reference set here to mimic a real initialize() call —
+        // Opay's echo of our own suffixed attempt reference, for the
+        // hosted-checkout path.
+        $payment->update([
+            'gateway' => PaymentGateway::Opay,
+            'gateway_reference' => "{$payment->reference}_abc12345",
+        ]);
+
+        return $payment->fresh();
+    }
+
+    /**
+     * Responds to whichever lookup key OpayGateway::verify() actually sent
+     * (`reference` or `orderNo`) with a matching successful transaction, so
+     * each test only needs to assert which key/value was used, not fake a
+     * different body shape per case.
+     */
+    protected function fakeOpayVerify(float $amountNaira, string $orderNo = '256611110000000001'): void
+    {
+        Http::fake([
+            'https://testapi.opaycheckout.com/api/v1/international/cashier/status' => function ($request) use ($amountNaira, $orderNo) {
+                return Http::response([
+                    'code' => '00000',
+                    'message' => 'SUCCESSFUL',
+                    'data' => [
+                        'reference' => $request['reference'] ?? null,
+                        'orderNo' => $orderNo,
+                        'status' => 'SUCCESS',
+                        'amount' => ['total' => (int) round($amountNaira * 100), 'currency' => 'NGN'],
+                    ],
+                ]);
+            },
+        ]);
+    }
+
+    public function test_opay_native_sdk_ordernumber_is_used_when_it_is_not_our_own_reference_format(): void
+    {
+        $user = User::factory()->create();
+        $vehicle = Vehicle::factory()->create(['fare' => 1500]);
+        $seat = $vehicle->seats()->first();
+        $payment = $this->pendingOpayPayment($user, $vehicle, $seat);
+
+        // A real Opay orderNo never carries our own CL-PAY- prefix — that's
+        // how OpayGateway::verify() knows to query by orderNo instead of
+        // reference.
+        $this->fakeOpayVerify(1500, '256611110000000099');
+
+        $response = $this->actingAs($user, 'sanctum')
+            ->postJson("/api/v1/payments/{$payment->id}/verify", ['reference' => '256611110000000099']);
+
+        $response->assertOk();
+        $response->assertJsonPath('status', 'confirmed');
+        $this->assertSame('successful', $payment->fresh()->status->value);
+        $this->assertSame('256611110000000099', $payment->fresh()->gateway_reference);
+
+        Http::assertSent(fn ($request) => $request['orderNo'] === '256611110000000099' && ! isset($request['reference']));
+    }
+
+    public function test_opay_falls_back_to_stored_gateway_reference_when_client_echoes_back_payment_reference(): void
+    {
+        $user = User::factory()->create();
+        $vehicle = Vehicle::factory()->create(['fare' => 1500]);
+        $seat = $vehicle->seats()->first();
+        $payment = $this->pendingOpayPayment($user, $vehicle, $seat);
+
+        $this->fakeOpayVerify(1500);
+
+        // Old hosted-checkout contract: the client just echoes back
+        // Payment::reference, which must not be trusted as a distinct
+        // native-SDK identifier — the currently-working hosted-checkout
+        // path depends on gateway_reference (the suffixed attempt
+        // reference) still being used here instead.
+        $response = $this->actingAs($user, 'sanctum')
+            ->postJson("/api/v1/payments/{$payment->id}/verify", ['reference' => $payment->reference]);
+
+        $response->assertOk();
+
+        Http::assertSent(fn ($request) => $request['reference'] === $payment->gateway_reference && ! isset($request['orderNo']));
+    }
+
+    public function test_opay_rejects_an_ordernumber_already_claimed_by_another_successful_payment(): void
+    {
+        $user = User::factory()->create();
+        $vehicle = Vehicle::factory()->create(['fare' => 1500]);
+        $seats = $vehicle->seats()->orderBy('seat_number')->take(2)->get();
+
+        Payment::factory()->successful()->create([
+            'gateway' => PaymentGateway::Opay,
+            'gateway_reference' => '256611110000000099',
+            'amount' => 1500,
+        ]);
+
+        $payment = $this->pendingOpayPayment($user, $vehicle, $seats[1]);
+
+        $this->fakeOpayVerify(1500, '256611110000000099');
+
+        $response = $this->actingAs($user, 'sanctum')
+            ->postJson("/api/v1/payments/{$payment->id}/verify", ['reference' => '256611110000000099']);
+
+        $response->assertStatus(422);
+        $response->assertJsonPath('error.code', 'payment_failed');
+        $this->assertSame('failed', $payment->fresh()->status->value);
+        $this->assertDatabaseMissing('bookings', ['payment_id' => $payment->id, 'status' => 'confirmed']);
+    }
+
     protected function fakeVerify(string $status, float $amountNaira, string $reference): void
     {
         Http::fake([
